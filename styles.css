@@ -5,7 +5,7 @@
 
  .sidebar {
      width: 250px;
-     height: 100vh;
+     height: /*100vh*/ auto;
      background-color: #ffffff;
      padding-top: 20px;
  }
@@ -28,60 +28,96 @@
      width: 145px;
      height: auto;
  }
+
+ .search-bar {
+     flex: 1;
+ }
+
+ .icon-container {
+     font-size: 1.5rem;
+     color: #6c757d;
+     cursor: pointer;
+ }
+
+ .icon-container:hover {
+     color: #343a40;
+ }
+
+ .profile img {
+     object-fit: cover;
+ }
+
+ .profile span {
+     font-weight: 500;
+ }
+
+ .img-profile {
+     width: 40px;
+     height: 40px;
+     border-radius: 10px;
+ }
+
+ .bg-warning-light {
+     background-color: #fffbe6 !important;
+ }
+
+ .bg-success-light {
+     background-color: #E6FFF7 !important;
+ }
+
+ .bg-danger-light {
+     background-color: #ffeaea !important;
+ }
+
+ .text-dark {
+     color: #343a40 !important;
+  }
+
+ .text-dark.p {
+     font-size: 15px
+}
  
-.search-bar {
-    flex: 1;
-}
+ .text-bg-success {
+     color: #40997E;
+ }
 
-.icon-container {
-    font-size: 1.5rem;
-    color: #6c757d;
-    cursor: pointer;
-}
+ .text-bg-warning {
+     color: #E0A23A;
+ }
 
-.icon-container:hover {
-    color: #343a40;
-}
+ .text-bg-danger {
+     color: #FF3737;
+ }
 
-.profile img {
-    object-fit: cover;
-}
+ .bg-bem-vindo {
+     background-color: #E2A925 !important;
+     height: 168px;
+ }
 
-.profile span {
-    font-weight: 500;
-}
+ /* styles.css */
 
-.img-profile {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-}
- 
-.bg-warning-light {
-    background-color: #fffbe6 !important;
-}
+ .bg-purple {
+     background-color: #6f42c1 !important;
+ }
 
-.bg-success-light  {
-    background-color: #E6FFF7 !important;
-}
+ .bg-purple-light {
+     background-color: #ccc9f0;
+ }
 
-.bg-danger-light  {
-    background-color: #ffeaea !important;
-}
+ .text-bg-purple {
+     color: #6f42c1;
+ }
 
-.text-dark {
-    color: #343a40 !important;
-    font-size: 15px
-}
+ .profile-container img {
+     object-fit: cover;
+ }
 
-.text-bg-success {
-    color: #40997E;
-}
+ .profile-container h5,
+ .profile-container small,
+ .profile-container p {
+     margin: 0;
+ }
 
-.text-bg-warning {
-    color: #E0A23A;
-}
-
-.text-bg-danger {
-    color: #FF3737;
-}
+ .text-small {
+     font-size: 13.5px
+ }

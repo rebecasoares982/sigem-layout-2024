@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,8 @@
         <a href="#" class="nav-link"><i class="fas fa-newspaper"></i> Notícias</a>
         <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> Relatórios</a>
     </div>
-    <div class="content">
+
+    <div class="container content">
         <header class="header d-flex justify-content-between align-items-center p-3">
             <div class="search-bar">
                 <input type="text" class="form-control w-75" placeholder="Buscar...">
@@ -45,16 +47,11 @@
             </div>
         </header>
 
-        <br>
-
-        <h1>Bem-vindo ao Dashboard</h1>
-        <p>Conteúdo aqui...</p>
-
         <div class="mt-4">
             <div class="row">
                 <!-- Primeiro Container Amarelo -->
                 <div class="col-sm-7 mb-3">
-                    <div class="p-4 bg-warning text-white rounded">
+                    <div class="p-4 bg-bem-vindo text-white rounded">
                         <h2>Seja bem vindo!</h2>
                         <p>Gerencie informações, turma, alunos, professores no melhor sistema acadêmico.</p>
                     </div>
@@ -62,24 +59,26 @@
                 <!-- Segundo Container Branco -->
                 <div class="col-sm-5">
                     <div class="p-3 bg-white text-dark rounded">
-                         <div class="row">
-                            <!-- Container Verde Claro -->
+
+                        <h4>Dados</h4>
+
+                         <div class="row mt-3">
                             <div class="col-sm-4">
-                                <div class="p-3 bg-success-light text-white rounded">
+                                <div class="p-2 bg-success-light text-white text-center rounded">
                                     <h4 class="text-bg-success">960</h4>
                                     <p class="text-dark">Estudantes</p>
                                 </div>
                             </div>
-                            <!-- Container Amarelo Claro -->
+
                             <div class="col-sm-4">
-                                <div class="p-3 bg-warning-light text-dark rounded">
+                                <div class="p-2 bg-warning-light text-dark text-center rounded">
                                     <h4 class="text-bg-warning">50</h4>
                                     <p class="text-dark">Professores</p>
                                 </div>
                             </div>
-                            <!-- Container Vermelho Claro -->
+
                             <div class="col-sm-4">
-                                <div class="p-3 bg-danger-light text-white rounded">
+                                <div class="p-2 bg-danger-light text-white text-center rounded">
                                     <h4 class="text-bg-danger">50</h4>
                                     <p class="text-dark">Eventos</p>
                                 </div>
@@ -89,12 +88,177 @@
                 </div>
             </div>
         </div>
+
+        <br>
+
+        <div class="mt-4">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="p-4 bg-white rounded">
+                        <h3>Sigem Logados</h3>
+                        <div id="barchart_values" style="width: 100%; height: 300px;"></div> <!-- Div para o gráfico -->
+
+                        <hr>
+
+                        <h4 class="text-dark">Total Leads: 6579</h5>
+
+                        <div class="row mt-4">
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-success-light text-white rounded d-flex justify-content-between">
+                                    <h4 class="text-bg-success">Professores</h4>
+                                    <h3 class="text-bg-success">14</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-warning-light text-dark rounded d-flex justify-content-between">
+                                    <h4 class="text-bg-warning">Psicologia</h4>
+                                    <h3 class="text-bg-warning">650</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-purple-light text-white rounded d-flex justify-content-between">
+                                    <h4 class="text-bg-purple">Coordenadores</h4>
+                                    <h3 class="text-bg-purple">1</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-danger-light text-white rounded d-flex justify-content-between">
+                                    <h4 class="text-bg-danger">Diretor</h4>
+                                    <h3 class="text-bg-danger">1</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
     
+                <!-- Segundo Container: Professores Online -->
+                <div class="col-sm-6 mb-3">
+                    <div class="p-4 bg-white rounded">
+                        <h3>Professores Online</h3>
+                        <div class="row">
+                            <div class="col-sm-7 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <small>Último horário de acesso: 19:20h</small>
+                                        <p class="mb-0 text-danger text-small">Offline</p>
+                                     </div>
+                                </div>
+                            </div> 
+
+                            <div class="col-sm-5 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <p class="mb-3 text-success">Online</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-7 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <small>Último horário de acesso: 19:20h</small>
+                                        <p class="mb-0 text-danger text-small">Offline</p>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <p class="mb-3 text-success">Online</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-7 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <small>Último horário de acesso: 19:20h</small>
+                                        <p class="mb-0 text-danger text-small">Offline</p>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <p class="mb-3 text-success">Online</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-7 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <small>Último horário de acesso: 19:20h</small>
+                                        <p class="mb-0 text-danger text-small">Offline</p>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <p class="mb-3 text-success">Online</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-7 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <small>Último horário de acesso: 19:20h</small>
+                                        <p class="mb-0 text-danger text-small">Offline</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5 mb-3">
+                                <div class="p-3 bg-white rounded border d-flex align-items-center">
+                                    <img src="./assets/images/profile.svg" alt="Foto do Professor" class="rounded-circle" width="50" height="50">
+                                    <div class="ms-3">
+                                        <h6 class="mb-0">Daniela Silva</h6>
+                                        <p class="mb-3 text-success">Online</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script
+
 </body>
 
 </html>
