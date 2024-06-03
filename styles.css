@@ -1,0 +1,87 @@
+ body {
+     display: flex;
+     background-color: #f4f2f9;
+ }
+
+ .sidebar {
+     width: 250px;
+     height: 100vh;
+     background-color: #ffffff;
+     padding-top: 20px;
+ }
+
+ .sidebar .nav-link {
+     color: #000;
+ }
+
+ .sidebar .nav-link:hover {
+     background-color: #f8f5ff;
+     color: #e2a925;
+ }
+
+ .content {
+     flex: 1;
+     padding: 20px;
+ }
+
+ .logo-SIGEM {
+     width: 145px;
+     height: auto;
+ }
+ 
+.search-bar {
+    flex: 1;
+}
+
+.icon-container {
+    font-size: 1.5rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    color: #343a40;
+}
+
+.profile img {
+    object-fit: cover;
+}
+
+.profile span {
+    font-weight: 500;
+}
+
+.img-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+ 
+.bg-warning-light {
+    background-color: #fffbe6 !important;
+}
+
+.bg-success-light  {
+    background-color: #E6FFF7 !important;
+}
+
+.bg-danger-light  {
+    background-color: #ffeaea !important;
+}
+
+.text-dark {
+    color: #343a40 !important;
+    font-size: 15px
+}
+
+.text-bg-success {
+    color: #40997E;
+}
+
+.text-bg-warning {
+    color: #E0A23A;
+}
+
+.text-bg-danger {
+    color: #FF3737;
+}
