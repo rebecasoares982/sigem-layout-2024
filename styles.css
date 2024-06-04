@@ -3,9 +3,18 @@
      background-color: #f4f2f9;
  }
 
+ .dropdown-item.active,
+ .dropdown-item:active {
+     color: #353535;
+     text-decoration: none;
+     background-color: #fcf7b6;
+ }
+
  .sidebar {
      width: 250px;
-     height: /*100vh*/ auto;
+     height:
+         /*100vh*/
+         auto;
      background-color: #ffffff;
      padding-top: 20px;
  }
@@ -31,16 +40,6 @@
 
  .search-bar {
      flex: 1;
- }
-
- .icon-container {
-     font-size: 1.5rem;
-     color: #6c757d;
-     cursor: pointer;
- }
-
- .icon-container:hover {
-     color: #343a40;
  }
 
  .profile img {
@@ -71,12 +70,12 @@
 
  .text-dark {
      color: #343a40 !important;
-  }
+ }
 
  .text-dark.p {
      font-size: 15px
-}
- 
+ }
+
  .text-bg-success {
      color: #40997E;
  }
@@ -91,7 +90,6 @@
 
  .bg-bem-vindo {
      background-color: #E2A925 !important;
-     height: 168px;
  }
 
  /* styles.css */
@@ -120,4 +118,97 @@
 
  .text-small {
      font-size: 13.5px
+ }
+
+ .profile:hover {
+     cursor: pointer;
+ }
+
+ .icon-container {
+     font-size: 1.5rem;
+     color: #6c757d;
+     cursor: pointer;
+     position: relative;
+ }
+
+ .icon-container:hover {
+     color: #343a40;
+ }
+
+ .icon-container .dropdown-menu {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     z-index: 1000;
+     display: none;
+     min-width: 160px;
+     padding: 0.5rem 0;
+     margin: 0.125rem 0 0;
+     font-size: 1rem;
+     color: #212529;
+     text-align: left;
+     list-style: none;
+     background-color: #fff;
+     background-clip: padding-box;
+     border: 1px solid rgba(0, 0, 0, 0.15);
+     border-radius: 0.25rem;
+     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+ }
+
+ .icon-container.show .dropdown-menu {
+     display: block;
+ }
+
+ .icon-container i {
+     font-size: 1.5rem;
+     padding: 10px;
+     background-color: #fff;
+     border-radius: 50%;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .profile {
+     position: relative;
+ }
+
+ .profile-container {
+     background-color: #fff;
+     padding: 10px;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .dropdown-menu {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     z-index: 1000;
+     display: none;
+     min-width: 160px;
+     padding: 0.5rem 0;
+     margin: 0.125rem 0 0;
+     font-size: 1rem;
+     color: #212529;
+     text-align: left;
+     list-style: none;
+     background-color: #fff;
+     background-clip: padding-box;
+     border: 1px solid rgba(0, 0, 0, 0.15);
+     border-radius: 0.25rem;
+     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+ }
+
+ .dropdown-menu.show {
+     display: block;
+ }
+
+ .dropdown-item i {
+     margin-right: 8px;
+ }
+
+ footer {
+     background-color: #f8f9fa;
+     padding: 10px 0;
+     text-align: center;
+     border-top: 1px solid #eaeaea;
  }
