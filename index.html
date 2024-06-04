@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -13,23 +13,23 @@
 </head>
 
 <body>
-    <div class="sidebar d-flex flex-column p-3">
+    <div class="sidebar d-flex flex-column p-3 page-academico">
         <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
-        <h3 class="badge badge-warning text-wrap">PREFEITURA MUNICIPAL DE ACRELÂNDIA - Escola Dois</h3>
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
 
-        <a href="#" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="#" class="nav-link"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
-        <a href="#" class="nav-link"><i class="fas fa-user"></i> Pessoal</a>
-        <a href="#" class="nav-link"><i class="fas fa-school"></i> Escola</a>
-        <a href="#" class="nav-link"><i class="fas fa-cogs"></i> Gerencial</a>
-        <a href="#" class="nav-link"><i class="fas fa-utensils"></i> Alimentação</a>
-        <a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i> Agenda</a>
-        <a href="#" class="nav-link"><i class="fas fa-newspaper"></i> Notícias</a>
-        <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> Relatórios</a>
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
     </div>
 
     <div class="content">
-        <header class="header d-flex justify-content-between align-items-center p-3">
+        <header class="header d-flex justify-content-between align-items-center p-3 profile-container ">
             <div class="search-bar">
                 <input type="text" class="form-control w-75" placeholder="Buscar...">
             </div>
@@ -54,13 +54,15 @@
             </div>
 
             <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
-                <div class="profile-container d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
                     <div class="ml-2">
-                        <span>Professor Xavier</span>
+                        <span>Escola Teste</span>
                         <br>
-                        <span>Professor</span>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
                     </div>
                 </div>
                 <div class="dropdown-menu" aria-labelledby="profileDropdown">
@@ -82,7 +84,7 @@
             </div>
 
 
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-sm-12">
                     <div class="p-3 bg-white text-dark rounded">
 
@@ -120,70 +122,90 @@
                     </div>
                 </div>
             </div>
+        -->
 
             <br>
 
             <div class="mt-4">
                 <div class="row">
-                    <div class="col-sm-6 mb-3">
+                    <div class="col-sm-12 mb-3">
                         <div class="p-4 bg-white rounded">
-                            <h3>Estatística</h3>
+                            <h3>Dados da Unidade</h3>
                             <div id="barchart_values" style="width: 100%; height: 300px;"></div>
 
                             <hr>
 
-                            <h5 class="text-dark">Total Leads: 6579</h5>
-
                             <div class="row mt-4">
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-warning-light text-dark rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-warning">Alunos</h5>
-                                        <h4 class="text-bg-warning">450</h4>
+                                    <div class="p-3 bg-warning-light text-dark rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-warning">Alunos</h5>
+                                            <h4 class="text-bg-warning">450</h4>
+                                        </div>
+                                        <a href="#">Mais informações</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-warning-light text-dark rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-warning">Alunos Matriculados</h5>
-                                        <h4 class="text-bg-warning">850</h4>
+                                    <div class="p-3 bg-warning-light text-dark rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-warning">Alunos Matriculados</h5>
+                                            <h4 class="text-bg-warning">850</h4>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#detalhesModal">Detalhes</a>
+                                        | <a href="#">Mais informações</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-warning-light text-dark rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-warning">Turmas</h5>
-                                        <h4 class="text-bg-warning">5</h4>
+                                    <div class="p-3 bg-warning-light text-dark rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-warning">Turmas</h5>
+                                            <h4 class="text-bg-warning">5</h4>
+                                        </div>
+                                        <a href="#">Mais informações</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-success-light text-white rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-success">Professores</h5>
-                                        <h4 class="text-bg-success">14</h4>
+                                    <div class="p-3 bg-success-light text-white rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-success">Professores</h5>
+                                            <h4 class="text-bg-success">14</h4>
+                                        </div>
+                                        <a href="#">Mais informações</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-success-light text-white rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-success">Funcionários</h5>
-                                        <h4 class="text-bg-success">14</h4>
+                                    <div class="p-3 bg-success-light text-white rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-success">Funcionários</h5>
+                                            <h4 class="text-bg-success">14</h4>
+                                        </div>
+                                        <a href="#">Mais informações</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-purple-light text-white rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-purple">Coordenadores</h5>
-                                        <h4 class="text-bg-purple">2</h4>
+                                    <div class="p-3 bg-purple-light text-white rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-purple">Coordenadores</h5>
+                                            <h4 class="text-bg-purple">2</h4>
+                                        </div>
+                                        <a href="#">Mais informações</a>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-lg-6 mb-3">
-                                    <div class="p-3 bg-danger-light text-white rounded d-flex justify-content-between">
-                                        <h5 class="text-bg-danger">Diretor</h5>
-                                        <h4 class="text-bg-danger">1</h4>
+                                    <div class="p-3 bg-danger-light text-white rounded">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="text-bg-danger">Diretor</h5>
+                                            <h4 class="text-bg-danger">1</h4>
+                                        </div>
+                                        <a href="#">Mais informações</a>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
@@ -323,6 +345,106 @@
                 </div>
             </footer>
 
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detalhesModal" tabindex="-1" role="dialog" aria-labelledby="detalhesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detalhesModalLabel">Detalhes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-sm-4">
+                                <div class="card card-detalhes-alunos mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quantidade de Registros</h5>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Total Geral Alunos: 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Alunos desta Escola: 0</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Alunos de outra Escola: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card card-detalhes-alunos mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quantidade de Matrículas do Ano Corrente</h5>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Total Geral Matriculados: 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Matriculados desta Escola: 0
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Matriculados de outra escola: 0
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card card-detalhes-alunos mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Status da Matrícula</h5>
+                                        <h6>(Todas as Disciplinas/Parte Disciplinas)</h6>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Evadidos: 0 / 0</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Transferidos: 0 / 0</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Cancelados: 0 / 0</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="card-text badge badge-warning">Falecidos: 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

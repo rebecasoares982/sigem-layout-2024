@@ -1,3 +1,4 @@
+//gráfico dashboard
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
@@ -20,6 +21,7 @@ function drawChart() {
     chart.draw(data, options);
 }
 
+//dropdown icones mensagem e notificação
 $(document).ready(function () {
     $('.icon-container').on('click', function () {
         $(this).toggleClass('show');
@@ -34,6 +36,7 @@ $(document).ready(function () {
     });
 });
 
+//dropdown perfil
 $(document).ready(function () {
     $('#profileDropdown .dropdown-toggle').on('click', function () {
         var $dropdownMenu = $(this).closest('#profileDropdown').find('.dropdown-menu');
@@ -43,6 +46,29 @@ $(document).ready(function () {
     $(document).on('click', function (e) {
         if (!$(e.target).closest('#profileDropdown').length) {
             $('#profileDropdown .dropdown-menu').removeClass('show');
+        }
+    });
+});
+ 
+//Link ativo
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Remove a classe 'active' de todos os links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Adiciona a classe 'active' ao link clicado
+            this.classList.add('active');
+        });
+    });
+
+    // Manter o link ativo ao recarregar a página
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
         }
     });
 });
