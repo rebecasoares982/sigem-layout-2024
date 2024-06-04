@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="styles.css"> 
+<!-- FullCalendar CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -74,19 +75,18 @@
         </header>
 
         <div class="mt-4">
-            <h2 class="text-primary"><i class="fas fa-utensils"></i> Alimentação</h1>
+            <h2 class="text-primary"><i class="fas fa-calendar-alt"></i> Agenda</h1>
         </div>
 
         <div class="mt-4">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Cardápio</h4>
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Cardápio</button>
-
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Refeição</button>
+                        <div class="container">
+                            <div id="calendar"></div>
+                        </div>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <Br>
@@ -100,112 +100,19 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="detalhesModal" tabindex="-1" role="dialog" aria-labelledby="detalhesModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="detalhesModalLabel">Detalhes</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-
-                        <div class="row">
-
-                            <div class="col-sm-4">
-                                <div class="card card-detalhes-alunos mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Quantidade de Registros</h5>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Total Geral Alunos: 1</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Alunos desta Escola: 0</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Alunos de outra Escola: 0</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card card-detalhes-alunos mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Quantidade de Matrículas do Ano Corrente</h5>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Total Geral Matriculados: 1</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Matriculados desta Escola: 0
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Matriculados de outra escola: 0
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card card-detalhes-alunos mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Status da Matrícula</h5>
-                                        <h6>(Todas as Disciplinas/Parte Disciplinas)</h6>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Evadidos: 0 / 0</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Transferidos: 0 / 0</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Cancelados: 0 / 0</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="card-text badge badge-warning">Falecidos: 0</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+<!-- FullCalendar JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+<!-- FullCalendar core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/core/main.min.js"></script>
+<!-- FullCalendar dayGrid -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/daygrid/main.min.js"></script>
+<!-- FullCalendar interaction -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/interaction/main.min.js"></script>
     <script src="scripts.js"></script>
-
+ 
 </body>
 
 </html>
