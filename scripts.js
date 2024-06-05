@@ -49,27 +49,9 @@ $(document).ready(function () {
         }
     });
 });
- 
-//Link ativo
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            // Remove a classe 'active' de todos os links
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            // Adiciona a classe 'active' ao link clicado
-            this.classList.add('active');
-        });
-    });
-
-    // Manter o link ativo ao recarregar a página
-    const currentPath = window.location.pathname;
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
+//tooltip
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
 });
  

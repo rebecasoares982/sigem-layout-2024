@@ -72,29 +72,103 @@
             </div>
         </header>
 
-        <div class="mt-4">
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Lista de Alunos</li>
+            </ol>
+        </nav> 
+
+        <div class="d-flex justify-content-between mt-5">
             <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Alunos</h4>
+            <a class="btn btn-dark" href="/cadastro.html"><i class="fas fa-user-plus"></i> Cadastrar Aluno
+            </a>
         </div>
 
         <br>
-        <div class="btn-group" role="group" aria-label="Exportar Dados">
-            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Exportar para Excel">
-                <i class="far fa-file-excel"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Exportar para CSV">
-                <i class="fas fa-file-csv"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Exportar para PDF">
-                <i class="far fa-file-pdf"></i>
-            </button>
+
+        <div class="d-flex justify-content-between mt-4">
+            <div>
+                <button type="button" class="btn btn-primary-light" title="Copiar">
+                    <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                </button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                    </button>
+                    <!--<div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Nº</a>
+                        <a class="dropdown-item" href="#">Id</a>
+                        <a class="dropdown-item" href="#">Escola</a>
+                        <a class="dropdown-item" href="#">Nome</a>
+                        <a class="dropdown-item" href="#">Matrícula</a>
+                        <a class="dropdown-item" href="#">Situação</a>
+                        <a class="dropdown-item" href="#">Funções</a>
+                    </div> -->
+
+                    <div class="dropdown-menu p-3">
+                        <form id="filter-form">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                            <label class="form-check-label" for="colNo">Nº</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Id" id="colId">
+                            <label class="form-check-label" for="colId">Id</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
+                            <label class="form-check-label" for="colEscola">Escola</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                            <label class="form-check-label" for="colNome">Nome</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
+                            <label class="form-check-label" for="colMatricula">Matrícula</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Situação" id="colSituacao">
+                            <label class="form-check-label" for="colSituacao">Situação</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
+                            <label class="form-check-label" for="colFuncoes">Funções</label>
+                          </div>
+                          <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i class="fas fa-filter"></i> Filtrar </button>
+                        </form>
+                      </div>
+                </div>
+
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Exportar Dados">
+                <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                    <i class="far fa-file-excel text-success fa-lg"></i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                    <i class="fas fa-file-csv text-info  fa-lg"></i>
+                </button>
+                <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                    <i class="far fa-file-pdf text-danger  fa-lg"></i>
+                </button>
+            </div>
         </div>
-        
+
+        <br>
+
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Id</th>
+                        <th scope="col">Nº</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Escola</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Matrícula</th>
@@ -232,9 +306,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script src="scripts.js"></script>
-
+    <script src="menu-lateral.js"></script>
 </body>
 
 </html>

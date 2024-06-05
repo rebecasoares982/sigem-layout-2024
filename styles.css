@@ -1,6 +1,8 @@
  body {
      display: flex;
-     background-color: #f4f2f9;
+     background-color:
+         /*#f4f2f9*/
+         #fbfbfb;
  }
 
  .dropdown-item.active,
@@ -253,7 +255,11 @@
  }
 
  .btn.btn-primary:focus,
- .btn.btn-primary.focus {
+ .btn-primary-light:focus,
+ .btn-outline-primary:focus,
+ .btn-primary-light:active .btn.btn-primary.focus,
+ .btn-primary-light.focus,
+ .btn-outline-primary.focus {
      outline: none !important;
      box-shadow: none !important;
  }
@@ -270,10 +276,14 @@
      color: #fff;
  }
 
- .btn-outline-primary:focus,
- .btn-outline-primary.focus {
-     outline: none !important;
-     box-shadow: none !important;
+ .btn-primary-light {
+     background: #fffbe6 !important;
+     border: 1px solid #e3b04b !important;
+     color: #545454 !important;
+ }
+
+ .btn-outline-secondary:hover {
+     background: transparent;
  }
 
  .fc-toolbar-title {
@@ -328,3 +338,35 @@
  .btn-rounded {
      border-radius: 20px;
  }
+
+ .bold {
+     font-weight: 600;
+ }
+
+ /*Breadcrumb*/
+ .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .breadcrumb-item {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+    color: #333; /* cor do texto */
+  }
+
+  .breadcrumb-item:first-child {
+    list-style: none; /* remove a list-style apenas do primeiro item */
+  }
+
+  .breadcrumb-item:last-child {
+    font-weight: bold; /* torna o último item em negrito */
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    margin-right: 5px;
+  }

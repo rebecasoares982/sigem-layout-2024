@@ -72,9 +72,17 @@
             </div>
         </header>
 
+        <br>
+
+        <a href="tabela-alunos.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+
         <div class="mt-4">
             <h4 class="text-primary"><i class="fas fa-pen"></i> Cadastrar Aluno</h4>
         </div>
+
+        <br>
 
         <div class="card">
             <div class="card-header card-header-cadastro">
@@ -85,14 +93,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="nome">Nome *</label>
+                                <label for="nome" class="bold">Nome *</label>
                                 <input type="text" class="form-control" id="nome" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="nis">NIS *</label>
+                                <label for="nis" class="bold">NIS *</label>
                                 <input type="text" class="form-control" id="nis" required>
                             </div>
                         </div>
@@ -101,14 +109,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="email">Email *</label>
+                                <label for="email" class="bold">Email *</label>
                                 <input type="email" class="form-control" id="email" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="telefone">Telefone *</label>
+                                <label for="telefone" class="bold">Telefone *</label>
                                 <input type="tel" class="form-control" id="telefone" required>
                             </div>
                         </div>
@@ -117,7 +125,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="endereco">Endereço *</label>
+                                <label for="endereco" class="bold">Endereço *</label>
                                 <input type="text" class="form-control" id="endereco" required>
                             </div>
                         </div>
@@ -134,14 +142,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="data_nascimento">Data de Nascimento</label>
+                                <label for="data_nascimento" class="bold">Data de Nascimento</label>
                                 <input type="date" class="form-control" id="data_nascimento">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="codigo_inep">Código INEP</label>
+                                <label for="codigo_inep" class="bold">Código INEP</label>
                                 <input type="text" class="form-control" id="codigo_inep">
                             </div>
                         </div>
@@ -161,13 +169,13 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="renda_anual">Renda Anual *</label>
+                                <label for="renda_anual" class="bold">Renda Anual *</label>
                                 <input type="text" class="form-control" id="renda_anual" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="porcentagem">Porcentagem *</label>
+                                <label for="porcentagem" class="bold">Porcentagem *</label>
                                 <input type="text" class="form-control" id="porcentagem" required>
                             </div>
                         </div>
@@ -175,21 +183,21 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <label for="banco">Banco *</label>
+                                <label for="banco" class="bold">Banco *</label>
                                 <input type="text" class="form-control" id="banco" required>
                             </div>
                         </div>
 
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <label for="banco">Conta</label>
+                                <label for="banco" class="bold">Conta</label>
                                 <input type="text" class="form-control" id="banco" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="tipo">Tipo *</label>
+                            <div class="form-group" class="bold">
+                                <label for="tipo" class="bold">Tipo *</label>
                                 <select class="form-control" id="tipo" required>
                                     <option value="">Selecione</option>
                                     <option value="corrente">Corrente</option>
@@ -217,6 +225,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
 
 </body>
 
