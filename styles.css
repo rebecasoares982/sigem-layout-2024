@@ -37,7 +37,8 @@
      color: #000;
  }
 
- .sidebar .nav-link:hover, .nav-link.active {
+ .sidebar .nav-link:hover,
+ .nav-link.active {
      background-color: #f8f5ff;
      color: #e2a925;
  }
@@ -70,7 +71,8 @@
      border-radius: 10px;
  }
 
- .bg-warning-light {
+ .bg-warning-light,
+ .card-agenda {
      background-color: #fffbe6 !important;
  }
 
@@ -256,7 +258,73 @@
      box-shadow: none !important;
  }
 
- #calendar {
-    max-width: 900px;
-    margin: 40px auto;
-}
+ .btn-outline-primary {
+     border: 1px solid #e3b04b;
+     background: transparent;
+     color: #e3b04b;
+ }
+
+ .btn-outline-primary:hover {
+     border: 1px solid transparent;
+     background: #9c9c9c;
+     color: #fff;
+ }
+
+ .btn-outline-primary:focus,
+ .btn-outline-primary.focus {
+     outline: none !important;
+     box-shadow: none !important;
+ }
+
+ .fc-toolbar-title {
+     text-transform: capitalize;
+ }
+
+ .fc-event-title {
+     text-transform: uppercase;
+     color: #000;
+     text-wrap: wrap;
+ }
+
+ .custom-event {
+     background-color: #e3b04b !important;
+     border-color: #e3b04b !important;
+ }
+
+ .fc .fc-daygrid-event-dot {
+     border-color: #e3b04b !important;
+ }
+
+ .fc-event-title-container {
+     background-color: #e3b04b !important;
+     border: none
+ }
+
+ .fc-h-event {
+     border: 1px solid #9c9c9c !important;
+     border: 1px solid var(--fc-event-border-color, #e3b04b) !important;
+     background-color: #5c5c5c !important;
+     background-color: var(--fc-event-bg-color, #535353) !important;
+ }
+
+ .news-card {
+     margin-bottom: 20px;
+ }
+
+ .news-header {
+     background-color: #e6ecff;
+     color: #4e4e4e;
+ }
+
+ .news-footer {
+     background-color: #f8f9fa;
+ }
+
+ .card-header-cadastro {
+     background-color: #ffc107;
+     color: #fff;
+ }
+
+ .btn-rounded {
+     border-radius: 20px;
+ }

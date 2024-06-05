@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="mt-4">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Alunos</h4>
+        </div>
+
+        <br>
+        <div class="btn-group" role="group" aria-label="Exportar Dados">
+            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Exportar para Excel">
+                <i class="far fa-file-excel"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Exportar para CSV">
+                <i class="fas fa-file-csv"></i>
+            </button>
+            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Exportar para PDF">
+                <i class="far fa-file-pdf"></i>
+            </button>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Escola</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Matrícula</th>
+                        <th scope="col">Situação</th>
+                        <th scope="col">Funções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>391467</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>ALUNO RECUPERACAO SEMESTRAL</td>
+                        <td>4442023369119</td>
+                        <td>HOMOLOGADO</td>
+                        <td>
+                            <a href="#"><i class="fas fa-eye"></i></a> <!-- Ícone para Visualizar -->
+                            <a href="#"><i class="fas fa-edit"></i></a> <!-- Ícone para Editar -->
+                            <div class="dropdown d-inline-block">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i> <!-- Ícone para Outras Opções de Menu -->
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Acesso ao
+                                        Sistema</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file"></i> Arquivo do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-id-card"></i> Carteirinha do
+                                        Estudante</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file-alt"></i> Comprovante de
+                                        Matrícula</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Ficha do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Excluir</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>391467</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>ALUNO RECUPERACAO SEMESTRAL</td>
+                        <td>4442023369119</td>
+                        <td>HOMOLOGADO</td>
+                        <td>
+                            <a href="#"><i class="fas fa-eye"></i></a> <!-- Ícone para Visualizar -->
+                            <a href="#"><i class="fas fa-edit"></i></a> <!-- Ícone para Editar -->
+                            <div class="dropdown d-inline-block">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i> <!-- Ícone para Outras Opções de Menu -->
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Acesso ao
+                                        Sistema</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file"></i> Arquivo do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-id-card"></i> Carteirinha do
+                                        Estudante</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file-alt"></i> Comprovante de
+                                        Matrícula</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Ficha do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Excluir</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>391467</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>ALUNO RECUPERACAO SEMESTRAL</td>
+                        <td>4442023369119</td>
+                        <td>HOMOLOGADO</td>
+                        <td>
+                            <a href="#"><i class="fas fa-eye"></i></a> <!-- Ícone para Visualizar -->
+                            <a href="#"><i class="fas fa-edit"></i></a> <!-- Ícone para Editar -->
+                            <div class="dropdown d-inline-block">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i> <!-- Ícone para Outras Opções de Menu -->
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Acesso ao
+                                        Sistema</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file"></i> Arquivo do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-id-card"></i> Carteirinha do
+                                        Estudante</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file-alt"></i> Comprovante de
+                                        Matrícula</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Ficha do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Excluir</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>391467</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>ALUNO RECUPERACAO SEMESTRAL</td>
+                        <td>4442023369119</td>
+                        <td>HOMOLOGADO</td>
+                        <td>
+                            <a href="#"><i class="fas fa-eye"></i></a> <!-- Ícone para Visualizar -->
+                            <a href="#"><i class="fas fa-edit"></i></a> <!-- Ícone para Editar -->
+                            <div class="dropdown d-inline-block">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i> <!-- Ícone para Outras Opções de Menu -->
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Acesso ao
+                                        Sistema</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file"></i> Arquivo do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-id-card"></i> Carteirinha do
+                                        Estudante</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-file-alt"></i> Comprovante de
+                                        Matrícula</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Ficha do Aluno</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Excluir</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
