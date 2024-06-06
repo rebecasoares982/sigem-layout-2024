@@ -74,9 +74,17 @@
 
         <br>
 
-        <a href="tabela-alunos.html" class="btn btn-secondary">
-            <i class="fas fa-arrow-left"></i> Voltar
-        </a>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
+                <li class="breadcrumb-item"><a href="/tabela-alunos.html">Lista de Alunos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Matrícula</li>
+            </ol>
+        </nav>
+
+        <br>
 
         <div class="mt-4">
             <h4 class="text-primary"><i class="fas fa-pen"></i> Matrículas</h4>
@@ -84,73 +92,156 @@
 
         <br>
 
-        <div class="accordion" id="accordionCadastro">
+        <div class="accordion" id="accordion1">
             <div class="card">
-                <div class="card-header card-header-cadastro" id="headingIdentificacao">
+                <div class="card-header card-header-cadastro" id="heading1">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse"
-                            data-target="#collapseIdentificacao" aria-expanded="true"
-                            aria-controls="collapseIdentificacao">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1"
+                            aria-expanded="true" aria-controls="collapse1">
                             Dados da Matrícula <i class="fas fa-chevron-right"></i>
                         </button>
                     </h5>
                 </div>
-                <div id="collapseIdentificacao" class="collapse show" aria-labelledby="headingIdentificacao"
-                    data-parent="#accordionCadastro">
+                <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion1">
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <label for="aluno">Aluno:</label>
+                                <div class="col-sm-4">
+                                    <label for="aluno" class="bold">Aluno:</label>
                                     <input type="text" class="form-control" id="aluno" name="aluno"
-                                        value="ALUNO RECUPERACAO SEMESTRAL">
+                                        value="ALUNO RECUPERACAO SEMESTRAL" disabled>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <label for="matricula">Número de Matrícula:</label>
+                                <div class="col-sm-4">
+                                    <label for="matricula" class="bold">Número de Matrícula:</label>
                                     <input type="text" class="form-control" id="matricula" name="matricula"
-                                        value="4442023369119">
+                                        value="4442023369119" disabled>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="bold">Tipo de Matrícula:</label>
+                                    <input type="text" class="form-control" id="matricula" name="matricula"
+                                        value="Fechada" disabled>
                                 </div>
                             </div>
-                            
+
                             <br>
 
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <label>Tipo de Matrícula:</label>
-                                    <input type="text" class="form-control" id="matricula" name="matricula"
-                                        value="Fechada">
-                                </div>
-                                <div class="col-sm-6">
-                                    <label>Convênio:</label>
+                                <div class="col-sm-4">
+                                    <label class="bold">Convênio:</label>
                                     <br>
-                                    <input type="radio" id="sim" name="escolarizacao" value="sim">
-                                    <label for="sim">Estadual</label>
-                                    <input type="radio" id="nao" name="escolarizacao" value="nao">
-                                    <label for="nao">Municipal</label>
-                                    <input type="radio" id="nao" name="escolarizacao" value="nao">
-                                    <label for="nao">Estadual e Municipal</label>
+                                    <input type="radio" id="estadual" name="convenio" value="estadual">
+                                    <label for="estadual">Estadual</label>
+                                    <input type="radio" id="municipal" name="convenio" value="municipal">
+                                    <label for="municipal">Municipal</label>
+                                    <input type="radio" id="dois" name="convenio" value="dois">
+                                    <label for="dois">Estadual e Municipal</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="ano" class="bold">Ano:</label>
+                                    <input type="text" class="form-control" id="ano" name="ano"
+                                        value="ANO LETIVO 2021 - 31/01/2021 até 10/12/2021" disabled>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="bold">Recebe escolarização em outro espaço (diferente da
+                                        escola):</label>
+                                    <br>
+                                    <input type="radio" id="emDomicilio" name="escolarizacao" value="emDomicilio">
+                                    <label for="emDomicilio">Em Domicílio</label>
+                                    <input type="radio" id="emHospital" name="escolarizacao" value="emHospital">
+                                    <label for="emHospital">Em Hospital</label>
+                                    <input type="radio" id="naoRecebe" name="escolarizacao" value="naoRecebe">
+                                    <label for="naoRecebe">Não Recebe</label>
                                 </div>
                             </div>
 
-                            <div>
-                                <label for="ano">Ano:</label>
-                                <input type="text" id="ano" name="ano"
-                                    value="ANO LETIVO 2021 - 31/01/2021 até 10/12/2021">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="data_registro" class="bold">Data do registro no sistema:</label>
+                                    <input type="text" class="form-control" id="data_registro" name="data_registro"
+                                        value="27/10/2023" disabled>
+                                </div>
                             </div>
-                            <div>
-                                <label>Recebe escolarização em outro espaço (diferente da escola):</label>
-                                <input type="radio" id="sim" name="escolarizacao" value="sim">
-                                <label for="sim">Sim</label>
-                                <input type="radio" id="nao" name="escolarizacao" value="nao">
-                                <label for="nao">Não</label>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordion2">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="heading2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2"
+                            aria-expanded="true" aria-controls="collapse2">
+                            Transporte Escolar <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapse2" class="collapse show" aria-labelledby="heading2" data-parent="#accordion2">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="bold">Utiliza Transporte Público*:</label>
+                                    <br>
+                                    <input type="radio" id="sim" name="transporte" value="sim">
+                                    <label for="sim">Sim</label>
+                                    <input type="radio" id="nao" name="transporte" value="nao">
+                                    <label for="nao">Não</label>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="ano" class="bold">Tipo de Transporte:</label>
+                                    <select name="tipo_transporte" id="tipo_transporte" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                        <option value="10">Aquaviário/Embarcação -Capacidade acima de 35 </option>
+                                        <option value="7">Aquaviário/Embarcação -Capacidade de até 5 Alunos</option>
+                                        <option value="9">Aquaviário/Embarcação -Capacidade entre 15 a 35 </option>
+                                        <option value="8">Aquaviário/Embarcação -Capacidade entre 5 a 15 </option>
+                                        <option value="11">Ferroviário - Trem/Metrô </option>
+                                        <option value="4">Rodoviário - Bicicleta </option>
+                                        <option value="2">Rodoviário - Microônibus</option>
+                                        <option value="3">Rodoviário - Ônibus </option>
+                                        <option value="6">Rodoviário - Outro</option>
+                                        <option value="1">Rodoviário - Vans/Kombis </option>
+                                        <option value="5">Rodoviário – Tração Animal</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Transporte
+                                    </button>
+                                </div>
                             </div>
-                            <div>
-                                <label for="data_registro">Data do registro no sistema:</label>
-                                <input type="text" id="data_registro" name="data_registro" value="27/10/2023">
-                            </div>
-                            <div>
-                                <input type="submit" value="Enviar">
+
+                            <br>
+
+                            <h5 class="mb-2">Lista dos Transportes</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered  ">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Transporte</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Rodoviário - Ônibus</td>
+                                            <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
+                                                    data-toggle="modal" data-target="#excluir"><i
+                                                        class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </form>
                     </div>
@@ -162,32 +253,85 @@
 
         <div class="accordion" id="accordionCadastro">
             <div class="card">
-                <div class="card-header card-header-cadastro" id="headingIdentificacao">
+                <div class="card-header card-header-cadastro" id="heading3">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse"
-                            data-target="#collapseIdentificacao" aria-expanded="true"
-                            aria-controls="collapseIdentificacao">
-                            Identificação <i class="fas fa-chevron-right"></i>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3"
+                            aria-expanded="true" aria-controls="collapse3">
+                            Matrícula Fechada <i class="fas fa-chevron-right"></i>
                         </button>
                     </h5>
                 </div>
-                <div id="collapseIdentificacao" class="collapse show" aria-labelledby="headingIdentificacao"
-                    data-parent="#accordionCadastro">
+                <div id="collapse3" class="collapse show" aria-labelledby="heading3" data-parent="#accordionCadastro">
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="nome" class="bold">Nome *</label>
-                                        <input type="text" class="form-control" id="nome" required>
-                                    </div>
+                                <div class="col-sm-4">
+                                    <label for="ano" class="bold">Turma:</label>
+                                    <select name="tipo_transporte" id="tipo_transporte" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                    </select>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="nis" class="bold">NIS *</label>
-                                        <input type="text" class="form-control" id="nis" required>
-                                    </div>
+
+                                <div class="col-sm-5">
+                                    <label class="bold">Tipo de Matrícula:</label>
+                                    <br>
+                                    <input type="radio" id="continuidade" name="tipoMatricula" value="continuidade">
+                                    <label for="continuidade">Continuidade</label>
+                                    <input type="radio" id="ingressante" name="tipoMatricula" value="ingressante">
+                                    <label for="ingressante">Ingressante</label>
+                                    <input type="radio" id="transferido" name="tipoMatricula" value="transferido">
+                                    <label for="transferido">Transferido de Escola</label>
                                 </div>
+
+                                <div class="col-sm-3">
+                                    <label for="ano" class="bold">Data de Matrícula:</label>
+                                    <input type="date" class="form-control" id="dataMatricula" name="dataMatricula">
+                                </div>
+                            </div>
+
+                            <Br>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="exampleFormControlTextarea1" class="bold">Observação:</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                    <i class="fas fa-plus"></i> Adicionar
+                                </button>
+                            </div>
+
+                            <br>
+
+                            <h5 class="mb-2">Lista das Disciplinas</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered  ">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Disciplina</th>
+                                            <th>Turma</th>
+                                            <th>Modo</th>
+                                            <th>Observação</th>
+                                            <th>Data</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
+                                                    data-toggle="modal" data-target="#excluir"><i
+                                                        class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </form>
                     </div>
@@ -195,17 +339,34 @@
             </div>
         </div>
 
-
-
-
+        <Br>
 
         <div class="d-flex justify-content-end mt-3">
             <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
             <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
         </div>
-
-
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
