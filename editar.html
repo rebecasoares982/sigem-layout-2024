@@ -100,13 +100,13 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <label for="aluno" class="bold">Identificação única(INEP):</label>
-                            <input type="text" class="form-control" id="aluno" name="aluno" value="###" disabled>
+                            <input type="text" class="form-control" id="aluno" name="aluno" value=" " disabled>
                         </div>
 
                         <div class="col-sm-4">
                             <label for="matricula" class="bold">Número de Identificação Social(NIS):</label>
                             <input type="text" class="form-control" id="matricula" name="matricula"
-                                value="4442023369119" disabled>
+                                value="4442023369119">
                         </div>
 
                         <div class="col-sm-4">
@@ -118,17 +118,19 @@
                 </form>
             </div>
 
-            <div class="accordion p-3" id="accordion1">
+            <div class="accordion p-3" id="accordionInfoGerais">
                 <div class="card">
-                    <div class="card-header btn-blue-light" id="heading1">
+                    <div class="card-header btn-blue-light" id="headingInfoGerais">
                         <h5 class="mb-0">
                             <button class="btn btn-link blue" type="button" data-toggle="collapse"
-                                data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                data-target="#collapseInfoGerais" aria-expanded="true"
+                                aria-controls="collapseInfoGerais">
                                 Informações Gerais <i class="fas fa-chevron-right"></i>
                             </button>
                         </h5>
                     </div>
-                    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion1">
+                    <div id="collapseInfoGerais" class="collapse show" aria-labelledby="headingInfoGerais"
+                        data-parent="#accordionInfoGerais">
                         <div class="card-body">
                             <form>
                                 <div class="row">
@@ -257,7 +259,7 @@
                                                     <label class="bold" for="dataTransferencia">Data de
                                                         Transferência:</label>
                                                     <input type="date" class="form-control" id="dataTransferencia"
-                                                        name="dataTransferencia">
+                                                        name="dataTransferencia" disabled>
                                                 </div>
 
                                                 <div class="col-sm-6 mt-4">
@@ -268,140 +270,1094 @@
 
                                             <br>
 
-                                            <div class="form-group">
-                                                <label>Deficiência, transtorno do espectro autista ou altas
-                                                    habilidades/superdotação:</label>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaAutismo" name="deficiencia[]" value="autismo">
-                                                    <label class="form-check-label" for="deficienciaAutismo">Transtorno
-                                                        do espectro autista</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaCegueira" name="deficiencia[]" value="cegueira">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaCegueira">Cegueira</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaBaixaVisao" name="deficiencia[]"
-                                                        value="baixaVisao">
-                                                    <label class="form-check-label" for="deficienciaBaixaVisao">Baixa
-                                                        visão</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaVisaoMonocular" name="deficiencia[]"
-                                                        value="visaoMonocular">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaVisaoMonocular">Visão monocular</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaSurdez" name="deficiencia[]" value="surdez">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaSurdez">Surdez</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaDeficienciaAuditiva" name="deficiencia[]"
-                                                        value="deficienciaAuditiva">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaDeficienciaAuditiva">Deficiência
-                                                        auditiva</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaAutismo" name="deficiencia[]" value="autismo">
-                                                    <label class="form-check-label" for="deficienciaAutismo">Transtorno
-                                                        do espectro autista</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaAltasHabilidades" name="deficiencia[]"
-                                                        value="altasHabilidades">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaAltasHabilidades">Altas
-                                                        habilidades/superdotação</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaSurdocegueira" name="deficiencia[]"
-                                                        value="surdocegueira">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaSurdocegueira">Surdocegueira</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaDeficienciaFisica" name="deficiencia[]"
-                                                        value="deficienciaFisica">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaDeficienciaFisica">Deficiência física</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaDeficienciaIntelectual" name="deficiencia[]"
-                                                        value="deficienciaIntelectual">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaDeficienciaIntelectual">Deficiência
-                                                        intelectual</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="deficienciaDeficienciaMultipla" name="deficiencia[]"
-                                                        value="deficienciaMultipla">
-                                                    <label class="form-check-label"
-                                                        for="deficienciaDeficienciaMultipla">Deficiência
-                                                        múltipla</label>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label class="bold">Deficiência, transtorno do espectro autista
+                                                            ou
+                                                            altas
+                                                            habilidades/superdotação:</label>
+                                                        <div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="deficiencia" id="sim" value="sim">
+                                                                <label class="form-check-label"
+                                                                    for="sexoFeminino">Sim</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="deficiencia" id="nao" value="nao">
+                                                                <label class="form-check-label" for="nao">Não</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-8">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaAutismo" name="deficiencia[]"
+                                                                value="autismo">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaAutismo">Transtorno
+                                                                do espectro autista</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaCegueira" name="deficiencia[]"
+                                                                value="cegueira">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaCegueira">Cegueira</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaBaixaVisao" name="deficiencia[]"
+                                                                value="baixaVisao">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaBaixaVisao">Baixa
+                                                                visão</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaVisaoMonocular" name="deficiencia[]"
+                                                                value="visaoMonocular">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaVisaoMonocular">Visão monocular</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaSurdez" name="deficiencia[]"
+                                                                value="surdez">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaSurdez">Surdez</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaDeficienciaAuditiva" name="deficiencia[]"
+                                                                value="deficienciaAuditiva">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaDeficienciaAuditiva">Deficiência
+                                                                auditiva</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaAutismo" name="deficiencia[]"
+                                                                value="autismo">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaAutismo">Transtorno
+                                                                do espectro autista</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaAltasHabilidades" name="deficiencia[]"
+                                                                value="altasHabilidades">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaAltasHabilidades">Altas
+                                                                habilidades/superdotação</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaSurdocegueira" name="deficiencia[]"
+                                                                value="surdocegueira">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaSurdocegueira">Surdocegueira</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaDeficienciaFisica" name="deficiencia[]"
+                                                                value="deficienciaFisica">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaDeficienciaFisica">Deficiência
+                                                                física</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaDeficienciaIntelectual"
+                                                                name="deficiencia[]" value="deficienciaIntelectual">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaDeficienciaIntelectual">Deficiência
+                                                                intelectual</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="deficienciaDeficienciaMultipla" name="deficiencia[]"
+                                                                value="deficienciaMultipla">
+                                                            <label class="form-check-label"
+                                                                for="deficienciaDeficienciaMultipla">Deficiência
+                                                                múltipla</label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
+                                            <br>
 
-                                        </form>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label class="bold">Recebe Escolarização
+                                                            diferenciada:</label><br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="escolarizacao_diferenciada" id="nao_escolarizacao"
+                                                                value="nao">
+                                                            <label class="form-check-label" for="nao_escolarizacao">Não
+                                                                recebe
+                                                                escolarização diferenciada</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="escolarizacao_diferenciada" id="domicilio"
+                                                                value="domicilio">
+                                                            <label class="form-check-label" for="domicilio">Em
+                                                                domicílio.</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="escolarizacao_diferenciada" id="hospital"
+                                                                value="hospital">
+                                                            <label class="form-check-label" for="hospital">Em
+                                                                Hospital.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label class="bold">Cadastro Homologado:</label><br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="cadastro_homologado" id="homologado_nao"
+                                                                value="nao">
+                                                            <label class="form-check-label"
+                                                                for="homologado_nao">Não</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="cadastro_homologado" id="homologado_sim"
+                                                                value="sim">
+                                                            <label class="form-check-label"
+                                                                for="homologado_sim">Sim</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label class="bold">Vínculo Cadastral:</label><br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="vinculo_cadastral" id="vinculado_escola"
+                                                                value="vinculado">
+                                                            <label class="form-check-label"
+                                                                for="vinculado_escola">Cadastro
+                                                                vinculado à escola.</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="vinculo_cadastral" id="sem_vinculo"
+                                                                value="sem_vinculo">
+                                                            <label class="form-check-label" for="sem_vinculo">Cadastro
+                                                                sem
+                                                                vínculo com a escola.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label class="bold">Conexão Internet:</label><br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="conexao_internet" id="internet_sim" value="sim">
+                                                            <label class="form-check-label"
+                                                                for="internet_sim">Sim</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="conexao_internet" id="internet_nao" value="nao">
+                                                            <label class="form-check-label"
+                                                                for="internet_nao">Não</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <h5>Nascimento*</h6>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <label for="data_nascimento" class=" bold">Data</label>
+                                            <input type="date" class="form-control" id="data_nascimento"
+                                                name="data_nascimento" value="09/08/2013">
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <label for="estado" class="bold">Estado</label>
+                                            <select class="form-control" id="estado" name="estado">
+                                                <option value="BAHIA" selected>BAHIA</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="col-sm-3">
+                                            <label for="municipio" class="bold">Município</label>
+                                            <select class="form-control" id="municipio" name="municipio">
+                                                <option value="SALVADOR" selected>SALVADOR</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <h5>Filiação*</h6>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filiacao"
+                                                            id="filiacao_sim" value="sim">
+                                                        <label class="form-check-label" for="filiacao_sim">Sim</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filiacao"
+                                                            id="filiacao_nao" value="nao">
+                                                        <label class="form-check-label" for="filiacao_nao">Não</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="nome_mae" class="bold">Nome da mãe:</label>
+                                                <input type="text" class="form-control" id="nome_mae" name="nome_mae">
+                                            </div>
+
+
+                                            <div class="col-sm-2">
+                                                <label for="rg_mae" class="bold">RG da mãe:</label>
+                                                <input type="text" class="form-control" id="rg_mae" name="rg_mae">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="profissao_mae" class="bold">Profissão da mãe:</label>
+                                                <select class="form-control" id="profissao_mae" name="profissao_mae">
+                                                    <option value="">Selecione a profissão</option>
+                                                    <option value="professora">Professora</option>
+                                                    <option value="medica">Médica</option>
+                                                    <option value="advogada">Advogada</option>
+                                                    <option value="engenheira">Engenheira</option>
+                                                    <option value="empresaria">Empresária</option>
+                                                    <option value="outra">Outra</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-sm-4">
+                                                <label for="nome_mae" class="bold">Nome do pai:</label>
+                                                <input type="text" class="form-control" id="nome_mae" name="nome_mae">
+                                            </div>
+
+
+                                            <div class="col-sm-2">
+                                                <label for="rg_mae" class="bold">RG do pai:</label>
+                                                <input type="text" class="form-control" id="rg_mae" name="rg_mae">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="profissao_mae" class="bold">Profissão do pai:</label>
+                                                <select class="form-control" id="profissao_mae" name="profissao_mae">
+                                                    <option value="">Selecione a profissão</option>
+                                                    <option value="professora">Professora</option>
+                                                    <option value="medica">Médica</option>
+                                                    <option value="advogada">Advogada</option>
+                                                    <option value="engenheira">Engenheira</option>
+                                                    <option value="empresaria">Empresária</option>
+                                                    <option value="outra">Outra</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <h5>Responsável*</h5>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="responsavel_nome" class="bold">Nome:</label>
+                                                <input type="text" class="form-control" id="responsavel_nome"
+                                                    name="responsavel_nome" value="RESPONSÁVEL TESTE">
+                                            </div>
+
+                                            <div class="col-sm-2">
+                                                <label for="rg" class="bold">RG</label>
+                                                <input type="text" class="form-control" id="rg" name="rg">
+                                            </div>
+
+                                            <div class="col-sm-2">
+                                                <label for="cpf" class="bold">CPF</label>
+                                                <input type="text" class="form-control" id="cpf" name="cpf">
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <label for="email" class="bold">E-mail</label>
+                                                <input type="email" class="form-control" id="email" name="email">
+                                            </div>
+                                        </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionResidencia">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingResidencia">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseResidencia" aria-expanded="true"
+                                aria-controls="collapseResidencia">
+                                Residência <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseResidencia" class="collapse show" aria-labelledby="headingResidencia"
+                        data-parent="#accordionResidencia">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="pais_residencia" class="bold">País de residência:</label>
+                                    <select class="form-control" id="pais_residencia" name="pais_residencia">
+                                        <option value="BRASIL" selected>BRASIL</option>
+                                        <option value="ARGENTINA">ARGENTINA</option>
+                                        <option value="BOLIVIA">BOLÍVIA</option>
+                                        <option value="CHILE">CHILE</option>
+                                        <option value="PARAGUAY">PARAGUAI</option>
+                                        <option value="URUGUAY">URUGUAI</option>
+                                        <option value="USA">ESTADOS UNIDOS</option>
+                                        <option value="CANADA">CANADÁ</option>
+                                        <option value="PORTUGAL">PORTUGAL</option>
+                                        <option value="SPAIN">ESPANHA</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <label class="bold">Localização/ Zona de residência:</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="zona_residencia" id="urbana"
+                                            value="urbana">
+                                        <label class="form-check-label" for="urbana">Urbana</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="zona_residencia" id="rural"
+                                            value="rural">
+                                        <label class="form-check-label" for="rural">Rural</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="localizacao_diferenciada" class="bold">Localização diferenciada de
+                                        residência:</label>
+                                    <select class="form-control" id="localizacao_diferenciada"
+                                        name="localizacao_diferenciada">
+                                        <option value="">Selecione um registro</option>
+                                        <option value="1">Área de assentamento</option>
+                                        <option value="2">Terra indígena</option>
+                                        <option value="3">Comunidade quilombola</option>
+                                        <option value="7" selected>Não está em área de localização diferenciada</option>
+                                        <option value="8">Área onde se localizam povos e comunidades tradicionais
+                                        </option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-2">
+                                    <label for="cep" class="bold">CEP:</label>
+                                    <input type="text" class="form-control" id="cep" name="cep" value="41110-560">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="endereco" class="bold">Endereço:</label>
+                                    <input type="text" class="form-control" id="endereco" name="endereco"
+                                        value="RUA DA LEGALIDADE">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="bairro" class="bold">Bairro:</label>
+                                    <input type="text" class="form-control" id="bairro" name="bairro" value="PERNAMBU">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="municipio_residencia" class="bold">Município de residência:</label>
+                                    <select class="form-control" id="municipio_residencia" name="municipio_residencia">
+                                        <option value="SALVADOR" selected>SALVADOR</option>
+                                        <option value="FEIRA_DE_SANTANA">Feira de Santana</option>
+                                        <option value="VITORIA_DA_CONQUISTA">Vitória da Conquista</option>
+                                        <option value="CAMAÇARI">Camaçari</option>
+                                        <option value="ILHÉUS">Ilhéus</option>
+                                        <option value="ITABUNA">Itabuna</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-2">
+                                    <label for="numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="numero" name="numero">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="complemento" class="bold">Complemento:</label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="estado" class="bold">Estado:</label>
+                                    <select class="form-control" id="estado" name="estado">
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA" selected>Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="telefone_residencial" class="bold">Telefone residencial:</label>
+                                    <input type="text" class="form-control" id="telefone_residencial"
+                                        name="telefone_residencial">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-2">
+                                    <label for="telefone_sms" class="bold">Telefone SMS:</label>
+                                    <input type="text" class="form-control" id="telefone_sms" name="telefone_sms">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="telefone_contato" class="bold">Telefone para contato:</label>
+                                    <input type="text" class="form-control" id="telefone_contato"
+                                        name="telefone_contato">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionDocumentos">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingDocumentos">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseDocumentos" aria-expanded="true"
+                                aria-controls="collapseDocumentos">
+                                Documentos <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseDocumentos" class="collapse show" aria-labelledby="headingDocumentos"
+                        data-parent="#accordionDocumentos">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="bold">Filiado ao SUS?</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="filiado_sus" id="nao_filiado"
+                                            value="nao">
+                                        <label class="form-check-label" for="nao_filiado">Não</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="filiado_sus" id="sim_filiado"
+                                            value="sim">
+                                        <label class="form-check-label" for="sim_filiado">Sim</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="justificativa" class="bold">Ausência de doc. (Justificativa):</label>
+                                    <select class="form-control" id="justificativa" name="justificativa">
+                                        <option value="" selected>Selecione um registro</option>
+                                        <option value="1">Aluno não possui documento</option>
+                                        <option value="2">Escola não possui informação de documentação do aluno</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="cpf" class="bold">CPF:</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf"
+                                        placeholder="123.456.789-00">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="doc_estrangeiro" class="bold">Doc. estrangeiro/Passaporte:</label>
+                                    <input type="text" class="form-control" id="doc_estrangeiro" name="doc_estrangeiro"
+                                        placeholder="Número do documento">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="cartao_sus" class="bold">Cartão do SUS:</label>
+                                    <input type="text" class="form-control" id="cartao_sus" name="cartao_sus"
+                                        placeholder="Cartão do SUS">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Certidão Civil</h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="modelo_certidao" class="bold">Qual o modelo?</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modelo_certidao"
+                                                id="modelo_antigo" value="antigo">
+                                            <label class="form-check-label" for="modelo_antigo">Modelo antigo</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="modelo_certidao"
+                                                id="modelo_novo" value="novo">
+                                            <label class="form-check-label" for="modelo_novo">Modelo novo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="tipo_certidao" class="bold">Tipo de certidão civil:</label>
+                                    <select class="form-control" id="tipo_certidao" name="tipo_certidao">
+                                        <option value="">Selecione um registro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="numero_termo" class="bold">Número do Termo:</label>
+                                    <input type="text" class="form-control" id="numero_termo" name="numero_termo"
+                                        placeholder="Digite o número do termo">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="folha" class="bold">Folha:</label>
+                                    <input type="text" class="form-control" id="folha" name="folha"
+                                        placeholder="Digite o número da folha">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="livro" class="bold">Livro:</label>
+                                    <input type="text" class="form-control" id="livro" name="livro"
+                                        placeholder="Digite o número do livro">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="data_expedicao" class="bold">Data de expedição:</label>
+                                    <input type="text" class="form-control" id="data_expedicao" name="data_expedicao"
+                                        placeholder="DD/MM/AAAA">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="estado_cartorio" class="bold">Estado do Cartório:</label>
+                                    <select class="form-control" id="estado_cartorio" name="estado_cartorio">
+                                        <option value="">Selecione um estado</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="municipio_cartorio" class="bold">Município do Cartório:</label>
+                                    <select class="form-control" id="municipio_cartorio" name="municipio_cartorio">
+                                        <option value="">Selecione um município</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="cartorio" class="bold">Cartório:</label>
+                                    <input type="text" class="form-control" id="cartorio" name="cartorio"
+                                        placeholder="Digite o nome do cartório">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Carteira de Identidade</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="rg" class="bold">RG:</label>
+                                    <input type="text" class="form-control" id="rg" name="rg" value="000.000.000-00">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="uf_rg" class="bold">UF:</label>
+                                    <select class="form-control" id="uf_rg" name="uf_rg">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB" selected>Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="data_expedicao_rg" class="bold">Data de expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_rg"
+                                        name="data_expedicao_rg">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="orgao_emissor" class="bold">Orgão emissor:</label>
+                                    <select class="form-control" id="orgao_emissor" name="orgao_emissor">
+                                        <option value="">Selecione um órgão emissor</option>
+                                        <option value="ssp">Secretaria de Segurança Pública (SSP)</option>
+                                        <option value="detran">Departamento Estadual de Trânsito (DETRAN)</option>
+                                        <option value="pf">Polícia Federal (PF)</option>
+                                        <option value="crea">Conselho Regional de Engenharia e Agronomia (CREA)</option>
+                                        <option value="crm">Conselho Regional de Medicina (CRM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Título Eleitoral</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="titulo_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="titulo_numero" name="titulo_numero">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="zona_eleitoral" class="bold">Zona Eleitoral:</label>
+                                    <input type="text" class="form-control" id="zona_eleitoral" name="zona_eleitoral">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="sessao_eleitoral" class="bold">Sessão Eleitoral:</label>
+                                    <input type="text" class="form-control" id="sessao_eleitoral"
+                                        name="sessao_eleitoral">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="data_expedicao_titulo" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_titulo"
+                                        name="data_expedicao_titulo">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Carteira Profissional -->
+                            <h5>Carteira Profissional</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="carteira_profissional_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="carteira_profissional_numero"
+                                        name="carteira_profissional_numero">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="carteira_profissional_serie" class="bold">Série:</label>
+                                    <input type="text" class="form-control" id="carteira_profissional_serie"
+                                        name="carteira_profissional_serie">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_expedicao_carteira" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_carteira"
+                                        name="data_expedicao_carteira">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="estado_carteira" class="bold">Estado:</label>
+                                    <select class="form-control" id="estado_carteira" name="estado_carteira">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Alistamento Militar -->
+                            <h5>Alistamento Militar</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="alistamento_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="alistamento_numero"
+                                        name="alistamento_numero">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="alistamento_serie" class="bold">Série:</label>
+                                    <input type="text" class="form-control" id="alistamento_serie"
+                                        name="alistamento_serie">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="alistamento_rm" class="bold">RM:</label>
+                                    <input type="text" class="form-control" id="alistamento_rm" name="alistamento_rm">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="alistamento_csm" class="bold">CSM:</label>
+                                    <input type="text" class="form-control" id="alistamento_csm" name="alistamento_csm">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_expedicao_alistamento" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_alistamento"
+                                        name="data_expedicao_alistamento">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Certificado de Reservista</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="reservista_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="reservista_numero"
+                                        name="reservista_numero">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_expedicao_reservista" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_reservista"
+                                        name="data_expedicao_reservista">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="reservista_serie" class="bold">Série:</label>
+                                    <input type="text" class="form-control" id="reservista_serie"
+                                        name="reservista_serie">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="reservista_cat" class="bold">CAT:</label>
+                                    <input type="text" class="form-control" id="reservista_cat" name="reservista_cat">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="reservista_rm" class="bold">RM:</label>
+                                    <input type="text" class="form-control" id="reservista_rm" name="reservista_rm">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="reservista_csm" class="bold">CSM:</label>
+                                    <input type="text" class="form-control" id="reservista_csm" name="reservista_csm">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Observação</h5>
+                            <div class="form-group">
+                                <label for="observacao" class="bold">Texto:</label>
+                                <textarea class="form-control" id="observacao" name="observacao" rows="4"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionDadosBancarios">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingDadosBancarios">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseDadosBancarios" aria-expanded="true"
+                                aria-controls="collapseDadosBancarios">
+                                Dados Bancarios <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseDadosBancarios" class="collapse show" aria-labelledby="headingDadosBancarios"
+                        data-parent="#accordionDadosBancarios">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for="banco" class="bold">Banco:</label>
+                                        <select class="form-control" id="banco" name="banco">
+                                            <option value="">Selecione um banco</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label for="tipo_conta" class="bold">Tipo da Conta:</label>
+                                        <select class="form-control" id="tipo_conta" name="tipo_conta">
+                                            <option value="">Selecione um tipo de conta</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-sm-3">
+                                        <label for="agencia" class="bold">Nº da Agência:</label>
+                                        <input type="text" class="form-control" id="agencia" name="agencia">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label for="digito_agencia" class="bold">Dígito da Agência:</label>
+                                        <input type="text" class="form-control" id="digito_agencia"
+                                            name="digito_agencia">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label for="conta" class="bold">Nº da Conta:</label>
+                                        <input type="text" class="form-control" id="conta" name="conta">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label for="digito_conta" class="bold">Dígito da Conta:</label>
+                                        <input type="text" class="form-control" id="digito_conta" name="digito_conta">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-sm-3">
+                                        <label for="valor_receber" class="bold">Valor a Receber:</label>
+                                        <input type="text" class="form-control" id="valor_receber" name="valor_receber">
                                     </div>
                                 </div>
                         </div>
+                        </form>
                     </div>
-
-                </div>
-
-                <Br>
-
-                <div class="d-flex justify-content-end mt-3">
-                    <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                    <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Deseja excluir as informações?</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+            <div class="accordion p-3" id="accordionEstagio">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingEstagio">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseEstagio" aria-expanded="true" aria-controls="collapseEstagio">
+                                Estágio <i class="fas fa-chevron-right"></i>
                             </button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <button class="btn btn-primary">Sim</button>
-                            <button class="btn btn-secondary">Não</button>
+                        </h5>
+                    </div>
+                    <div id="collapseEstagio" class="collapse show" aria-labelledby="headingEstagio"
+                        data-parent="#accordionEstagio">
+                        <div class="card-body">
+                            <div>
+                                <button class="btn btn-primary-light btn-icon" type="button" data-toggle="modal"
+                                    data-target="#adicionarEstagio">
+                                    <i class="fas fa-plus"></i> Adicionar Estágio
+                                </button>
+                            </div>
 
+                            <br>
+
+                            <h5 class="mb-2">Lista dos Estágios</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered  ">
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th>Empresa</th>
+                                            <th>Início</th>
+                                            <th>Fim</th>
+                                            <th>Horas</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
+                                                    data-toggle="modal" data-target="#excluir"><i
+                                                        class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <br>
+        </div>
 
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <Br>
 
-            <script src="scripts.js"></script>
-            <script src="menu-lateral.js"></script>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="adicionarEstagio" tabindex="-1" role="dialog" aria-labelledby="adicionarEstagio"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar Estágio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="container">
+                    <form>
+                        <div class="row mt-3">
+                            <div class="col-sm-5">
+                                <label for="empresa" class="bold">Empresa<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="empresa" name="empresa">
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="data_inicio" class="bold">Data de Início<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data_inicio" name="data_inicio">
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="data_fim" class="bold">Data de Fim<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data_fim" name="data_fim">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-5">
+                                <label for="endereco" class="bold">Endereço<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="endereco" name="endereco">
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="numero" class="bold">Número<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="numero" name="numero">
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="complemento" class="bold">Complemento<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="complemento" name="complemento">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-3">
+                                <label for="estado" class="bold">Estado<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="estado" name="estado">
+                                    <option value="">Selecione um estado</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="municipio" class="bold">Município<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="municipio" name="municipio">
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="bairro" class="bold">Bairro<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="bairro" name="bairro">
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="cep" class="bold">CEP<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="cep" name="cep">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-2">
+                                <label for="horas" class="bold">Horas<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="time" class="form-control" id="horas" name="horas">
+                            </div>
+
+
+
+                            <div class="col-sm-4">
+                                <label for="telefone" class="bold">Telefone<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="tel" class="form-control" id="telefone" name="telefone">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3 mb-3">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
 
 </body>
 

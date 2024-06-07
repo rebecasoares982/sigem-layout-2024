@@ -85,23 +85,24 @@
 
         <div class="d-flex justify-content-between mt-5">
             <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Alunos</h4>
-            <a class="btn btn-dark" href="/cadastro.html"><i class="fas fa-user-plus"></i> Cadastrar Aluno
+            <a class="btn btn-cadastro" href="/cadastro.html"><i class="fas fa-user-plus"></i> Cadastrar Aluno
             </a>
         </div>
 
         <br>
 
-        <div class="d-flex justify-content-between mt-4">
-            <div>
-                <button type="button" class="btn btn-primary-light" title="Copiar">
-                    <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
-                </button>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+        <div class="element-box">
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
                     </button>
-                    <!--<div class="dropdown-menu">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                        </button>
+                        <!--<div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Nº</a>
                         <a class="dropdown-item" href="#">Id</a>
                         <a class="dropdown-item" href="#">Escola</a>
@@ -111,60 +112,59 @@
                         <a class="dropdown-item" href="#">Funções</a>
                     </div> -->
 
-                    <div class="dropdown-menu p-3">
-                        <form id="filter-form">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
-                                <label class="form-check-label" for="colNo">Nº</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Id" id="colId">
-                                <label class="form-check-label" for="colId">Id</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
-                                <label class="form-check-label" for="colEscola">Escola</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
-                                <label class="form-check-label" for="colNome">Nome</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
-                                <label class="form-check-label" for="colMatricula">Matrícula</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Situação" id="colSituacao">
-                                <label class="form-check-label" for="colSituacao">Situação</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
-                                <label class="form-check-label" for="colFuncoes">Funções</label>
-                            </div>
-                            <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
-                                    class="fas fa-filter"></i> Filtrar </button>
-                        </form>
+                        <div class="dropdown-menu p-3">
+                            <form id="filter-form">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                                    <label class="form-check-label" for="colNo">Nº</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Id" id="colId">
+                                    <label class="form-check-label" for="colId">Id</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
+                                    <label class="form-check-label" for="colEscola">Escola</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                                    <label class="form-check-label" for="colNome">Nome</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
+                                    <label class="form-check-label" for="colMatricula">Matrícula</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Situação" id="colSituacao">
+                                    <label class="form-check-label" for="colSituacao">Situação</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
+                                    <label class="form-check-label" for="colFuncoes">Funções</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
+                                        class="fas fa-filter"></i> Filtrar </button>
+                            </form>
+                        </div>
                     </div>
+
                 </div>
 
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
             </div>
 
-            <div class="btn-group" role="group" aria-label="Exportar Dados">
-                <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
-                    <i class="far fa-file-excel text-success fa-lg"></i>
-                </button>
-                <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
-                    <i class="fas fa-file-csv text-info  fa-lg"></i>
-                </button>
-                <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
-                    <i class="far fa-file-pdf text-danger  fa-lg"></i>
-                </button>
-            </div>
-        </div>
+            <br>
 
-        <br>
-
-        <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
@@ -177,7 +177,7 @@
                         <th scope="col">Funções</th>
                     </tr>
                 </thead>
-                <tbody> 
+                <tbody>
                     <tr>
                         <th scope="row">1</th>
                         <td>391467</td>
@@ -186,13 +186,12 @@
                         <td>4442023369119</td>
                         <td>HOMOLOGADO</td>
                         <td>
-                            <a href="matriculas.html"><i class="fas fa-user-plus icon-view"></i></a> <!-- Ícone para Visualizar -->
-                            <a href="editar.html"><i class="fas fa-edit icon-edit"></i></a> <!-- Ícone para Editar -->
+                            <a href="matriculas.html"><i class="fas fa-user-plus icon-view" title="Matrículas"></i></a>
+                            <a href="editar.html"><i class="fas fa-edit icon-edit" title="Editar"></i></a>
                             <div class="dropdown d-inline-block">
                                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v icon-menu"></i>
-                                    <!-- Ícone para Outras Opções de Menu -->
+                                    <i class="fas fa-ellipsis-v icon-menu" title="Mais Opções"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt icon-access"></i>
@@ -211,7 +210,7 @@
                             </div>
                         </td>
                     </tr>
- 
+
                 </tbody>
             </table>
 

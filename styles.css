@@ -33,6 +33,7 @@ a:focus {
     height: auto !important;
     background-color: #ffffff;
     padding-top: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
 }
 
 .sidebar .nav-link {
@@ -201,7 +202,7 @@ a:focus {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -180px;
     z-index: 1000;
     display: none;
     min-width: 160px;
@@ -227,7 +228,7 @@ a:focus {
 }
 
 footer {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     padding: 10px 0;
     text-align: center;
     border-top: 1px solid #eaeaea;
@@ -236,6 +237,19 @@ footer {
 .card-detalhes-alunos {
     height: 205px;
 }
+
+/*.btn-cadastro {
+    background: #c6e4a9 !important;
+    border: 1px solid #074c27 !important;
+    color: #032f17 !important;
+}*/
+
+.btn-cadastro {
+    background: #e4f1ff !important;
+    border: 1px solid #3a5170 !important;
+    color: #032f17 !important;
+}
+
 
 .btn.btn-primary {
     background: #e3b04b !important;
@@ -270,9 +284,10 @@ footer {
     color: #e3b04b;
 }
 
-.btn-outline-primary:hover {
-    border: 1px solid transparent;
-    background: #9c9c9c;
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+    border: 1px solid transparent !important;
+    background: #9c9c9c !important;
     color: #fff;
 }
 
@@ -286,11 +301,20 @@ footer {
     background: transparent;
 }
 
-.btn-blue-light,
+/*.btn-blue-light,
 .table-primary {
     background-color: #e6ecff;
     color: #4e4e4e;
     border: 1px solid #6d92ae;
+}*/
+
+.btn-blue-light,
+.table-primary {
+    background-color:
+        /*#f4f7ff*/
+        #f8faff;
+    color: #4e4e4e;
+    border: 1px solid #91adc3;
 }
 
 .fc-toolbar-title {
@@ -338,8 +362,11 @@ footer {
 }
 
 .card-header-cadastro {
-    background-color: #ffc107;
-    color: #fff;
+    background-color:
+        /*#ffc107*/
+        /*#ffdd7c*/
+        #ffe6a0;
+    color: #000;
 }
 
 .card-bg-light {
@@ -393,8 +420,8 @@ footer {
     align-items: center;
     width: 100%;
     text-align: left;
-    color: #fff;
-    font-weight: bold;
+    color: #000;
+    font-weight: 500;
     font-size: 18px;
     text-decoration: none;
 }
@@ -403,7 +430,7 @@ footer {
 .btn-link:focus,
 .btn-link:active {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 .btn-link i {
@@ -412,6 +439,10 @@ footer {
 
 .btn-link.collapsed i {
     transform: rotate(90deg);
+}
+
+.card-header {
+    padding: .55rem 1.15rem !important;
 }
 
 .card-header-cadastro {
@@ -423,7 +454,7 @@ footer {
 }
 
 .icon-view {
-    color: blue;
+    color: rgb(140, 140, 202);
 }
 
 .icon-edit {
@@ -465,7 +496,17 @@ footer {
     text-align: center;
     margin-top: 10px;
 }
+
 .photo-box i {
     font-size: 50px;
     color: #888;
+}
+
+.element-box {
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+    box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
 }
