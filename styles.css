@@ -286,7 +286,8 @@ footer {
     background: transparent;
 }
 
-.btn-blue-light, .table-primary {
+.btn-blue-light,
+.table-primary {
     background-color: #e6ecff;
     color: #4e4e4e;
     border: 1px solid #6d92ae;
@@ -341,6 +342,15 @@ footer {
     color: #fff;
 }
 
+.card-bg-light {
+    background: #fffbe6 !important;
+    color: #545454 !important;
+}
+
+.btn-link.blue {
+    color: #545454 !important;
+}
+
 .btn-rounded {
     border-radius: 20px;
 }
@@ -385,7 +395,7 @@ footer {
     text-align: left;
     color: #fff;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -410,4 +420,52 @@ footer {
 
 .btn-icon i {
     margin-right: 5px;
+}
+
+.icon-view {
+    color: blue;
+}
+
+.icon-edit {
+    color: orange;
+}
+
+.icon-menu {
+    color: gray;
+}
+
+.icon-access {
+    color: green;
+}
+
+.icon-file {
+    color: purple;
+}
+
+.icon-id {
+    color: darkblue;
+}
+
+.icon-enrollment {
+    color: teal;
+}
+
+.icon-student {
+    color: brown;
+}
+
+.icon-delete {
+    color: red;
+}
+
+.photo-box {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+.photo-box i {
+    font-size: 50px;
+    color: #888;
 }

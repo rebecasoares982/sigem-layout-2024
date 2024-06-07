@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
+                <li class="breadcrumb-item"><a href="/tabela-alunos.html">Lista de Alunos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Editar</li>
+            </ol>
+        </nav>
+
+        <br>
+
+        <div class="mt-4">
+            <h4 class="text-primary"><i class="fas fa-pen"></i> Editar</h4>
+        </div>
+
+        <br>
+        <div class="card">
+            <div class="card-header card-header-cadastro">
+                <h5 class="card-title">Dados do Aluno</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="aluno" class="bold">Identificação única(INEP):</label>
+                            <input type="text" class="form-control" id="aluno" name="aluno" value="###" disabled>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="matricula" class="bold">Número de Identificação Social(NIS):</label>
+                            <input type="text" class="form-control" id="matricula" name="matricula"
+                                value="4442023369119" disabled>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label class="bold">Situação:</label>
+                            <input type="text" class="form-control" id="matricula" name="matricula" value="Inativo"
+                                disabled>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="accordion p-3" id="accordion1">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="heading1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                Informações Gerais <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion1">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <!-- Caixa com ícone de foto e campo de envio -->
+                                    <div class="col-sm-3">
+                                        <label for="foto">Foto:</label>
+                                        <input type="file" class="form-control-file" id="foto" name="foto">
+                                        <div class="photo-box">
+                                            <i class="fas fa-camera"></i>
+                                            <p>Foto do Aluno</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Formulário -->
+                                    <div class="col-sm-9">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="bold" for="nomeCompleto">Nome completo:</label>
+                                                    <input type="text" class="form-control" id="nomeCompleto"
+                                                        name="nomeCompleto" value="ALUNO RECUPERACAO SEMESTRAL">
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label class="bold">Sexo:</label>
+                                                    <br>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="sexo"
+                                                            id="sexoMasculino" value="Masculino">
+                                                        <label class="form-check-label"
+                                                            for="sexoMasculino">Masculino</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="sexo"
+                                                            id="sexoFeminino" value="Feminino">
+                                                        <label class="form-check-label"
+                                                            for="sexoFeminino">Feminino</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="nomeSocial">Nome Social:</label>
+                                                    <input type="text" class="form-control" id="nomeSocial"
+                                                        name="nomeSocial">
+                                                </div>
+
+                                                <div class="col-sm-8">
+                                                    <label class="bold">Cor/Raça:</label>
+                                                    <br>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="corRaca"
+                                                            id="corRacaAmarela" value="amarela">
+                                                        <label class="form-check-label"
+                                                            for="corRacaAmarela">Amarela</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="corRaca"
+                                                            id="corRacaBranca" value="branca">
+                                                        <label class="form-check-label"
+                                                            for="corRacaBranca">Branca</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="corRaca"
+                                                            id="corRacaIndigena" value="indigena">
+                                                        <label class="form-check-label"
+                                                            for="corRacaIndigena">Indígena</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="corRaca"
+                                                            id="corRacaParda" value="parda">
+                                                        <label class="form-check-label" for="corRacaParda">Não
+                                                            Declarada</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="corRaca"
+                                                            id="corRacaParda" value="parda">
+                                                        <label class="form-check-label" for="corRacaParda">Parda</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="corRaca"
+                                                            id="corRacaPreta" value="preta">
+                                                        <label class="form-check-label" for="corRacaPreta">Preta</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-9">
+                                                    <label class="bold">Nacionalidade:</label>
+                                                    <br>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="nacionalidade" id="nacionalidadeBrasileira"
+                                                            value="brasileira">
+                                                        <label class="form-check-label"
+                                                            for="nacionalidadeBrasileira">Brasileira</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="nacionalidade" id="nacionalidadeBrasileiraExterior"
+                                                            value="brasileiraExterior">
+                                                        <label class="form-check-label"
+                                                            for="nacionalidadeBrasileiraExterior">Brasileira nascida no
+                                                            exterior</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="nacionalidade" id="nacionalidadeNaturalizado"
+                                                            value="naturalizado">
+                                                        <label class="form-check-label"
+                                                            for="nacionalidadeNaturalizado">Naturalizado</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="nacionalidade" id="nacionalidadeEstrangeiro"
+                                                            value="estrangeiro">
+                                                        <label class="form-check-label"
+                                                            for="nacionalidadeEstrangeiro">Estrangeiro</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label class="bold" for="dataTransferencia">Data de
+                                                        Transferência:</label>
+                                                    <input type="date" class="form-control" id="dataTransferencia"
+                                                        name="dataTransferencia">
+                                                </div>
+
+                                                <div class="col-sm-6 mt-4">
+                                                    <label class="bold" for="email">E-mail:</label>
+                                                    <input type="email" class="form-control" id="email" name="email">
+                                                </div>
+                                            </div>
+
+                                            <br>
+
+                                            <div class="form-group">
+                                                <label>Deficiência, transtorno do espectro autista ou altas
+                                                    habilidades/superdotação:</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaAutismo" name="deficiencia[]" value="autismo">
+                                                    <label class="form-check-label" for="deficienciaAutismo">Transtorno
+                                                        do espectro autista</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaCegueira" name="deficiencia[]" value="cegueira">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaCegueira">Cegueira</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaBaixaVisao" name="deficiencia[]"
+                                                        value="baixaVisao">
+                                                    <label class="form-check-label" for="deficienciaBaixaVisao">Baixa
+                                                        visão</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaVisaoMonocular" name="deficiencia[]"
+                                                        value="visaoMonocular">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaVisaoMonocular">Visão monocular</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaSurdez" name="deficiencia[]" value="surdez">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaSurdez">Surdez</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaDeficienciaAuditiva" name="deficiencia[]"
+                                                        value="deficienciaAuditiva">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaDeficienciaAuditiva">Deficiência
+                                                        auditiva</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaAutismo" name="deficiencia[]" value="autismo">
+                                                    <label class="form-check-label" for="deficienciaAutismo">Transtorno
+                                                        do espectro autista</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaAltasHabilidades" name="deficiencia[]"
+                                                        value="altasHabilidades">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaAltasHabilidades">Altas
+                                                        habilidades/superdotação</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaSurdocegueira" name="deficiencia[]"
+                                                        value="surdocegueira">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaSurdocegueira">Surdocegueira</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaDeficienciaFisica" name="deficiencia[]"
+                                                        value="deficienciaFisica">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaDeficienciaFisica">Deficiência física</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaDeficienciaIntelectual" name="deficiencia[]"
+                                                        value="deficienciaIntelectual">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaDeficienciaIntelectual">Deficiência
+                                                        intelectual</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="deficienciaDeficienciaMultipla" name="deficiencia[]"
+                                                        value="deficienciaMultipla">
+                                                    <label class="form-check-label"
+                                                        for="deficienciaDeficienciaMultipla">Deficiência
+                                                        múltipla</label>
+                                                </div>
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <Br>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Deseja excluir as informações?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <button class="btn btn-primary">Sim</button>
+                            <button class="btn btn-secondary">Não</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+            <script src="scripts.js"></script>
+            <script src="menu-lateral.js"></script>
+
+</body>
+
+</html>
