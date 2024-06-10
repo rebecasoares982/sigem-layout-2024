@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
- </head>
+</head>
 
 <body>
     <div class="sidebar d-flex flex-column p-3 page-academico">
@@ -72,66 +72,117 @@
             </div>
         </header>
 
-        <div class="mt-4">
-            <h2 class="text-primary"><i class="fas fa-cogs"></i> Gerencial</h1>
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
+                <li class="breadcrumb-item"><a href="/matriculas-coletivas.html">Matricula Coletiva</a></li>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Matricula Coletiva</h4>
         </div>
 
-        <div class="mt-4">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Relatórios</h4>
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Áreas</button>
+        <br>
 
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Relatórios</button>
+        <div class="element-box">
+
+            <h5>Filtro</h5>
+            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label for="ano" class="bold">Turma do Ano Anterior:</label>
+                        <select class="form-control" id="ano">
+                            <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="turma" class="bold">Reserva de Matrícula:</label>
+                        <select class="form-control" id="turma">
+                            <option value="12000 - 2º ANO">Não Reservou</option>
+                            <option value="12000 - 2º ANO">Reservou</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="aluno" class="bold">Aluno:</label>
+                        <select class="form-control" id="aluno">
+                            <option value="todos">TODOS OS ALUNOS</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="modelo-documento" class="bold">Matrícula Atual:</label>
+                        <select class="form-control" id="modelo-documento">
+                            <option value="teste-tamanho-fonte">Não Matriculado</option>
+                            <option value="teste-tamanho-fonte">Matriculado</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3 mt-3">
+                        <label for="modelo-documento" class="bold">Turma Atual:</label>
+                        <select class="form-control" id="modelo-documento">
+                            <option value="teste-tamanho-fonte">TESTE TAMANHO FONTE</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-5">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Pesquisar</button>
                     </div>
                 </div>
+            </form>
+        </div>
 
-                <div class="col-sm-12 mt-3">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Gerencial</h4>
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Usuários</button>
+        <br>
 
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Implantação</button> 
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-cadastro" href="cadastro-matricula-coletiva.html"><i class="fas fa-user-plus"></i>
+                Matricular</a>
+        </div>
 
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Dados SAGRES</button> 
+        <div class="element-box mt-3">
 
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Ano Letivo</button> 
-                    </div>
-                </div>
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">Matrícula</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Aluno</th>
+                        <th scope="col">Reserva</th>
+                        <th scope="col">Turma Anterior</th>
+                        <th scope="col">Turma Atual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">4442024491895</th>
+                        <td>389841</td>
+                        <td>TESTE AAA</td>
+                        <td>NÃO</td>
+                        <td>11996</td>
+                        <td>29608</td>
+                    </tr>
 
-                <div class="col-sm-12 mt-3">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Educacenso</h4>
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Análise de Dados</button>
-
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Relatório Censo</button>
-
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Download Educacenso</button>
-
-                        <button class="btn btn-primary mb-2 btn-sm text-white">Exportação</button>
-                    </div>
-                </div> 
-            </div>
-
-            <Br>
-
-            <footer class="text-center mt-5">
-                <div class="container">
-                    <p class="mb-0">&copy; 2024 Todos os direitos reservados</p>
-                </div>
-            </footer>
+                </tbody>
+            </table>
 
         </div>
     </div>
- 
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script src="scripts.js"></script>
     <script src="menu-lateral.js"></script>
-
 </body>
 
 </html>

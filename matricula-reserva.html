@@ -79,17 +79,50 @@
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
                 <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lista de Alunos</li>
+                <li class="breadcrumb-item active" aria-current="page">Cadastro de Matricula Reserva</li>
             </ol>
         </nav>
 
-        <div class="d-flex justify-content-between mt-5">
-            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Alunos</h4>
-            <a class="btn btn-cadastro" href="/cadastro.html"><i class="fas fa-user-plus"></i> Cadastrar Aluno
-            </a>
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-pen"></i> Cadastro de Matricula Reserva</h4>
         </div>
 
         <br>
+
+        <div class="element-box">
+            <form>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="turma" class="bold">Turma*:</label>
+                        <select class="form-control" id="turma">
+                            <option value="12000 - 2º ANO">12000 - 2º ANO</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="aluno" class="bold">Aluno:</label>
+                        <select class="form-control" id="aluno">
+                            <option value="todos">TODOS OS ALUNOS</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="modelo-documento" class="bold">Situação Reserva:</label>
+                        <select class="form-control" id="modelo-documento">
+                            <option value="teste-tamanho-fonte">A confirmar</option>
+                            <option value="teste-tamanho-fonte">Confirmada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-outline-primary mr-2"><i class="fas fa-times-circle"></i>
+                        Cancelar Reserva</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-check-circle"></i> Confirmar
+                        Reserva</button>
+                </div>
+        </div>
+        </form>
 
         <div class="element-box">
             <div class="d-flex justify-content-between mt-4">
@@ -168,53 +201,27 @@
             <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
-                        <th scope="col">Nº</th>
                         <th scope="col">ID</th>
-                        <th scope="col">Escola</th>
-                        <th scope="col">Nome</th>
+                        <th scope="col">Aluno</th>
+                        <th scope="col">Turma</th>
                         <th scope="col">Matrícula</th>
-                        <th scope="col">Situação</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">Situação da Reserva</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>391467</td>
                         <td>ESCOLA TESTE</td>
                         <td>ALUNO RECUPERACAO SEMESTRAL</td>
                         <td>4442023369119</td>
-                        <td>HOMOLOGADO</td>
-                        <td>
-                            <a href="matriculas.html"><i class="fas fa-user-plus icon-view" title="Matrículas"></i></a>
-                            <a href="editar.html"><i class="fas fa-edit icon-edit" title="Editar"></i></a>
-                            <div class="dropdown d-inline-block">
-                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v icon-menu" title="Mais Opções"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt icon-access"></i>
-                                        Acesso ao Sistema</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-file icon-file"></i> Arquivo do
-                                        Aluno</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-id-card icon-id"></i> Carteirinha
-                                        do Estudante</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-file-alt icon-enrollment"></i>
-                                        Comprovante de Matrícula</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-user icon-student"></i> Ficha do
-                                        Aluno</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-trash-alt icon-delete"></i>
-                                        Excluir</a>
-                                </div>
-                            </div>
-                        </td>
+                        <td>CONFIRMADA</td>
                     </tr>
 
                 </tbody>
             </table>
 
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

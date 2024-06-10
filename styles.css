@@ -510,3 +510,41 @@ footer {
     -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
 }
+
+.document-container {
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.document-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.document-section {
+    margin-bottom: 20px;
+}
+.document-label {
+    font-weight: bold;
+}
+.no-print {
+    margin-bottom: 20px;
+}
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .printable, .printable * {
+        visibility: visible;
+    }
+    .printable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .no-print {
+        display: none;
+    }
+}

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Acertos de Matrícula</li>
+            </ol>
+        </nav>
+
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Acertos de Matrícula</h4>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">Nº</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Escola</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Matrícula</th>
+                        <th scope="col">Situação</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>391467</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>ALUNO RECUPERACAO SEMESTRAL</td>
+                        <td>4442023369119</td>
+                        <td>HOMOLOGADO</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-exchange-alt" title="Transferência entre Escolas"
+                                    data-toggle="modal" data-target="#transferencia"></i></a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Acertos de Matrículas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="escola" class="bold">Escola:</label>
+                                <input type="text" class="form-control" id="escola" value="ESCOLA TESTE" disabled>
+                            </div>
+                            <div class="col-sm-5">
+                                <label for="turma" class="bold">Turmas que o aluno está matriculado:</label>
+                                <select class="form-control" id="turma">
+                                    <option selected>MATRICULA: 426284 TURMA: 29608 - TURMA IVAN CONCEITO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="aluno" class="bold">Aluno:</label>
+                                <input type="text" class="form-control" id="aluno" value="ALUNO RECUPERACAO SEMESTRAL"
+                                    disabled>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="situacao" class="bold">Situação:</label>
+                                <input type="text" class="form-control" id="situacao" value="Inativo" disabled>
+                            </div>
+
+                            <div class="col-sm-3 mt-4">
+                                <button type="button" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h5>Alteração da Matrícula</h5>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="convenio" class="bold">Convênio:</label>
+                                <select class="form-control" id="convenio">
+                                    <option>MUNICIPAL</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="tipo-matricula" class="bold">Tipo de matrícula:</label>
+                                <select class="form-control" id="tipo-matricula">
+                                    <option>FECHADA</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="situacao-matricula" class="bold">Situação da Matrícula:</label>
+                                <select class="form-control" id="situacao-matricula">
+                                    <option>TRANSFERIDO ESCOLA</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 mt-4">
+                                <button type="button" class="btn btn-primary"><i class="fas fa-save"></i> Alterar informações</button>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h5>Transporte Escolar</h5>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="bold">Utiliza Transporte Público*:</label>
+                                <br>
+                                <input type="radio" id="sim" name="transporte" value="sim">
+                                <label for="sim">Sim</label>
+                                <input type="radio" id="nao" name="transporte" value="nao">
+                                <label for="nao">Não</label>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="ano" class="bold">Tipo de Transporte:</label>
+                                <select name="tipo_transporte" id="tipo_transporte" class="form-control">
+                                    <option value="">Selecione Um Registro</option>
+                                    <option value="10">Aquaviário/Embarcação -Capacidade acima de 35 </option>
+                                    <option value="7">Aquaviário/Embarcação -Capacidade de até 5 Alunos</option>
+                                    <option value="9">Aquaviário/Embarcação -Capacidade entre 15 a 35 </option>
+                                    <option value="8">Aquaviário/Embarcação -Capacidade entre 5 a 15 </option>
+                                    <option value="11">Ferroviário - Trem/Metrô </option>
+                                    <option value="4">Rodoviário - Bicicleta </option>
+                                    <option value="2">Rodoviário - Microônibus</option>
+                                    <option value="3">Rodoviário - Ônibus </option>
+                                    <option value="6">Rodoviário - Outro</option>
+                                    <option value="1">Rodoviário - Vans/Kombis </option>
+                                    <option value="5">Rodoviário – Tração Animal</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                    <i class="fas fa-plus"></i> Adicionar Transporte
+                                </button>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <h5 class="mb-2">Lista dos Transportes</h5>
+                        <div class="table responsive">
+                            <table class="table table-bordered  ">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Transporte</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Rodoviário - Ônibus</td>
+                                        <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
+                                                data-toggle="modal" data-target="#excluir"><i
+                                                    class="fas fa-trash-alt"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+
+                        <h5>Outras opções para a turma selecionada</h5>
+                        <div>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-times-circle"></i> Cancelar
+                                Matrícula</button>
+                            <button type="button" class="btn btn-warning"><i class="fas fa-exclamation-circle"></i>
+                                Registrar Evasão</button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-skull-crossbones"></i>
+                                Registrar Falecimento</button>
+                            <button type="button" class="btn btn-success"><i class="fas fa-check-circle"></i> Reativar
+                                Aluno</button>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Excluir
+                                Registro</button>
+                        </div>
+
+                        <hr>
+
+                        <h5>Lista disciplinas matriculadas na turma selecionada (Matrícula fechada)</h5>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">Nome das Disciplinas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Matemática</td>
+                                </tr>
+                                <tr>
+                                    <td>História</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL TRANSFERENCIA-->
+    <div class="modal fade" id="transferencia" tabindex="-1" role="dialog" aria-labelledby="modalTransferenciaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTransferenciaLabel">Realizar Transferência</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning bold" role="alert">
+                        Esta ação não poderá ser revertida. Verifique atentamente a matrícula selecionada e o tipo de
+                        transferência que deseja realizar, antes de efetivar o processo.
+                    </div>
+
+                    <p><b>Aluno:</b> ALUNO RECUPERACAO SEMESTRAL</p>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="escola" class="bold">Escola/Matrícula/Turma:</label>
+                            <select class="form-control" id="escola">
+                                <option selected disabled>SELECIONE A ESCOLA</option>
+                                <option value="ESCOLA TESTE">ESCOLA TESTE</option>
+                                <option value="ESCOLA TESTE">Matrícula: 426284, Turma: 29608 - TURMA IVAN CONCEITO
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <p class="bold">ENTENDA OS TIPOS DE TRANSFERÊNCIA:</p>
+                    <p><b>TIPO 1 - TRANSFERÊNCIA DE ALUNO DENTRO DA PRÓPRIA ESCOLA:</b>
+                        Este tipo de transferência irá alterar
+                        o status das disciplinas atuais para (7 - Transferido Turma) e o tipo de matrícula será alterada
+                        para matrícula aberta. Após isto a transferência se dará com a inclusão de matérias de outra
+                        turma na própria tela de matrícula para este aluno.</p>
+                    <p><b>TIPO 2 - TRANSFERÊNCIA DE ALUNO PARA PRÓPRIA/OUTRA REDE MUNICIPAL:</b>
+                        Este tipo de transferência irá remover o vínculo do aluno com a escola.
+                        Este aluno ficará disponível no menu "Acadêmico/Aluno/Alunos sem escola" para nova matrícula em
+                        qualquer outra escola.
+                        A matrícula anterior ainda permanecerá na escola antiga com status de transferido (6 -
+                        Transferido Escola)
+                        para que suas informações possam ser recuperadas sempre que solicitadas, a título de histórico
+                        escolar.</p>
+
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="tipoTransferencia" class="bold">Tipo de Transferência</label>
+                                <select class="form-control" id="tipoTransferencia">
+                                    <option selected disabled>SELECIONE A OPÇÃO</option>
+                                    <option value="1">Transferência dentro da escola</option>
+                                    <option value="2">Transferência para outra escola</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="dataTransferencia" class="bold">Data da Transferência</label>
+                                <input type="date" class="form-control" id="dataTransferencia">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-file-import"></i> Enviar transferência do aluno</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>
