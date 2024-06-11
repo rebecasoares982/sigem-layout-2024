@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Diário de Classe</a></li>
+                <li class="breadcrumb-item"><a href="/matriculas-coletivas.html">Conteúdo</a></li>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Avaliações</h4>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+
+            <h5>Filtro</h5>
+            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label for="ano" class="bold">Professor</label>
+                        <select class="form-control" id="ano">
+                            <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="turma" class="bold">Turmas:</label>
+                        <select class="form-control" id="turma">
+                            <option value="12000 - 2º ANO">Não Reservou</option>
+                            <option value="12000 - 2º ANO">Reservou</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="aluno" class="bold">Período:</label>
+                        <select class="form-control" id="aluno">
+                            <option value="todos">TODOS OS ALUNOS</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="modelo-documento" class="bold">Disciplinas:</label>
+                        <select class="form-control" id="modelo-documento">
+                            <option value="teste-tamanho-fonte">Não Matriculado</option>
+                            <option value="teste-tamanho-fonte">Matriculado</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-3">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Pesquisar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionCadastro">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="heading3">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3"
+                            aria-expanded="true" aria-controls="collapse3">
+                            Cadastro da Avaliação<i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapse3" class="collapse show" aria-labelledby="heading3" data-parent="#accordionCadastro">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="eixoCampo" class="bold">Avaliação (Ordem):</label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação:</label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="dataCadastro" class="bold">Data:</label>
+                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação:</label>
+                                    <input type="text" class="form-control" id="conteudo" name="conteudo">
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary btn-icon mt-4" type="button">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                        </button>
+                        <!--<div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Nº</a>
+                        <a class="dropdown-item" href="#">Id</a>
+                        <a class="dropdown-item" href="#">Escola</a>
+                        <a class="dropdown-item" href="#">Nome</a>
+                        <a class="dropdown-item" href="#">Matrícula</a>
+                        <a class="dropdown-item" href="#">Situação</a>
+                        <a class="dropdown-item" href="#">Funções</a>
+                    </div> -->
+
+                        <div class="dropdown-menu p-3">
+                            <form id="filter-form">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                                    <label class="form-check-label" for="colNo">Nº</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Id" id="colId">
+                                    <label class="form-check-label" for="colId">Id</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
+                                    <label class="form-check-label" for="colEscola">Escola</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                                    <label class="form-check-label" for="colNome">Nome</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
+                                    <label class="form-check-label" for="colMatricula">Matrícula</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Situação" id="colSituacao">
+                                    <label class="form-check-label" for="colSituacao">Situação</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
+                                    <label class="form-check-label" for="colFuncoes">Funções</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
+                                        class="fas fa-filter"></i> Filtrar </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="d-flex justify-content-between">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <h5>Lista das aulas cadastradas</h5>
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Unidade</th>
+                        <th scope="col">Avaliação/Ordem</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Nota Máxima</th>
+                        <th scope="col">Instrumento de Avaliação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="10">Nenhum registro encontrado</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>

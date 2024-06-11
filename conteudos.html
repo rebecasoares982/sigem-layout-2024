@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Diário de Classe</a></li>
+                <li class="breadcrumb-item"><a href="/matriculas-coletivas.html">Conteúdo</a></li>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Conteúdo</h4>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+
+            <h5>Filtro</h5>
+            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label for="ano" class="bold">Professor</label>
+                        <select class="form-control" id="ano">
+                            <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="turma" class="bold">Turmas:</label>
+                        <select class="form-control" id="turma">
+                            <option value="12000 - 2º ANO">Não Reservou</option>
+                            <option value="12000 - 2º ANO">Reservou</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="aluno" class="bold">Período:</label>
+                        <select class="form-control" id="aluno">
+                            <option value="todos">TODOS OS ALUNOS</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="modelo-documento" class="bold">Disciplinas:</label>
+                        <select class="form-control" id="modelo-documento">
+                            <option value="teste-tamanho-fonte">Não Matriculado</option>
+                            <option value="teste-tamanho-fonte">Matriculado</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-3">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Pesquisar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionCadastro">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="heading3">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3"
+                            aria-expanded="true" aria-controls="collapse3">
+                            Cadastro <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapse3" class="collapse show" aria-labelledby="heading3" data-parent="#accordionCadastro">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="dataCadastro" class="bold">Data:</label>
+                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro">
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="conteudo" class="bold">Conteúdo:</label>
+                                    <input type="text" class="form-control" id="conteudo" name="conteudo">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="qtdAula" class="bold">Qtd. Aula:</label>
+                                    <input type="number" class="form-control" id="qtdAula" name="qtdAula">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="eixoCampo" class="bold">Eixo/Campo de Experiência:</label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="bold">Modelo de plano de aula:</label>
+                                    <br>
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-download"></i> Baixar Modelo
+                                    </button>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label for="planoAula" class="bold">Enviar plano de aula preenchido:</label>
+                                    <input type="file" class="form-control-file" id="planoAula" name="planoAula">
+                                    <small class="form-text text-muted">
+                                        Nenhum arquivo escolhido (Tamanho máximo: 1 MB) Somente arquivos do tipo doc,
+                                        docx ou pdf.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary btn-icon mt-4" type="button">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="element-box mt-3">
+
+            <h6>PROFESSOR: Selecione Um Registro, TURMA: Selecione um registro, DISCIPLINA: Selecione um registro</h6>
+            <table class="table table-bordered table-striped mt-3">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Data da Aula</th>
+                        <th scope="col">Eixo</th>
+                        <th scope="col">Conteúdo</th>
+                        <th scope="col">Usuário/Data de cadastro</th>
+                        <th scope="col">Período</th>
+                        <th scope="col">Qtd. Aulas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4442024491895</td>
+                        <td>10/06/2024</td>
+                        <td>TESTE AAA</td>
+                        <td>NÃO</td>
+                        <td>11996 - 15/06/2024</td>
+                        <td>3</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>
