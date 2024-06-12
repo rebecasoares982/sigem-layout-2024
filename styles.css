@@ -510,6 +510,7 @@ footer {
     background-color: #fff;
     -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+    height: auto;
 }
 
 .document-container {
@@ -557,4 +558,4 @@ footer {
     .no-print {
         display: none;
     }
-}
+} 
