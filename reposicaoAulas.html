@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Diário de Classe</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Reposição de Aulas</li>
+            </ol>
+        </nav>
+
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Reposição de Aulas</h4>
+            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrar"><i
+                    class="fas fa-user-plus"></i>
+                Cadastrar</a>
+        </div>
+
+        <br>
+        <div class="element-box">
+
+            <h5>Filtro</h5>
+            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="ano" class="bold">Ano:</label>
+                        <select class="form-control" id="ano">
+                            <option value="2019">60 - 2019</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-4">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="d-flex justify-content-between">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">Nº</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Escola</th>
+                        <th scope="col">Turma</th>
+                        <th scope="col">Professor</th>
+                        <th scope="col">Data Solicitação</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>391467</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>12345</td>
+                        <td>Funcionário Professor</td>
+                        <td>22/12/2025</td>
+                        <td>Deferida</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Cadastrar Reposição de Aulas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="accordionDefinicao">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingDefinicao">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseDefinicao" aria-expanded="true"
+                                        aria-controls="collapseDefinicao">
+                                        Definição <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseDefinicao" class="collapse show" aria-labelledby="headingDefinicao"
+                                data-parent="#accordionDefinicao">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="professor" class="bold">Professor:</label>
+                                                <select class="form-control" id="professor" name="professor">
+                                                    <option value="">Selecione um Professor</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="turma" class="bold">Turma:</label>
+                                                <select class="form-control" id="turma" name="turma">
+                                                    <option value="">Selecione uma Turma</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-2">
+                                                <label class="bold" for="dataAula">Data da Aula:</label>
+                                                <input type="date" class="form-control" id="dataAula" name="dataAula">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="aula" class="bold">Aula:</label>
+                                                <select class="form-control" id="aula" name="aula">
+                                                    <option value="">Selecione uma Aula</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-7 mt-3">
+                                                <label for="justificativa" class="bold">Justificativa:</label>
+                                                <textarea class="form-control" id="justificativa" name="justificativa"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionDadosReposicaoAulas">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingDadosReposicaoAulas">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseDadosReposicaoAulas" aria-expanded="true"
+                                        aria-controls="collapseDadosReposicaoAulas" disabled>
+                                        Dados da Reposição das Aulas <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseDadosReposicaoAulas" class="collapse"
+                                aria-labelledby="headingDadosReposicaoAulas"
+                                data-parent="#accordionDadosReposicaoAulas">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Aula:</label>
+                                                <select name="tipo_transporte" id="tipo_transporte"
+                                                    class="form-control">
+                                                    <option value="">Selecione Um Registro</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-2">
+                                                <label class="bold" for="dataAula">Data para Reposição:</label>
+                                                <input type="date" class="form-control" id="dataAula" name="dataAula">
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Turno para Reposição:</label>
+                                                <select name="tipo_transporte" id="tipo_transporte"
+                                                    class="form-control">
+                                                    <option value="">Selecione Um Registro</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-2 mt-2">
+                                                <button class="btn btn-primary btn-icon mt-4"
+                                                    type="button">Salvar</button>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <h5 class="mb-2">Lista de Etapas</h5>
+                                        <div class="table responsive">
+                                            <table class="table table-bordered  ">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th>Data da Reposição</th>
+                                                        <th>Disciplina</th>
+                                                        <th>Turno da Reposição</th>
+                                                        <th>Aula ID (Horário Original)</th>
+                                                        <th>Ação</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>10/04/2021</td>
+                                                        <td>74775 - Matemática</td>
+                                                        <td>4949 - Matutino</td>
+                                                        <td>154815 (08:00:00 às 08:50:00)</td>
+                                                        <td><button class="btn btn-danger btn-sm" title="Excluir"
+                                                                type="button" data-toggle="modal"
+                                                                data-target="#excluir"><i
+                                                                    class="fas fa-trash-alt"></i></button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionAnalise">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingAnalise">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseAnalise" aria-expanded="true"
+                                        aria-controls="collapseAnalise" disabled>
+                                        Análise <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseAnalise" class="collapse" aria-labelledby="headingAnalise"
+                                data-parent="#accordionAnalise">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Aula:</label>
+                                                <select name="tipo_transporte" id="tipo_transporte"
+                                                    class="form-control">
+                                                    <option value="">Selecione Um Registro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-7 mt-3">
+                                                <label for="justificativa" class="bold">Justificativa:</label>
+                                                <textarea class="form-control" id="justificativa" name="justificativa"
+                                                    rows="3"></textarea>
+                                                <p>4000 caracteres restantes</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Br>
+
+                    <div class="d-flex justify-content-end mt-3">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Reposição de Aulas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="accordionDefinicao">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingDefinicao">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseDefinicao" aria-expanded="true"
+                                        aria-controls="collapseDefinicao">
+                                        Definição <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseDefinicao" class="collapse show" aria-labelledby="headingDefinicao"
+                                data-parent="#accordionDefinicao">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="professor" class="bold">Professor:</label>
+                                                <select class="form-control" id="professor" name="professor">
+                                                    <option value="">Selecione um Professor</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="turma" class="bold">Turma:</label>
+                                                <select class="form-control" id="turma" name="turma">
+                                                    <option value="">Selecione uma Turma</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-2">
+                                                <label class="bold" for="dataAula">Data da Aula:</label>
+                                                <input type="date" class="form-control" id="dataAula" name="dataAula">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="aula" class="bold">Aula:</label>
+                                                <select class="form-control" id="aula" name="aula">
+                                                    <option value="">Selecione uma Aula</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-7 mt-3">
+                                                <label for="justificativa" class="bold">Justificativa:</label>
+                                                <textarea class="form-control" id="justificativa" name="justificativa"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionDadosReposicaoAulas">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingDadosReposicaoAulas">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseDadosReposicaoAulas" aria-expanded="true"
+                                        aria-controls="collapseDadosReposicaoAulas">
+                                        Dados da Reposição das Aulas <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseDadosReposicaoAulas" class="collapse show"
+                                aria-labelledby="headingDadosReposicaoAulas"
+                                data-parent="#accordionDadosReposicaoAulas">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Aula:</label>
+                                                <select name="tipo_transporte" id="tipo_transporte"
+                                                    class="form-control">
+                                                    <option value="">Selecione Um Registro</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-2">
+                                                <label class="bold" for="dataAula">Data para Reposição:</label>
+                                                <input type="date" class="form-control" id="dataAula" name="dataAula">
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Turno para Reposição:</label>
+                                                <select name="tipo_transporte" id="tipo_transporte"
+                                                    class="form-control">
+                                                    <option value="">Selecione Um Registro</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-2 mt-2">
+                                                <button class="btn btn-primary btn-icon mt-4"
+                                                    type="button">Salvar</button>
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <h5 class="mb-2">Lista de Etapas</h5>
+                                        <div class="table responsive">
+                                            <table class="table table-bordered  ">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th>Data da Reposição</th>
+                                                        <th>Disciplina</th>
+                                                        <th>Turno da Reposição</th>
+                                                        <th>Aula ID (Horário Original)</th>
+                                                        <th>Ação</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>10/04/2021</td>
+                                                        <td>74775 - Matemática</td>
+                                                        <td>4949 - Matutino</td>
+                                                        <td>154815 (08:00:00 às 08:50:00)</td>
+                                                        <td><button class="btn btn-danger btn-sm" title="Excluir"
+                                                                type="button" data-toggle="modal"
+                                                                data-target="#excluir"><i
+                                                                    class="fas fa-trash-alt"></i></button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionAnalise">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingAnalise">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseAnalise" aria-expanded="true"
+                                        aria-controls="collapseAnalise">
+                                        Análise <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseAnalise" class="collapse show" aria-labelledby="headingAnalise"
+                                data-parent="#accordionAnalise">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Aula:</label>
+                                                <select name="tipo_transporte" id="tipo_transporte"
+                                                    class="form-control">
+                                                    <option value="">Selecione Um Registro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-7 mt-3">
+                                                <label for="justificativa" class="bold">Justificativa:</label>
+                                                <textarea class="form-control" id="justificativa" name="justificativa"
+                                                    rows="3"></textarea>
+                                                <p>4000 caracteres restantes</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Br>
+
+                    <div class="d-flex justify-content-end mt-3">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>
