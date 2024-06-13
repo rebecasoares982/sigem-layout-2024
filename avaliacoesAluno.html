@@ -79,29 +79,56 @@
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
                 <li class="breadcrumb-item"><a href="/academico.html">Diário de Classe</a></li>
-                <li class="breadcrumb-item"><a href="/diarioClasse.html">Cadastro de Ocorrências</a></li>
+                <li class="breadcrumb-item"><a href="/avaliacoesAluno.html">Avaliações do Aluno</a></li>
             </ol>
         </nav>
 
         <div class="mt-5">
-            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Cadastro de Ocorrências</h4>
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Avaliações do Aluno</h4>
         </div>
 
         <br>
 
         <div class="element-box">
-
-            <h5>Filtro</h5>
-            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+                </div>
+            </div>
 
             <form class="mt-3">
                 <div class="row">
-                    <div class="col-sm-5">
-                        <label for="ano" class="bold">Nome</label>
-                        <input type="text" class="form-control" id="nome">
+                    <div class="col-sm-4">
+                        <label for="professor" class="bold">Professor<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="professor" name="professor">
+                            <option value="">Selecione um registro</option>
+                        </select>
                     </div>
 
-                    <div class="col-sm-3  mt-4">
+                    <div class="col-sm-4">
+                        <label for="turma" class="bold">Turma<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="turma" name="turma">
+                            <option value="">Selecione um registro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="turma" class="bold">Ano:</label>
+                        <p>Ano Letivo 2021</p>
+                    </div>
+
+                    <div class="col-sm-4 mt-3">
+                        <label for="disciplina" class="bold">Disciplina<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="disciplina" name="disciplina">
+                            <option value="">Selecione um registro</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-5">
                         <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
                         <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
                             Limpar</button>
@@ -110,26 +137,110 @@
             </form>
         </div>
 
-        <br>
-
-        <div class="element-box mt-3">
-            <div class="d-flex justify-content-end">
-                <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarOcorrencia"><i
-                        class="fas fa-user-plus"></i> Cadastrar nova ocorrência</button>
+        <div class="element-box mt-4">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Disciplina</h5>
+                </div>
+                <dl class="info-list">
+                    <div>
+                        <dt>Aulas Dadas:</dt>
+                        <dd>7</dd>
+                    </div>
+                    <div>
+                        <dt>Aulas Previstas:</dt>
+                        <dd>179</dd>
+                    </div>
+                    <div>
+                        <dt>Mínimo de Aulas:</dt>
+                        <dd>5.25</dd>
+                    </div>
+                    <div>
+                        <dt>Presença Mínima:</dt>
+                        <dd>75%</dd>
+                    </div>
+                    <div>
+                        <dt>Nota Final Mínima <i class="fas fa-question-circle"
+                                title="Esta Turma/disciplina possui 8 períodos/unidades . Período 1 com 3 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; Av. 2 com nota máxima &quot;10.00&quot;; Av. 3 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1]+[AV2]+[AV3])/3 e seu coeficiente total de notas foi 10 .Período 2 com 3 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; Av. 2 com nota máxima &quot;10.00&quot;; Av. 3 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1]+[AV2]+[AV3])/3 e seu coeficiente total de notas foi 10 .Período 3 com 1 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1])/1 e seu coeficiente total de notas foi 10 .Período 4 com 3 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; Av. 2 com nota máxima &quot;10.00&quot;; Av. 3 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1]+[AV2]+[AV3])/3 e seu coeficiente total de notas foi 10 .Período 5 com 3 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; Av. 2 com nota máxima &quot;10.00&quot;; Av. 3 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1]+[AV2]+[AV3])/3 e seu coeficiente total de notas foi 10 .Período 6 com 1 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1])/1 e seu coeficiente total de notas foi 10 .Período 7 com 1 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1])/1 e seu coeficiente total de notas foi 10 .Período 8 com 1 avaliações cadastradas (Av. 1 com nota máxima &quot;10.00&quot;; ).  Este período utilizou a regra ([AV1])/1 e seu coeficiente total de notas foi 10 .O Total acumulado de pontos acumulados das médias das unidades no ano letivo foi de 80 . "></i>
+                        </dt>
+                        <dd>2.5</dd>
+                    </div>
+                </dl>
             </div>
- 
-            <table class="table table-bordered table-striped mt-3">
-                <thead class="bg-white">
-                    <tr>
-                        <th scope="col"> </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="8">Nenhum registro encontrado.</td>
-                    </tr>
-                </tbody>
-            </table>
+        </div>
+
+        <div class="element-box mt-4">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Ajustes</h5>
+                </div>
+                <button type="button" class="btn btn-primary">
+                    <i class="fas fa-cogs"></i> Frequência
+                </button>
+
+                <button type="button" class="btn btn-secondary">
+                    <i class="fas fa-chart-line"></i> Conselho de Classe
+                </button>
+
+                <button type="button" class="btn btn-success">
+                    <i class="fas fa-file-alt"></i> Plano de Aula Realizado
+                </button>
+
+                <button type="button" class="btn btn-info">
+                    <i class="fas fa-clipboard-check"></i> Nota/Conceito
+                </button>
+
+                <button type="button" class="btn btn-warning">
+                    <i class="fas fa-check-circle"></i> Finalizar Unidades
+                </button>
+
+                <button type="button" class="btn btn-danger">
+                    <i class="fas fa-exclamation-circle"></i> Recuperação Final
+                </button>
+            </div>
+        </div>
+
+        <div class="element-box mt-4">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5 class="mb-2">Lista de Frequência e Notas</h5>
+                </div>
+            </div>
+
+            <div class="table responsive">
+                <table class="table table-bordered">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Nome</th>
+                            <th>Frequência</th>
+                            <th>1UN</th>
+                            <th>2UN</th>
+                            <th>RS R1</th>
+                            <th>RS M1</th>
+                            <th>RF</th>
+                            <th>CON</th>
+                            <th>NF</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4442023369131</td>
+                            <td>TESTE</td>
+                            <td>0 ausência(s) (100%)</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td>Matriculado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
     </div>

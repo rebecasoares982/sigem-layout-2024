@@ -93,7 +93,8 @@
             <form>
                 <div class="row">
                     <div class="col-sm-4">
-                        <label for="turma" class="bold">Turma*:</label>
+                        <label for="turma" class="bold">Turma<span class="text-danger"
+                            title="Preenchimento Obrigatório">*</span></label>
                         <select class="form-control" id="turma">
                             <option value="12000 - 2º ANO">12000 - 2º ANO</option>
                         </select>
@@ -198,27 +199,29 @@
 
             <br>
 
-            <table class="table table-bordered table-striped">
-                <thead class="bg-white">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Aluno</th>
-                        <th scope="col">Turma</th>
-                        <th scope="col">Matrícula</th>
-                        <th scope="col">Situação da Reserva</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>ESCOLA TESTE</td>
-                        <td>ALUNO RECUPERACAO SEMESTRAL</td>
-                        <td>4442023369119</td>
-                        <td>CONFIRMADA</td>
-                    </tr>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="bg-white">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Aluno</th>
+                            <th scope="col">Turma</th>
+                            <th scope="col">Matrícula</th>
+                            <th scope="col">Situação da Reserva</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>ESCOLA TESTE</td>
+                            <td>ALUNO RECUPERACAO SEMESTRAL</td>
+                            <td>4442023369119</td>
+                            <td>CONFIRMADA</td>
+                        </tr>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
     </div>

@@ -90,21 +90,24 @@
         <br>
 
         <div class="element-box">
-
-            <h5>Filtro</h5>
-            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
-
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+                </div>
+            </div>
+            
             <form class="mt-3">
                 <div class="row">
                     <div class="col-sm-5">
-                        <label for="ano" class="bold">Professor</label>
+                        <label for="ano" class="bold">Professor<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
                         <select class="form-control" id="ano">
                             <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
                         </select>
                     </div>
 
                     <div class="col-sm-2">
-                        <label for="turma" class="bold">Turmas:</label>
+                        <label for="turma" class="bold">Turmas<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
                         <select class="form-control" id="turma">
                             <option value="12000 - 2º ANO">Não Reservou</option>
                             <option value="12000 - 2º ANO">Reservou</option>
@@ -112,23 +115,26 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <label for="aluno" class="bold">Período:</label>
+                        <label for="aluno" class="bold">Período<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
                         <select class="form-control" id="aluno">
                             <option value="todos">TODOS OS ALUNOS</option>
                         </select>
                     </div>
 
                     <div class="col-sm-2">
-                        <label for="modelo-documento" class="bold">Disciplinas:</label>
+                        <label for="modelo-documento" class="bold">Disciplinas<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
                         <select class="form-control" id="modelo-documento">
                             <option value="teste-tamanho-fonte">Não Matriculado</option>
                             <option value="teste-tamanho-fonte">Matriculado</option>
                         </select>
                     </div>
 
-                    <div class="col-sm-3  mt-3">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Pesquisar</button>
+                    <div class="col-sm-3  mt-4">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
                     </div>
+
                 </div>
             </form>
         </div>

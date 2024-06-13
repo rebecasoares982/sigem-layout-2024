@@ -83,7 +83,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Cadastro</li>
             </ol>
         </nav>
-        
+
         <div class="mt-4">
             <h4 class="text-primary"><i class="fas fa-pen"></i> Cadastrar Aluno</h4>
         </div>
@@ -92,126 +92,71 @@
 
         <div class="card">
             <div class="card-header card-header-cadastro">
-                <h5 class="card-title">Identificação</h5>
+                <h5 class="card-title">Dados Pessoais</h5>
             </div>
             <div class="card-body">
                 <form>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="nome" class="bold">Nome *</label>
-                                <input type="text" class="form-control" id="nome" required>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="nis" class="bold">NIS *</label>
-                                <input type="text" class="form-control" id="nis" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="email" class="bold">Email *</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="telefone" class="bold">Telefone *</label>
-                                <input type="tel" class="form-control" id="telefone" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="endereco" class="bold">Endereço *</label>
-                                <input type="text" class="form-control" id="endereco" required>
-                            </div>
-                        </div>
-
-                        <!--<div class="col-sm-6">
-                            <span>Foto*</span> 
-                            <div class="custom-file mt-2">
-                                <input type="file" class="custom-file-input" id="customFile">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="data_nascimento" class="bold">Data de Nascimento</label>
-                                <input type="date" class="form-control" id="data_nascimento">
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="codigo_inep" class="bold">Código INEP</label>
-                                <input type="text" class="form-control" id="codigo_inep">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="card">
-            <div class="card-header card-header-cadastro">
-                <h5 class="card-title">Ficha Financeira</h5>
-            </div>
-            <div class="card-body">
-                <form>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="renda_anual" class="bold">Renda Anual *</label>
-                                <input type="text" class="form-control" id="renda_anual" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="porcentagem" class="bold">Porcentagem *</label>
-                                <input type="text" class="form-control" id="porcentagem" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="form-group">
-                                <label for="banco" class="bold">Banco *</label>
-                                <input type="text" class="form-control" id="banco" required>
-                            </div>
+                        <div class="col-sm-4">
+                            <label for="nome" class="bold">Nome<span class="text-danger"
+                                    title="Preenchimento Obrigatório">*</span></label>
+                            <input type="text" class="form-control" id="nome" name="nome">
                         </div>
 
                         <div class="col-sm-3">
                             <div class="form-group">
-                                <label for="banco" class="bold">Conta</label>
-                                <input type="text" class="form-control" id="banco" required>
+                                <label for="sexo" class="bold">Sexo:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="masculino"
+                                        value="masculino">
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="feminino"
+                                        value="feminino">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group" class="bold">
-                                <label for="tipo" class="bold">Tipo *</label>
-                                <select class="form-control" id="tipo" required>
-                                    <option value="">Selecione</option>
-                                    <option value="corrente">Corrente</option>
-                                    <option value="poupança">Poupança</option>
-                                    <option value="investimento">Investimento</option>
-                                    <option value="outro">Outro</option>
-                                </select>
-                            </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-2">
+                            <label for="data" class="bold">Data de Nascimento<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                            <input type="date" class="form-control" id="data" name="data">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="nacionalidade" class="bold">Nacionalidade<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="nacionalidade" name="nacionalidade">
+                                <option value="">SELECIONE UM REGISTRO</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="estado" class="bold">Estado<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="estado" name="estado">
+                                <option value="">SELECIONE UM REGISTRO</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="municipio" class="bold">Município<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="municipio" name="municipio">
+                                <option value="">SELECIONE UM REGISTRO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-sm-3">
+                            <label for="inep" class="bold">Identificação única (INEP):</label>
+                            <input type="text" class="form-control" id="inep" name="inep" placeholder="Digite o INEP">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="nis" class="bold">Número de Identificação Social (NIS):</label>
+                            <input type="text" class="form-control" id="nis" name="nis" placeholder="Digite o NIS">
                         </div>
                     </div>
                 </form>

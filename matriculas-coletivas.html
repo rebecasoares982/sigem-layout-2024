@@ -90,14 +90,18 @@
         <br>
 
         <div class="element-box">
-
-            <h5>Filtro</h5>
-            <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+            <div class="element-wrapper">
+                <div class="element-header"> 
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+                </div>
+            </div>
 
             <form class="mt-3">
                 <div class="row">
                     <div class="col-sm-5">
-                        <label for="ano" class="bold">Turma do Ano Anterior:</label>
+                        <label for="ano" class="bold">Turma do Ano Anterior<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
                         <select class="form-control" id="ano">
                             <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
                         </select>
@@ -133,9 +137,11 @@
                         </select>
                     </div>
 
-                    <div class="col-sm-3  mt-5">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Pesquisar</button>
+                    <div class="col-sm-3 mt-5">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i> Limpar</button>
                     </div>
+
                 </div>
             </form>
         </div>
@@ -149,8 +155,8 @@
 
         <div class="element-box mt-3">
 
-            <table class="table table-bordered table-striped">
-                <thead class="bg-white">
+            <table class="table table-bordered">
+                <thead class="table-primary">
                     <tr>
                         <th scope="col">Matrícula</th>
                         <th scope="col">ID</th>

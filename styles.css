@@ -112,7 +112,8 @@ a:focus {
 }
 
 .text-primary {
-    color: #3b2900 !important;
+    /*color: #3b2900 !important;*/
+    color: #282828 !important;
 }
 
 .bg-purple {
@@ -558,4 +559,44 @@ footer {
     .no-print {
         display: none;
     }
-} 
+}
+
+.info-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.info-list div {
+    width: 15%;
+    margin-bottom: 10px;
+}
+
+.info-list dt {
+    font-weight: bold;
+}
+
+.info-list dd {
+    margin-top: 5px;
+}
+
+.element-wrapper .element-header:after {
+    content: "";
+    background-color: #E0A23A;
+    width: 25px;
+    height: 4px;
+    border-radius: 0;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.element-wrapper .element-header {
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
