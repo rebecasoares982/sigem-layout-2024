@@ -34,6 +34,66 @@ a:focus {
     background-color: #ffffff;
     padding-top: 20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}  
+
+@media (min-width: 320px) and (max-width:359px) {
+    .element-box {
+        width: 285px;
+    }
+}
+
+@media (min-width: 360px) and (max-width:384px) {
+    .element-box {
+        width: 325px;
+    }
+}
+
+@media (min-width: 385px) and (max-width:411px) {
+    .element-box {
+        width: 350px;
+    }
+}
+
+@media (min-width: 412px) and (max-width: 499px) {
+    .element-box {
+        width: 550px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .element-box {
+        width: 350px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 630px) {
+    .element-box {
+        width: 350px;
+    }
+}
+
+@media (min-width: 630px) and (max-width: 670px) {
+    .element-box {
+        width: 350px;
+    }
+}
+
+@media (min-width: 670px) and (max-width: 740px) {
+    .element-box {
+        width: 350px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 768px) {
+    .element-box {
+        width: 450px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+    .element-box {
+        width: 715px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -72,13 +132,10 @@ a:focus {
     }
 
 
-    .conteudo, .margin-top {
+    .conteudo,
+    .margin-top {
         padding-top: 565px;
     }
-
-    .element-box {
-        width: 350px;
-    } 
 }
 
 
@@ -155,6 +212,7 @@ a:focus {
 
 .bg-bem-vindo {
     background-color: #E2A925 !important;
+    height: 115px !important;
 }
 
 .text-primary {
@@ -275,9 +333,9 @@ a:focus {
 }
 
 footer {
-    background-color: #ffffff;
+    background-color: #fff;
+    color: #E2A925;
     padding: 10px 0;
-    text-align: center;
     border-top: 1px solid #eaeaea;
 }
 
