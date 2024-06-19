@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Menu</title>
+    <title>SIGEM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -1270,73 +1270,86 @@
                     <form>
                         <div class="row mt-3">
                             <div class="col-sm-5">
-                                <label for="empresa" class="bold">Empresa<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="empresa" name="empresa">
+                                <label for="empresa" class="bold">Empresa<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="empresa" name="empresa" required>
                             </div>
 
                             <div class="col-sm-2">
-                                <label for="data_inicio" class="bold">Data de Início<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data_inicio" name="data_inicio">
+                                <label for="data_inicio" class="bold">Data de Início<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data_inicio" name="data_inicio" required>
                             </div>
 
                             <div class="col-sm-2">
-                                <label for="data_fim" class="bold">Data de Fim<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data_fim" name="data_fim">
+                                <label for="data_fim" class="bold">Data de Fim<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data_fim" name="data_fim" required>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-sm-5">
-                                <label for="endereco" class="bold">Endereço<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="endereco" name="endereco">
+                                <label for="endereco" class="bold">Endereço<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="endereco" name="endereco" required>
                             </div>
 
                             <div class="col-sm-2">
-                                <label for="numero" class="bold">Número<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="numero" name="numero">
+                                <label for="numero" class="bold">Número<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="numero" name="numero" required>
                             </div>
 
                             <div class="col-sm-4">
-                                <label for="complemento" class="bold">Complemento<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="complemento" name="complemento">
+                                <label for="complemento" class="bold">Complemento<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="complemento" name="complemento" required>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-sm-3">
-                                <label for="estado" class="bold">Estado<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="estado" name="estado">
-                                    <option value="">Selecione um estado</option>
+                                <label for="estado" class="bold">Estado<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="estado" name="estado"  required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
                                 </select>
                             </div>
 
                             <div class="col-sm-3">
-                                <label for="municipio" class="bold">Município<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="municipio" name="municipio">
+                                <label for="municipio" class="bold">Município<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="municipio" name="municipio"  required>
                             </div>
 
                             <div class="col-sm-3">
-                                <label for="bairro" class="bold">Bairro<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="bairro" name="bairro">
+                                <label for="bairro" class="bold">Bairro<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="bairro" name="bairro"  required>
                             </div>
 
                             <div class="col-sm-2">
-                                <label for="cep" class="bold">CEP<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="cep" name="cep">
+                                <label for="cep" class="bold">CEP<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="cep" name="cep"  required>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-sm-2">
-                                <label for="horas" class="bold">Horas<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="time" class="form-control" id="horas" name="horas">
+                                <label for="horas" class="bold">Horas<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="time" class="form-control" id="horas" name="horas"  required>
                             </div>
 
 
 
                             <div class="col-sm-4">
-                                <label for="telefone" class="bold">Telefone<span class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="tel" class="form-control" id="telefone" name="telefone">
+                                <label for="telefone" class="bold">Telefone<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="tel" class="form-control" id="telefone" name="telefone"  required>
                             </div>
                         </div>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Menu</title>
+    <title>SIGEM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -104,7 +104,8 @@
                     <div class="col-sm-5">
                         <label for="ano" class="bold">Ano<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="ano">
+                        <select class="form-control" id="ano" required>
+                            <option value="">Selecione</option>
                             <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
                         </select>
                     </div>
@@ -112,7 +113,8 @@
                     <div class="col-sm-4">
                         <label for="turma" class="bold">Turma<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="turma">
+                        <select class="form-control" id="turma" required>
+                            <option value="">Selecione</option>
                             <option value="12000 - 2º ANO">12000 - 2º ANO</option>
                             <option value="12000 - 2º ANO">11990 - MATERNAL- 1° P - 2° P-MATUTINO</option>
                         </select>
@@ -121,7 +123,7 @@
                     <div class="col-sm-3">
                         <label for="aluno" class="bold">Aluno</label>
                         <select class="form-control" id="aluno">
-                            <option value="todos">Selecione um registro</option>
+                            <option value="todos">Selecione</option>
                             <option value="todos">TODOS OS ALUNOS</option>
                         </select>
                     </div>
@@ -129,7 +131,8 @@
                     <div class="col-sm-3 mt-3">
                         <label for="modelo-documento" class="bold">Modelo de documento<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="modelo-documento">
+                        <select class="form-control" id="modelo-documento" required>
+                            <option value="">Selecione</option>
                             <option value="teste-tamanho-fonte">TESTE TAMANHO FONTE</option>
                         </select>
                     </div>
@@ -139,7 +142,6 @@
                         <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
                             Limpar</button>
                     </div>
-
                 </div>
             </form>
         </div>

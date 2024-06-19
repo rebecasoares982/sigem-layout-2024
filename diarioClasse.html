@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Menu</title>
+    <title>SIGEM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -168,22 +168,24 @@
                             <div class="col-sm-4">
                                 <label for="turmas" class="bold">Turmas<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="turmas" name="turmas">
-                                    <option value="">SELECIONE UM REGISTRO</option>
+                                <select class="form-control" id="turmas" name="turmas" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option> 
                                 </select>
                             </div>
 
                             <div class="col-sm-3">
                                 <label for="data" class="bold">Data<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data" name="data">
+                                <input type="date" class="form-control" id="data" name="data" required>
                             </div>
 
                             <div class="col-sm-4">
                                 <label for="disciplinas" class="bold">Disciplinas<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="disciplinas" name="disciplinas">
-                                    <option value="">SELECIONE UM REGISTRO</option>
+                                <select class="form-control" id="disciplinas" name="disciplinas" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
                                 </select>
                             </div>
                         </div>
@@ -192,16 +194,18 @@
                             <div class="col-sm-4">
                                 <label for="tiposRelato" class="bold">Tipos de Relato<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="tiposRelato" name="tiposRelato">
-                                    <option value="">SELECIONE UM REGISTRO</option>
+                                <select class="form-control" id="tiposRelato" name="tiposRelato" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
                                 </select>
                             </div>
 
                             <div class="col-sm-4">
                                 <label for="aluno" class="bold">Aluno<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="aluno" name="aluno">
-                                    <option value="">SELECIONE UM REGISTRO</option>
+                                <select class="form-control" id="aluno" name="aluno" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
                                 </select>
                             </div>
                         </div>
@@ -210,7 +214,7 @@
                             <div class="col-sm-8">
                                 <label for="relato" class="bold">Relato<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <textarea class="form-control" id="relato" name="relato" rows="3"></textarea>
+                                <textarea class="form-control" id="relato" name="relato" rows="3" required></textarea>
                             </div>
                         </div>
                     </form>

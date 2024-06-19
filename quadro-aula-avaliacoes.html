@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Menu</title>
+    <title>SIGEM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -98,13 +98,14 @@
                     <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
                 </div>
             </div>
-            
+
             <form class="mt-3">
                 <div class="row">
                     <div class="col-sm-5">
                         <label for="ano" class="bold">Professor<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="ano">
+                        <select class="form-control" id="ano" name="professor" required>
+                            <option value="">Selecione</option>
                             <option value="2020">ANO LETIVO 2020 - 01/01/2020 ATÉ 31/12/2020</option>
                         </select>
                     </div>
@@ -112,7 +113,8 @@
                     <div class="col-sm-2">
                         <label for="turma" class="bold">Turmas<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="turma">
+                        <select class="form-control" id="turma" name="turma" required>
+                            <option value="">Selecione</option>
                             <option value="12000 - 2º ANO">Não Reservou</option>
                             <option value="12000 - 2º ANO">Reservou</option>
                         </select>
@@ -121,7 +123,8 @@
                     <div class="col-sm-3">
                         <label for="aluno" class="bold">Período<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="aluno">
+                        <select class="form-control" id="aluno" name="aluno" required>
+                            <option value="">Selecione</option>
                             <option value="todos">TODOS OS ALUNOS</option>
                         </select>
                     </div>
@@ -129,7 +132,8 @@
                     <div class="col-sm-2">
                         <label for="modelo-documento" class="bold">Disciplinas<span class="text-danger"
                                 title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="modelo-documento">
+                        <select class="form-control" id="disciplinas" name="disciplinas" required>
+                            <option value="">Selecione</option>
                             <option value="teste-tamanho-fonte">Não Matriculado</option>
                             <option value="teste-tamanho-fonte">Matriculado</option>
                         </select>
@@ -139,7 +143,7 @@
                         <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
                         <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
                             Limpar</button>
-                    </div> 
+                    </div>
                 </div>
             </form>
         </div>
@@ -161,30 +165,34 @@
                         <form>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <label for="eixoCampo" class="bold">Avaliação (Ordem):</label>
-                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
+                                    <label for="eixoCampo" class="bold">Avaliação (Ordem)<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control" required>
                                         <option value="">Selecione Um Registro</option>
+                                        <option value="">Teste</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação:</label>
+                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação</label>
                                     <select name="eixoCampo" id="eixoCampo" class="form-control">
                                         <option value="">Selecione Um Registro</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-2">
-                                    <label for="dataCadastro" class="bold">Data:</label>
-                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro">
+                                    <label for="dataCadastro" class="bold">Data<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro" required>
                                 </div>
 
                                 <div class="col-sm-3">
-                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação:</label>
-                                    <input type="text" class="form-control" id="conteudo" name="conteudo">
+                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="conteudo" name="conteudo" required>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary btn-icon mt-4" type="button">Salvar</button>
+                                <button class="btn btn-primary btn-icon mt-4" type="submit"><i class="fas fa-save"></i> Salvar</button>
                             </div>
                         </form>
                     </div>

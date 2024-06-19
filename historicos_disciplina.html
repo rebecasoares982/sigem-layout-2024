@@ -73,64 +73,45 @@
         </header>
 
         <div class="margin-top"></div>
-
         <br>
-
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
-                <li class="breadcrumb-item"><a href="/academico.html">Alunos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cadastro de Matricula Reserva</li>
+                <li class="breadcrumb-item"><a href="/academico.html">Histórico</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Disciplinas</li>
             </ol>
         </nav>
 
-        <div class="mt-5">
-            <h4 class="text-primary"><i class="fas fa-pen"></i> Cadastro de Matricula Reserva</h4>
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Disciplinas</h4>
+            <a class="btn btn-cadastro" href=" "><i class="fas fa-user-plus"></i> Cadastrar
+                Disciplina</a>
         </div>
 
         <br>
 
         <div class="element-box">
-            <form>
+            <div class="d-flex justify-content-between">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <label for="turma" class="bold">Turma<span class="text-danger"
-                                title="Preenchimento Obrigatório">*</span></label>
-                        <select class="form-control" id="turma" name="turma" required>
-                            <option value="">Selecione</option>
-                            <option value="12000 - 2º ANO">12000 - 2º ANO</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <label for="aluno" class="bold">Aluno:</label>
-                        <select class="form-control" id="aluno">
-                            <option value="">Selecione</option>
-                            <option value="todos">TODOS OS ALUNOS</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="modelo-documento" class="bold">Situação Reserva:</label>
-                        <select class="form-control" id="modelo-documento">
-                            <option value="">Selecione</option>
-                            <option value="teste-tamanho-fonte">A confirmar</option>
-                            <option value="teste-tamanho-fonte">Confirmada</option>
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
                         </select>
                     </div>
                 </div>
-
-                <div class="d-flex justify-content-end mt-4">
-                    <button type="submit" class="btn btn-outline-primary mr-2"><i class="fas fa-times-circle"></i>
-                        Cancelar Reserva</button>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-check-circle"></i> Confirmar
-                        Reserva</button>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
                 </div>
-        </div>
-        </form>
+            </div>
 
-        <div class="element-box">
             <div class="d-flex justify-content-between mt-4">
                 <div>
                     <button type="button" class="btn btn-primary-light" title="Copiar">
@@ -155,31 +136,19 @@
                             <form id="filter-form">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
-                                    <label class="form-check-label" for="colNo">Nº</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Id" id="colId">
-                                    <label class="form-check-label" for="colId">Id</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
-                                    <label class="form-check-label" for="colEscola">Escola</label>
+                                    <label class="form-check-label" for="colNo">#</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
                                     <label class="form-check-label" for="colNome">Nome</label>
                                 </div>
                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Parte" id="colParte">
+                                    <label class="form-check-label" for="colParte">Parte</label>
+                                </div>
+                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
-                                    <label class="form-check-label" for="colMatricula">Matrícula</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Situação" id="colSituacao">
-                                    <label class="form-check-label" for="colSituacao">Situação</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
-                                    <label class="form-check-label" for="colFuncoes">Funções</label>
+                                    <label class="form-check-label" for="colMatricula">Ações</label>
                                 </div>
                                 <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
                                         class="fas fa-filter"></i> Filtrar </button>
@@ -204,32 +173,49 @@
 
             <br>
 
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead class="bg-white">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Aluno</th>
-                            <th scope="col">Turma</th>
-                            <th scope="col">Matrícula</th>
-                            <th scope="col">Situação da Reserva</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>ESCOLA TESTE</td>
-                            <td>ALUNO RECUPERACAO SEMESTRAL</td>
-                            <td>4442023369119</td>
-                            <td>CONFIRMADA</td>
-                        </tr>
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Parte</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Nenhum registro encontrado.</td>
 
-                    </tbody>
-                </table>
+                        <!--<td>
+                            <a class="dropdown-item" href="#"><i class="fas fa-trash-alt icon-delete"></i>
+                                Excluir</a> 
+                        </td>-->
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
         </div>
-    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

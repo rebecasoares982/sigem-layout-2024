@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- FullCalendar -->
-
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.css" rel="stylesheet">
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/locales/pt-br.js'></script>
-
 </head>
 
 <body>
@@ -78,71 +72,56 @@
             </div>
         </header>
 
+        <br>
         <div class="margin-top"></div>
 
+        <nav aria-label=" breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/academico.html">Histórico</a></li>
+                <li class="breadcrumb-item"><a href="historicos_informacoes.html">Informações Adicionais</a></li>
+            </ol>
+        </nav>
+
         <div class="mt-5">
-            <h2 class="text-primary"><i class="fas fa-calendar-alt"></i> Agenda</h1>
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Informações Adicionais</h4>
         </div>
 
         <br>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="p-3 bg-white text-dark rounded">
+        <div class="element-box">
+            <form>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="observacoes" class="bold">Observações<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <textarea class="form-control" id="observacoes" name="observacoes" rows="4"
+                            required></textarea>
+                    </div>
 
-                    <div id='calendar'></div>
+                    <div class="col-sm-12 mt-3">
+                        <label for="equivalencia" class="bold">Equivalência<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <textarea class="form-control" id="equivalencia" name="equivalencia" rows="4"
+                            required></textarea>
+                    </div>
+                </div> 
 
-                </div>
-            </div>
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+                </div> 
+            </form>
         </div>
-
-        <Br>
-
-        <div class="row mt-3">
-            <div class="col-sm-4">
-                <h6><i class="fas fa-calendar-alt"></i> Data: 06/03/2024 a 12/04/2024</h6>
-                <div class="card p-3 card-agenda">
-                    <h6>Nome: Reunião</h6>
-                    <h6>Categoria: Comunicados</h6>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <h6><i class="fas fa-calendar-alt"></i> Data: 06/03/2024 a 12/04/2024</h6>
-                <div class="card p-3 card-agenda">
-                    <h6>Nome: Reunião</h6>
-                    <h6>Categoria: Comunicados</h6>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <h6><i class="fas fa-calendar-alt"></i> Data: 06/03/2024 a 12/04/2024</h6>
-                <div class="card p-3 card-agenda">
-                    <h6>Nome: Reunião</h6>
-                    <h6>Categoria: Comunicados</h6>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <footer class="text-center mt-5">
-            <div class="container">
-                <p class="mb-0">&copy; 2024 Todos os direitos reservados</p>
-            </div>
-        </footer>
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
-    <script src="fullcalendar.js"></script>
     <script src="scripts.js"></script>
     <script src="menu-lateral.js"></script>
-
 </body>
 
 </html>
