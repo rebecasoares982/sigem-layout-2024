@@ -74,20 +74,20 @@
         </header>
 
         <div class="margin-top"></div>
-
         <br>
-
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
-                <li class="breadcrumb-item"><a href="/menu-academico.html">Acadêmico</a></li>
-                <li class="breadcrumb-item"><a href="/menu-academico.html">Diário de Classe</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cadastro de Ocorrências</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Pessoal</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Capacitação</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Grau de Instrução</a></li>
             </ol>
         </nav>
 
-        <div class="mt-5">
-            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Cadastro de Ocorrências</h4>
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Grau de Instrução</h4>
+            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarGrauInstrucao"><i
+                    class="fas fa-user-plus"></i> Cadastrar</button>
         </div>
 
         <br>
@@ -100,14 +100,22 @@
                 </div>
             </div>
 
-            <form class="mt-3">
+            <form>
                 <div class="row">
-                    <div class="col-sm-5">
-                        <label for="ano" class="bold">Nome:</label>
-                        <input type="text" class="form-control" id="nome">
+                    <div class="col-sm-4">
+                        <label for="ano" class="bold">Grau de Instrução:</label>
+                        <input type="text" class="form-control" id="funcao" name="funcao">
                     </div>
 
-                    <div class="col-sm-3  mt-4">
+                    <div class="col-sm-4">
+                        <label for="turma" class="bold">Grau de instrução - MEC:</label>
+                        <select class="form-control" id="turma" name="turma">
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3 mt-4">
                         <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
                         <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
                             Limpar</button>
@@ -118,35 +126,83 @@
 
         <br>
 
-        <div class="element-box mt-3">
-            <div class="d-flex justify-content-end">
-                <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarOcorrencia"><i
-                        class="fas fa-user-plus"></i> Cadastrar nova ocorrência</button>
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Listagem de Graus de Intrução</h5>
+                </div>
             </div>
 
-            <table class="table table-bordered table-striped mt-3">
+            <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
-                        <th scope="col"> </th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Código MEC</th>
+                        <th scope="col">Nome MEC</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="8">Nenhum registro encontrado.</td>
+                        <td>51</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>Superior</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>52</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Ensino Médio - Normal/Magistério</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
         </div>
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="cadastrarOcorrencia" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+    <div class="modal fade" id="cadastrarGrauInstrucao" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5>Cadastro de Ocorrência</h5>
+                    <h5>Cadastrar Grau de Instrução</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -154,75 +210,85 @@
                 <div class="modal-body">
                     <form>
                         <div class="row">
-                            <div class="col-sm-3">
-                                <label for="escola" class="bold">Escola:</label>
-                                <p>Escola Teste</p>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <label for="professor" class="bold">Professor:</label>
-                                <p>Xavier Antunes</p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label for="turmas" class="bold">Turmas<span class="text-danger"
+                            <div class="col-sm-6">
+                                <label for="ano" class="bold">Grau de Instrução<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="turmas" name="turmas" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
+                                <input type="text" class="form-control" id="funcao" name="funcao" required>
                             </div>
 
-                            <div class="col-sm-3">
-                                <label for="data" class="bold">Data<span class="text-danger"
+                            <div class="col-sm-6">
+                                <label for="turma" class="bold">Grau de instrução - MEC<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data" name="data" required>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="disciplinas" class="bold">Disciplinas<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="disciplinas" name="disciplinas" required>
+                                <select class="form-control" id="turma" name="turma" required>
                                     <option value="">Selecione</option>
                                     <option value="">Teste</option>
                                 </select>
                             </div>
                         </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-4">
-                                <label for="tiposRelato" class="bold">Tipos de Relato<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="tiposRelato" name="tiposRelato" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="aluno" class="bold">Aluno<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="aluno" name="aluno" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row mt-2">
-                            <div class="col-sm-8">
-                                <label for="relato" class="bold">Relato<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <textarea class="form-control" id="relato" name="relato" rows="3" required></textarea>
-                            </div>
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                         </div>
                     </form>
-                    <div class="d-flex justify-content-end mt-3">
-                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Grau de Instrução</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="ano" class="bold">Grau de Instrução<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="funcao" name="funcao" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="turma" class="bold">Grau de instrução - MEC<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="turma" name="turma" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
                 </div>
             </div>
         </div>

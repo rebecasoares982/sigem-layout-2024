@@ -74,123 +74,77 @@
         </header>
 
         <div class="margin-top"></div>
+
         <br>
+
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
-                <li class="breadcrumb-item"><a href="/menu-academico.html">Acadêmico</a></li>
-                <li class="breadcrumb-item"><a href="/menu-academico.html">Histórico</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Disciplinas</li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Escola</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Escola</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Documentos Oficiais</a></li>
             </ol>
         </nav>
 
         <div class="d-flex justify-content-between mt-5">
-            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Disciplinas</h4>
-            <a class="btn btn-cadastro" href=" "><i class="fas fa-user-plus"></i> Cadastrar
-                Disciplina</a>
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Documentos Oficiais</h4>
+            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarDocumentosOficiais"><i
+                    class="fas fa-user-plus"></i> Cadastrar Documentos Oficiais</button>
         </div>
 
         <br>
 
         <div class="element-box">
-            <div class="d-flex justify-content-between">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <label for="resultsPerPage">Resultados por página:</label>
-                        <select class="form-control" id="resultsPerPage">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="50">50</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <label for="search">Pesquisar:</label>
-                        <input type="text" class="form-control" id="search">
-                    </div>
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between mt-4">
-                <div>
-                    <button type="button" class="btn btn-primary-light" title="Copiar">
-                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
-                    </button>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
-                        </button>
-                        <!--<div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Nº</a>
-                        <a class="dropdown-item" href="#">Id</a>
-                        <a class="dropdown-item" href="#">Escola</a>
-                        <a class="dropdown-item" href="#">Nome</a>
-                        <a class="dropdown-item" href="#">Matrícula</a>
-                        <a class="dropdown-item" href="#">Situação</a>
-                        <a class="dropdown-item" href="#">Funções</a>
-                    </div> -->
-
-                        <div class="dropdown-menu p-3">
-                            <form id="filter-form">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
-                                    <label class="form-check-label" for="colNo">#</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
-                                    <label class="form-check-label" for="colNome">Nome</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Parte" id="colParte">
-                                    <label class="form-check-label" for="colParte">Parte</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
-                                    <label class="form-check-label" for="colMatricula">Ações</label>
-                                </div>
-                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
-                                        class="fas fa-filter"></i> Filtrar </button>
-                            </form>
-                        </div>
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="ano" class="bold">Descrição:</label>
+                        <input type="text" class="form-control" id="nome">
                     </div>
 
+                    <div class="col-sm-3 mt-4">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
+                    </div>
                 </div>
+            </form>
+        </div>
 
-                <div class="btn-group" role="group" aria-label="Exportar Dados">
-                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
-                        <i class="far fa-file-excel text-dark fa-lg"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
-                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
-                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
-                    </button>
+        <br>
+
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Listagem de Documentos Oficiais</h5>
                 </div>
             </div>
-
-            <br>
 
             <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Parte</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Descrição</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="4">Nenhum registro encontrado.</td>
-
-                        <!--<td>
-                            <a class="dropdown-item" href="#"><i class="fas fa-trash-alt icon-delete"></i>
-                                Excluir</a> 
-                        </td>-->
+                        <td>42</td>
+                        <td>Teste</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -218,6 +172,90 @@
 
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cadastrarDocumentosOficiais" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Cadastro de Documentos Oficiais</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="data" class="bold">Descrição<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="data" name="data" required>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Frequência do Funcionário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="data" class="bold">Descrição<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="data" name="data" placeholder="TESTE CADASTRO 20/06" required>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
