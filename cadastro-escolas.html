@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/menu-escola.html">Escola</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Cadastrar Escola</a></li>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Cadastrar Escola</h4>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Dados da Escola</h5>
+                </div>
+            </div>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="codInep" class="bold">Código INEP<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <input type="text" class="form-control" id="codInep" name="codInep" required>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label for="nome" class="bold">Nome<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="nomeAbreviado" class="bold">Nome Abreviado (carteira de estudante)<span
+                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                        <input type="text" class="form-control" id="nomeAbreviado" name="nomeAbreviado" required>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="bold">Status da Escola:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="ativada" name="status_escola"
+                                    value="ativada" required>
+                                <label class="form-check-label" for="ativada">Ativada</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="desativada" name="status_escola"
+                                    value="desativada" required>
+                                <label class="form-check-label" for="desativada">Desativada</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-3 mt-3">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionCadastro">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="heading3">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3"
+                            aria-expanded="true" aria-controls="collapse3">
+                            Cadastro Complementar<i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionCadastro">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="eixoCampo" class="bold">Avaliação (Ordem)<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control" required>
+                                        <option value="">Selecione Um Registro</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação</label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="dataCadastro" class="bold">Data<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="conteudo" name="conteudo" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary btn-icon mt-4" type="submit"><i class="fas fa-save"></i>
+                                    Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionInstalacaoFisica">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingInstalacaoFisica">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#collapseInstalacaoFisica" aria-expanded="true"
+                            aria-controls="collapseInstalacaoFisica">
+                            Instalação Física<i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseInstalacaoFisica" class="collapse" aria-labelledby="headingInstalacaoFisica"
+                    data-parent="#accordionInstalacaoFisica">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="escola" class="bold">Escola:</label>
+                                    <p>ESCOLA TESTE</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Abastecimento de Água?</label>
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="agua_sim" name="agua"
+                                                value="sim" required>
+                                            <label class="form-check-label" for="agua_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="agua_nao" name="agua"
+                                                value="nao" required>
+                                            <label class="form-check-label" for="agua_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="rede_publica"
+                                                name="fonte_agua" value="rede_publica">
+                                            <label class="form-check-label" for="rede_publica">Rede Pública</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="fonte_rio"
+                                                name="fonte_agua" value="fonte_rio">
+                                            <label class="form-check-label"
+                                                for="fonte_rio">Fonte/Rio/Igarapé/Riacho/Córrego</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="cacimba"
+                                                name="fonte_agua" value="cacimba">
+                                            <label class="form-check-label" for="cacimba">Cacimba/Cisterna/Poço</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="poco_artesiano"
+                                                name="fonte_agua" value="poco_artesiano">
+                                            <label class="form-check-label" for="poco_artesiano">Poço Artesiano</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="carro_pipa"
+                                                name="fonte_agua" value="carro_pipa">
+                                            <label class="form-check-label" for="carro_pipa">Carro-pipa</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Esgotamento Sanitário</label>
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="esgoto_sim" name="esgoto"
+                                                value="sim" required>
+                                            <label class="form-check-label" for="esgoto_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="esgoto_nao" name="esgoto"
+                                                value="nao" required>
+                                            <label class="form-check-label" for="esgoto_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="rede_publica"
+                                                name="esgotamento_sanitario" value="rede_publica">
+                                            <label class="form-check-label" for="rede_publica">Rede Pública</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="fossa_rudimentar"
+                                                name="esgotamento_sanitario" value="fossa_rudimentar">
+                                            <label class="form-check-label" for="fossa_rudimentar">Fossa
+                                                rudimentar/comum</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="fossa_septica"
+                                                name="esgotamento_sanitario" value="fossa_septica">
+                                            <label class="form-check-label" for="fossa_septica">Fossa
+                                                Séptica</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="bold">Destinação do Lixo</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lixo_servico_coleta"
+                                                name="lixo[]" value="servico_coleta">
+                                            <label class="form-check-label" for="lixo_servico_coleta">Serviço de
+                                                Coleta</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lixo_descarta"
+                                                name="lixo[]" value="descarta">
+                                            <label class="form-check-label" for="lixo_descarta">Descarta em outra
+                                                área</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lixo_queima"
+                                                name="lixo[]" value="queima">
+                                            <label class="form-check-label" for="lixo_queima">Queima</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="lixo_enterra"
+                                                name="lixo[]" value="enterra">
+                                            <label class="form-check-label" for="lixo_enterra">Enterra</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="lixo_destinacao_licenciada" name="lixo[]"
+                                                value="destinacao_licenciada">
+                                            <label class="form-check-label" for="lixo_destinacao_licenciada">Leva a
+                                                uma
+                                                destinação final licenciada pelo poder público</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="bold">Tratamento do Lixo/resíduos que a escola
+                                            realiza:</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="tratamento_separacao"
+                                                name="tratamento[]" value="separacao">
+                                            <label class="form-check-label" for="tratamento_separacao">Separação do
+                                                lixo/resíduos</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="tratamento_reaproveitamento" name="tratamento[]"
+                                                value="reaproveitamento">
+                                            <label class="form-check-label"
+                                                for="tratamento_reaproveitamento">Reaproveitamento/reutilização</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="tratamento_reciclagem"
+                                                name="tratamento[]" value="reciclagem">
+                                            <label class="form-check-label"
+                                                for="tratamento_reciclagem">Reciclagem</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="tratamento_nao_faz"
+                                                name="tratamento[]" value="nao_faz">
+                                            <label class="form-check-label" for="tratamento_nao_faz">Não faz
+                                                tratamento</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="bold">Fonte de energia elétrica:</label>
+                                        <Br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="energia_sim" name="energia"
+                                                value="sim" required>
+                                            <label class="form-check-label" for="energia_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="energia_nao" name="energia"
+                                                value="nao" required>
+                                            <label class="form-check-label" for="energia_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="rede_publica"
+                                                name="fonte_energia" value="rede_publica">
+                                            <label class="form-check-label" for="rede_publica">Rede pública</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="gerador_combustivel_fossil" name="fonte_energia"
+                                                value="gerador_combustivel_fossil">
+                                            <label class="form-check-label" for="gerador_combustivel_fossil">Gerador
+                                                Movido a
+                                                Combustível Fóssil</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="fontes_renovaveis"
+                                                name="fonte_energia" value="fontes_renovaveis">
+                                            <label class="form-check-label" for="fontes_renovaveis">Fontes de energia
+                                                renováveis
+                                                ou alternativas (gerador a biocombustível e/ou biodigestores, eólica,
+                                                solar,
+                                                outras)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="voltagem" class="bold">Voltagem disponível:</label>
+                                    <select class="form-control" id="voltagem" name="voltagem">
+                                        <option value="">Selecione</option>
+                                        <option value="110V">110V</option>
+                                        <option value="220V">220V</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label class="bold">Recursos de acessibilidade para pessoas com deficiência ou
+                                            mobilidade reduzida nas vias de circulação internas na escola:</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="acessibilidade_corrimao"
+                                                name="acessibilidade[]" value="corrimao">
+                                            <label class="form-check-label" for="acessibilidade_corrimao">Corrimão e
+                                                guarda-corpos</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="acessibilidade_elevador"
+                                                name="acessibilidade[]" value="elevador">
+                                            <label class="form-check-label"
+                                                for="acessibilidade_elevador">Elevador</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="acessibilidade_pisos"
+                                                name="acessibilidade[]" value="pisos">
+                                            <label class="form-check-label" for="acessibilidade_pisos">Pisos
+                                                Táteis</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="acessibilidade_portas"
+                                                name="acessibilidade[]" value="portas">
+                                            <label class="form-check-label" for="acessibilidade_portas">Portas com vão
+                                                livre de
+                                                no mínimo 80cm</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="acessibilidade_rampas"
+                                                name="acessibilidade[]" value="rampas">
+                                            <label class="form-check-label" for="acessibilidade_rampas">Rampas</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="acessibilidade_sinalizacao_sonora" name="acessibilidade[]"
+                                                value="sinalizacao_sonora">
+                                            <label class="form-check-label"
+                                                for="acessibilidade_sinalizacao_sonora">Sinalização
+                                                Sonora</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="acessibilidade_sinalizacao_tatil" name="acessibilidade[]"
+                                                value="sinalizacao_tatil">
+                                            <label class="form-check-label"
+                                                for="acessibilidade_sinalizacao_tatil">Sinalização
+                                                Tátil</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="acessibilidade_sinalizacao_visual" name="acessibilidade[]"
+                                                value="sinalizacao_visual">
+                                            <label class="form-check-label"
+                                                for="acessibilidade_sinalizacao_visual">Sinalização
+                                                visual (piso/paredes)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="acessibilidade_sinalizacao_alarme" name="acessibilidade[]"
+                                                value="sinalizacao_alarme">
+                                            <label class="form-check-label"
+                                                for="acessibilidade_sinalizacao_alarme">Sinalização/alarme
+                                                luminoso</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="acessibilidade_nenhum"
+                                                name="acessibilidade[]" value="nenhum">
+                                            <label class="form-check-label" for="acessibilidade_nenhum">Nenhum dos
+                                                recursos de
+                                                acessibilidade listados</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5>Sala de Aula:</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="salas_dentro" class="bold">Dentro do prédio<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label> 
+                                    <input type="text" class="form-control" id="salas_dentro" name="salas_dentro"
+                                        value="10" required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="salas_fora" class="bold">Fora do prédio<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="salas_fora" name="salas_fora"
+                                        value="9" required>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="salas_climatizadas" class="bold">Salas Climatizadas (ar
+                                        condicionado,
+                                        aquecedor ou climatizador)<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="salas_climatizadas"
+                                        name="salas_climatizadas" value="8" required>
+                                </div>
+
+                                <div class="col-sm-6 mt-2">
+                                    <label for="salas_acessibilidade" class="bold">Salas com acessibilidade para
+                                        pessoa com
+                                        deficiência ou mobilidade reduzida<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="salas_acessibilidade"
+                                        name="salas_acessibilidade" value="7" required>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionFuncionamento">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingFuncionamento">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#collapseFuncionamento" aria-expanded="true"
+                            aria-controls="collapseFuncionamento">
+                            Funcionamento<i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFuncionamento" class="collapse" aria-labelledby="headingFuncionamento"
+                    data-parent="#accordionFuncionamento">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="eixoCampo" class="bold">Avaliação (Ordem)<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control" required>
+                                        <option value="">Selecione Um Registro</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação</label>
+                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
+                                        <option value="">Selecione Um Registro</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="dataCadastro" class="bold">Data<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="conteudo" name="conteudo" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary btn-icon mt-4" type="submit"><i class="fas fa-save"></i>
+                                    Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionPredio">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingPredio">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsePredio"
+                            aria-expanded="true" aria-controls="collapsePredio">
+                            Prédio<i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapsePredio" class="collapse" aria-labelledby="headingPredio"
+                    data-parent="#accordionPredio">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="escola" class="bold">Escola:</label>
+                                    <p>Escola Teste</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="ano_construcao" class="bold">Ano da Construção:</label>
+                                    <input type="text" class="form-control" id="ano_construcao" name="ano_construcao"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="codigo_predio" class="bold">Código do prédio:</label>
+                                    <input type="text" class="form-control" id="codigo_predio" name="codigo_predio"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="forma_ocupacao" class="bold">Forma de Ocupação do Prédio<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="forma_ocupacao" name="forma_ocupacao" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="entidade_proprietaria" class="bold">Entidade Proprietária<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="entidade_proprietaria" name="entidade_proprietaria"
+                                        required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="numero_pavimentos" class="bold">Número de Pavimentos:</label>
+                                    <input type="text" class="form-control" id="numero_pavimentos"
+                                        name="numero_pavimentos" required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="tamanho_terreno" class="bold">Tamanho do Terreno (m²):</label>
+                                    <input type="text" class="form-control" id="tamanho_terreno" name="tamanho_terreno"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="area_construida" class="bold">Área construída (m²):</label>
+                                    <input type="text" class="form-control" id="area_construida" name="area_construida"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="valor_terreno" class="bold">Valor do m² do terreno:</label>
+                                    <input type="text" class="form-control" id="valor_terreno" name="valor_terreno"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="valor_area_construida" class="bold">Valor do m² (área
+                                        construída):</label>
+                                    <input type="text" class="form-control" id="valor_area_construida"
+                                        name="valor_area_construida" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label class="bold">Possui muros:</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="possui_muros_sim"
+                                                name="possui_muros" value="sim" required>
+                                            <label class="form-check-label" for="possui_muros_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="possui_muros_nao"
+                                                name="possui_muros" value="nao" required>
+                                            <label class="form-check-label" for="possui_muros_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Compartilha Espaço com Outras Escolas:</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="compartilha_espaco_sim"
+                                                name="compartilha_espaco" value="sim" required>
+                                            <label class="form-check-label" for="compartilha_espaco_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="compartilha_espaco_nao"
+                                                name="compartilha_espaco" value="nao" required>
+                                            <label class="form-check-label" for="compartilha_espaco_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-4">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
+                                    Salvar</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionEquipamentos">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingEquipamentos">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#collapseEquipamentos" aria-expanded="true"
+                            aria-controls="collapseEquipamentos">
+                            Equipamentos <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEquipamentos" class="collapse" aria-labelledby="headingEquipamentos"
+                    data-parent="#accordionEquipamentos">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="escola" class="bold">Escola:</label>
+                                    <p>Escola Teste</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="tipo_dependencia" class="bold">Equipamento<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="tipo_dependencia" name="tipo_dependencia" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Equipamento para uso técnico administrativo<span
+                                                class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="equipamento_tec_adm_sim"
+                                                name="equipamento_tec_adm" value="sim" required>
+                                            <label class="form-check-label" for="equipamento_tec_adm_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="equipamento_tec_adm_nao"
+                                                name="equipamento_tec_adm" value="nao" required>
+                                            <label class="form-check-label" for="equipamento_tec_adm_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="quantidade_tec_adm" class="bold">Quantidade<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="number" class="form-control" id="quantidade_tec_adm"
+                                        name="quantidade_tec_adm" value="10" required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Equipamento para processo ensino aprendizagem<span
+                                                class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="equipamento_ensino_sim"
+                                                name="equipamento_ensino" value="sim" required>
+                                            <label class="form-check-label" for="equipamento_ensino_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="equipamento_ensino_nao"
+                                                name="equipamento_ensino" value="nao" required>
+                                            <label class="form-check-label" for="equipamento_ensino_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="quantidade_tec_adm" class="bold">Quantidade<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="number" class="form-control" id="quantidade_tec_adm"
+                                        name="quantidade_tec_adm" value="10" required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Equipamento em uso pelos alunos<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="equipamento_alunos_sim"
+                                                name="equipamento_alunos" value="sim" required>
+                                            <label class="form-check-label" for="equipamento_alunos_sim">Sim</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="equipamento_alunos_nao"
+                                                name="equipamento_alunos" value="nao" required>
+                                            <label class="form-check-label" for="equipamento_alunos_nao">Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="quantidade_tec_adm" class="bold">Quantidade<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="number" class="form-control" id="quantidade_tec_adm"
+                                        name="quantidade_tec_adm" value="10" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <button class="btn btn-primary btn-icon mt-4" type="submit">
+                                        <i class="fas fa-plus"></i> Adicionar Equipamento
+                                    </button>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <h5 class="mb-2">Listagem de Dependências da Escola</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Código</th>
+                                            <th>Nome</th>
+                                            <th>Quantidade Total</th>
+                                            <th>Dados Específicos</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12850</td>
+                                            <td>COMPUTADOR PORTÁTIL</td>
+                                            <td>30
+
+                                                Em uso pelos alunos: 10
+                                                Uso técnico e administrativo: 10
+                                                Processo ensino de aprendizagem: 10</td>
+                                            <td>Banda Larga: Não
+                                                Acesso Internet: Não</td>
+                                            <td>
+                                                <a href="##"><i class="fas fa-edit icon-edit" title="Editar"
+                                                        data-toggle="modal" data-target="#editar"></i></a>
+                                                <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                        data-target="#excluir"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionDependencia">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingDependencia">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#collapseDependencia" aria-expanded="true" aria-controls="collapseDependencia">
+                            Dependência <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseDependencia" class="collapse" aria-labelledby="headingDependencia"
+                    data-parent="#accordionDependencia">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="escola" class="bold">Escola:</label>
+                                    <p>Escola Teste</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="tipo_dependencia" class="bold">Tipo de Dependência:</label>
+                                    <select class="form-control" id="tipo_dependencia" name="tipo_dependencia" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="localizacao" class="bold">Localização:</label>
+                                    <select class="form-control" id="localizacao" name="localizacao" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="dependencia" class="bold">Dependência:</label>
+                                    <input type="text" class="form-control" id="dependencia" name="dependencia"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label for="descricao_dependencia" class="bold">Descrição da
+                                        Dependência:</label>
+                                    <input type="text" class="form-control" id="descricao_dependencia"
+                                        name="descricao_dependencia" required>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="bold">Permanente:</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="permanente_nao"
+                                                name="permanente" value="nao" required>
+                                            <label class="form-check-label" for="permanente_nao">Não</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="permanente_sim"
+                                                name="permanente" value="sim" required>
+                                            <label class="form-check-label" for="permanente_sim">Sim</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="bold">Situação:</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="situacao_ativa" name="situacao"
+                                            value="ativa" required>
+                                        <label class="form-check-label" for="situacao_ativa">Ativa</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="situacao_inativa"
+                                            name="situacao" value="inativa" required>
+                                        <label class="form-check-label" for="situacao_inativa">Inativa</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Dependência
+                                    </button>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <h5 class="mb-2">Listagem de Dependências da Escola</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Dependência</th>
+                                            <th>Descrição</th>
+                                            <th>Tipo</th>
+                                            <th>Situação</th>
+                                            <th>Localização</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Teste</td>
+                                            <td>Teste Descrição</td>
+                                            <td>Almoxarifado</td>
+                                            <td>Ativo</td>
+                                            <td>Fora</td>
+                                            <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
+                                                    data-toggle="modal" data-target="#excluir"><i
+                                                        class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="equipamento" class="bold">Equipamento<span class="text-danger"
+                                    title="Preenchimento Obrigatório">*</span></label>
+                            <p>COMPUTADOR PORTÁTIL</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="bold">Equipamento para uso técnico administrativo<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="equipamento_tec_adm_sim"
+                                            name="equipamento_tec_adm" value="sim" required>
+                                        <label class="form-check-label" for="equipamento_tec_adm_sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="equipamento_tec_adm_nao"
+                                            name="equipamento_tec_adm" value="nao" required>
+                                        <label class="form-check-label" for="equipamento_tec_adm_nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="quantidade_tec_adm" class="bold">Quantidade<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="number" class="form-control" id="quantidade_tec_adm"
+                                    name="quantidade_tec_adm" value="10" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="bold">Equipamento para processo ensino aprendizagem<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="equipamento_ensino_sim"
+                                            name="equipamento_ensino" value="sim" required>
+                                        <label class="form-check-label" for="equipamento_ensino_sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="equipamento_ensino_nao"
+                                            name="equipamento_ensino" value="nao" required>
+                                        <label class="form-check-label" for="equipamento_ensino_nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="quantidade_tec_adm" class="bold">Quantidade<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="number" class="form-control" id="quantidade_tec_adm"
+                                    name="quantidade_tec_adm" value="10" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="bold">Equipamento em uso pelos alunos<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="equipamento_alunos_sim"
+                                            name="equipamento_alunos" value="sim" required>
+                                        <label class="form-check-label" for="equipamento_alunos_sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="equipamento_alunos_nao"
+                                            name="equipamento_alunos" value="nao" required>
+                                        <label class="form-check-label" for="equipamento_alunos_nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="quantidade_tec_adm" class="bold">Quantidade<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="number" class="form-control" id="quantidade_tec_adm"
+                                    name="quantidade_tec_adm" value="10" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="bold">Possui banda larga:</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="banda_larga_sim"
+                                            name="banda_larga" value="sim">
+                                        <label class="form-check-label" for="banda_larga_sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="banda_larga_nao"
+                                            name="banda_larga" value="nao">
+                                        <label class="form-check-label" for="banda_larga_nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="bold">Possui acesso à internet:</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="acesso_internet_sim"
+                                            name="acesso_internet" value="sim">
+                                        <label class="form-check-label" for="acesso_internet_sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="acesso_internet_nao"
+                                            name="acesso_internet" value="nao">
+                                        <label class="form-check-label" for="acesso_internet_nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>

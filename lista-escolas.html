@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+        <br>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/menu-escola.html">Escola</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Lista de Escolas</a></li>
+            </ol>
+        </nav>
+
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Lista de Escolas</h4>
+            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarEscola"><i
+                    class="fas fa-user-plus"></i> Cadastrar</button>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">Nº</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Código INEP</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>20844</td>
+                        <td>12121212</td>
+                        <td>ESCOLA TESTE</td>
+                        <td>Ativo</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cadastrarEscola" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="nomeFuncao" class="bold">Nome da Função<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="nomeFuncao" name="nomeFuncao" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="funcaoMEC" class="bold">Função - MEC<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="funcaoMEC" name="funcaoMEC" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Agrônomo">Agrônomo</option>
+                                    <option value="Horticultor">Horticultor</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 mt-3">
+                                <label class="bold">Funções Relacionadas:</label><br>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao1"
+                                        value="Agrônomos(as), horticultores(as), técnicos ou monitores(as) responsáveis pela gestão da área de horta, plantio e/ou produção agrícola"
+                                        required>
+                                    <label class="form-check-label" for="funcao1">
+                                        Agrônomos(as), horticultores(as), técnicos ou monitores(as) responsáveis pela
+                                        gestão da área de horta, plantio e/ou produção agrícola
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao2"
+                                        value="Auxiliares de secretaria ou auxiliares administrativos, atendentes"
+                                        required>
+                                    <label class="form-check-label" for="funcao2">
+                                        Auxiliares de secretaria ou auxiliares administrativos, atendentes
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao3"
+                                        value="Auxiliar de serviços gerais, porteiro(a), zelador(a), faxineiro(a), jardineiro(a)"
+                                        required>
+                                    <label class="form-check-label" for="funcao3">
+                                        Auxiliar de serviços gerais, porteiro(a), zelador(a), faxineiro(a),
+                                        jardineiro(a)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao4"
+                                        value="Bibliotecário(a), auxiliar de biblioteca ou monitor(a) da sala de leitura"
+                                        required>
+                                    <label class="form-check-label" for="funcao4">
+                                        Bibliotecário(a), auxiliar de biblioteca ou monitor(a) da sala de leitura
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao5"
+                                        value="Bombeiro(a) brigadista, profissionais de assistência a saúde (urgência e emergência), enfermeiro(a), técnico(a) de enfermagem e socorrista"
+                                        required>
+                                    <label class="form-check-label" for="funcao5">
+                                        Bombeiro(a) brigadista, profissionais de assistência a saúde (urgência e
+                                        emergência), enfermeiro(a), técnico(a) de enfermagem e socorrista
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao6"
+                                        value="Coordenador(a) de turno/disciplinar" required>
+                                    <label class="form-check-label" for="funcao6">
+                                        Coordenador(a) de turno/disciplinar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao7"
+                                        value="Fonoaudiólogo(a)" required>
+                                    <label class="form-check-label" for="funcao7">
+                                        Fonoaudiólogo(a)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao8"
+                                        value="Tradutor e Intérprete de Libras para atendimento em outros ambientes da escola que não seja sala de aula"
+                                        required>
+                                    <label class="form-check-label" for="funcao8">
+                                        Tradutor e Intérprete de Libras para atendimento em outros ambientes da escola
+                                        que não seja sala de aula
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao9"
+                                        value="Nutricionista" required>
+                                    <label class="form-check-label" for="funcao9">
+                                        Nutricionista
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao10"
+                                        value="Psicólogo(a) escolar" required>
+                                    <label class="form-check-label" for="funcao10">
+                                        Psicólogo(a) escolar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao11"
+                                        value="Profissionais de preparação e segurança alimentar, cozinheiro(a), merendeira e auxiliar de cozinha"
+                                        required>
+                                    <label class="form-check-label" for="funcao11">
+                                        Profissionais de preparação e segurança alimentar, cozinheiro(a), merendeira e
+                                        auxiliar de cozinha
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao12"
+                                        value="Profissionais de apoio e supervisão pedagógica: (pedagogo(a), coordenador(a) pedagógico(a), orientador(a) educacional, supervisor(a) escolar e coordenador(a) de área de ensino"
+                                        required>
+                                    <label class="form-check-label" for="funcao12">
+                                        Profissionais de apoio e supervisão pedagógica: (pedagogo(a), coordenador(a)
+                                        pedagógico(a), orientador(a) educacional, supervisor(a) escolar e coordenador(a)
+                                        de área de ensino
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao13"
+                                        value="Revisor de texto Braille, assistente vidente (assistente de revisão do texto em Braille)"
+                                        required>
+                                    <label class="form-check-label" for="funcao13">
+                                        Revisor de texto Braille, assistente vidente (assistente de revisão do texto em
+                                        Braille)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao14"
+                                        value="Secretário(a) escolar" required>
+                                    <label class="form-check-label" for="funcao14">
+                                        Secretário(a) escolar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao15"
+                                        value="Segurança, guarda ou segurança patrimonial" required>
+                                    <label class="form-check-label" for="funcao15">
+                                        Segurança, guarda ou segurança patrimonial
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao16"
+                                        value="Técnicos(as), monitores(as), supervisores(as) ou auxiliares de laboratório(s), de apoio a tecnologias educacionais ou em multimeios/multimídias eletrônico-digitais"
+                                        required>
+                                    <label class="form-check-label" for="funcao16">
+                                        Técnicos(as), monitores(as), supervisores(as) ou auxiliares de laboratório(s),
+                                        de apoio a tecnologias educacionais ou em multimeios/multimídias
+                                        eletrônico-digitais
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao17"
+                                        value="Vice-diretor(a) ou diretor(a) adjunto(a), profissionais responsáveis pela gestão administrativa e/ou financeira"
+                                        required>
+                                    <label class="form-check-label" for="funcao17">
+                                        Vice-diretor(a) ou diretor(a) adjunto(a), profissionais responsáveis pela gestão
+                                        administrativa e/ou financeira
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao18"
+                                        value="Orientador(a) comunitário(a) ou assistente social" required>
+                                    <label class="form-check-label" for="funcao18">
+                                        Orientador(a) comunitário(a) ou assistente social
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao19"
+                                        value="Nenhuma das funções listadas" required>
+                                    <label class="form-check-label" for="funcao19">
+                                        Nenhuma das funções listadas
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <br>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="nomeFuncao" class="bold">Nome da Função<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="nomeFuncao" name="nomeFuncao"
+                                    placeholder="TESTE" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="funcaoMEC" class="bold">Função - MEC<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="funcaoMEC" name="funcaoMEC" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Agrônomo">Agrônomo</option>
+                                    <option value="Horticultor">Horticultor</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 mt-3">
+                                <label class="bold">Funções Relacionadas:</label><br>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao1"
+                                        value="Agrônomos(as), horticultores(as), técnicos ou monitores(as) responsáveis pela gestão da área de horta, plantio e/ou produção agrícola"
+                                        required>
+                                    <label class="form-check-label" for="funcao1">
+                                        Agrônomos(as), horticultores(as), técnicos ou monitores(as) responsáveis pela
+                                        gestão da área de horta, plantio e/ou produção agrícola
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao2"
+                                        value="Auxiliares de secretaria ou auxiliares administrativos, atendentes"
+                                        required>
+                                    <label class="form-check-label" for="funcao2">
+                                        Auxiliares de secretaria ou auxiliares administrativos, atendentes
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao3"
+                                        value="Auxiliar de serviços gerais, porteiro(a), zelador(a), faxineiro(a), jardineiro(a)"
+                                        required>
+                                    <label class="form-check-label" for="funcao3">
+                                        Auxiliar de serviços gerais, porteiro(a), zelador(a), faxineiro(a),
+                                        jardineiro(a)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao4"
+                                        value="Bibliotecário(a), auxiliar de biblioteca ou monitor(a) da sala de leitura"
+                                        required>
+                                    <label class="form-check-label" for="funcao4">
+                                        Bibliotecário(a), auxiliar de biblioteca ou monitor(a) da sala de leitura
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao5"
+                                        value="Bombeiro(a) brigadista, profissionais de assistência a saúde (urgência e emergência), enfermeiro(a), técnico(a) de enfermagem e socorrista"
+                                        required>
+                                    <label class="form-check-label" for="funcao5">
+                                        Bombeiro(a) brigadista, profissionais de assistência a saúde (urgência e
+                                        emergência), enfermeiro(a), técnico(a) de enfermagem e socorrista
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao6"
+                                        value="Coordenador(a) de turno/disciplinar" required>
+                                    <label class="form-check-label" for="funcao6">
+                                        Coordenador(a) de turno/disciplinar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao7"
+                                        value="Fonoaudiólogo(a)" required>
+                                    <label class="form-check-label" for="funcao7">
+                                        Fonoaudiólogo(a)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao8"
+                                        value="Tradutor e Intérprete de Libras para atendimento em outros ambientes da escola que não seja sala de aula"
+                                        required>
+                                    <label class="form-check-label" for="funcao8">
+                                        Tradutor e Intérprete de Libras para atendimento em outros ambientes da escola
+                                        que não seja sala de aula
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao9"
+                                        value="Nutricionista" required>
+                                    <label class="form-check-label" for="funcao9">
+                                        Nutricionista
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao10"
+                                        value="Psicólogo(a) escolar" required>
+                                    <label class="form-check-label" for="funcao10">
+                                        Psicólogo(a) escolar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao11"
+                                        value="Profissionais de preparação e segurança alimentar, cozinheiro(a), merendeira e auxiliar de cozinha"
+                                        required>
+                                    <label class="form-check-label" for="funcao11">
+                                        Profissionais de preparação e segurança alimentar, cozinheiro(a), merendeira e
+                                        auxiliar de cozinha
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao12"
+                                        value="Profissionais de apoio e supervisão pedagógica: (pedagogo(a), coordenador(a) pedagógico(a), orientador(a) educacional, supervisor(a) escolar e coordenador(a) de área de ensino"
+                                        required>
+                                    <label class="form-check-label" for="funcao12">
+                                        Profissionais de apoio e supervisão pedagógica: (pedagogo(a), coordenador(a)
+                                        pedagógico(a), orientador(a) educacional, supervisor(a) escolar e coordenador(a)
+                                        de área de ensino
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao13"
+                                        value="Revisor de texto Braille, assistente vidente (assistente de revisão do texto em Braille)"
+                                        required>
+                                    <label class="form-check-label" for="funcao13">
+                                        Revisor de texto Braille, assistente vidente (assistente de revisão do texto em
+                                        Braille)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao14"
+                                        value="Secretário(a) escolar" required>
+                                    <label class="form-check-label" for="funcao14">
+                                        Secretário(a) escolar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao15"
+                                        value="Segurança, guarda ou segurança patrimonial" required>
+                                    <label class="form-check-label" for="funcao15">
+                                        Segurança, guarda ou segurança patrimonial
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao16"
+                                        value="Técnicos(as), monitores(as), supervisores(as) ou auxiliares de laboratório(s), de apoio a tecnologias educacionais ou em multimeios/multimídias eletrônico-digitais"
+                                        required>
+                                    <label class="form-check-label" for="funcao16">
+                                        Técnicos(as), monitores(as), supervisores(as) ou auxiliares de laboratório(s),
+                                        de apoio a tecnologias educacionais ou em multimeios/multimídias
+                                        eletrônico-digitais
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao17"
+                                        value="Vice-diretor(a) ou diretor(a) adjunto(a), profissionais responsáveis pela gestão administrativa e/ou financeira"
+                                        required>
+                                    <label class="form-check-label" for="funcao17">
+                                        Vice-diretor(a) ou diretor(a) adjunto(a), profissionais responsáveis pela gestão
+                                        administrativa e/ou financeira
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao18"
+                                        value="Orientador(a) comunitário(a) ou assistente social" required>
+                                    <label class="form-check-label" for="funcao18">
+                                        Orientador(a) comunitário(a) ou assistente social
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="funcaoRelacionada" id="funcao19"
+                                        value="Nenhuma das funções listadas" required>
+                                    <label class="form-check-label" for="funcao19">
+                                        Nenhuma das funções listadas
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <br>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>
