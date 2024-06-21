@@ -84,12 +84,12 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/menu-escola.html">Escola</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Eventos da Escola</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Unidades Executoras</a></li>
             </ol>
         </nav>
 
         <div class="d-flex justify-content-between mt-5">
-            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Eventos da Escola</h4>
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Unidades Executoras</h4>
             <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarDocumentosOficiais"><i
                     class="fas fa-user-plus"></i> Cadastrar Unidade Executora</button>
         </div>
@@ -125,11 +125,17 @@
         <div class="element-box">
             <div class="element-wrapper">
                 <div class="element-header">
-                    <h5>Listagem de Eventos da Escola</h5>
+                    <h5>Listagem de Unidades Executoras</h5>
                 </div>
             </div>
 
-            <table class="table table-bordered table-striped">
+            <div class="alert alert-primary" role="alert">
+                <i class="fas fa-exclamation-triangle"></i> Nenhum Registro Encontrado
+            </div>
+
+            <br>
+
+            <!--<table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
                         <th scope="col">Código</th>
@@ -173,100 +179,258 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="cadastrarDocumentosOficiais" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Cadastro Eventos da Escola</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <label for="data" class="bold">Descrição<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="data" name="data" required>
-                            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="cadastrarDocumentosOficiais" tabindex="-1" role="dialog"
+                aria-labelledby="excluirLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Cadastro Eventos da Escola</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+                        <div class="modal-body">
+                            <form>
+                                <h5>Cadastrar</h5>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="nome" class="bold">Nome<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="nome" name="nome" required>
+                                    </div>
+                                </div>
 
-                        <div class="d-flex justify-content-end mt-4">
-                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                                <br>
+
+                                <h5>Endereço</h5>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="rua" class="bold">Rua<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="rua" name="rua" required>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="bairro" class="bold">Bairro<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="bairro" name="bairro" required>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="cep" class="bold">CEP<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="cep" name="cep" required>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="numero" class="bold">Número<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="numero" name="numero" required>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label for="complemento" class="bold">Complemento<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="complemento" name="complemento">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="complemento" class="bold">CEP<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="complemento" name="complemento">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="estado" class="bold">Estado<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="estado" name="estado" required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="municipio" class="bold">Município<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="municipio" name="municipio" required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label for="complemento" class="bold">Telefone<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="complemento" name="complemento">
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <h5>Dados Bancários</h5>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="banco" class="bold">Banco<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="banco" name="banco" required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="nome_agencia" class="bold">Nome da Agência<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="nome_agencia" name="nome_agencia"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="agencia" class="bold">Agência<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="agencia" name="agencia" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="estado_agencia" class="bold">Estado da Agência<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="estado_agencia" name="estado_agencia" required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="municipio_agencia" class="bold">Município da Agência<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="municipio_agencia" name="municipio_agencia"
+                                            required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="cep_agencia" class="bold">CEP<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="cep_agencia" name="cep_agencia"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="conta_corrente" class="bold">Conta-corrente<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="conta_corrente"
+                                            name="conta_corrente" required>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <h5>Dirigente</h5>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="nome_dirigente" class="bold">Nome do Dirigente<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="nome_dirigente"
+                                            name="nome_dirigente" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="rg" class="bold">RG<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="rg" name="rg" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="orgao_emissor_rg" class="bold">Órgão Emissor do RG<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="orgao_emissor_rg" name="orgao_emissor_rg"
+                                            required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="rg_expedicao" class="bold">RG Expedição<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="date" class="form-control" id="rg_expedicao" name="rg_expedicao"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="cpf" class="bold">CPF<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="cpf" name="cpf" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="rua_dirigente" class="bold">Rua<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="rua_dirigente" name="rua_dirigente"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="numero_dirigente" class="bold">Número<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="numero_dirigente"
+                                            name="numero_dirigente" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="bairro_dirigente" class="bold">Bairro<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="bairro_dirigente"
+                                            name="bairro_dirigente" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="complemento_dirigente" class="bold">Complemento<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="complemento_dirigente"
+                                            name="complemento_dirigente">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="cep_dirigente" class="bold">CEP<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="cep_dirigente" name="cep_dirigente"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="estado_dirigente" class="bold">Estado do Dirigente<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="estado_dirigente" name="estado_dirigente"
+                                            required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="telefone_dirigente" class="bold">Telefone<span class="text-danger"
+                                                title="Preenchimento Obrigatório">*</span></label>
+                                        <input type="text" class="form-control" id="telefone_dirigente"
+                                            name="telefone_dirigente" required>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="municipio_dirigente" class="bold">Município do Dirigente<span
+                                                class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                        <select class="form-control" id="municipio_dirigente" name="municipio_dirigente"
+                                            required>
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </form>
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Editar Cadastro de Eventos da Escola</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <label for="data" class="bold">Descrição<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="data" name="data"
-                                    placeholder="TESTE CADASTRO 20/06" required>
-                            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Deseja excluir as informações?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+                        <div class="modal-body text-center">
+                            <button class="btn btn-primary">Sim</button>
+                            <button class="btn btn-secondary">Não</button>
 
-                        <div class="d-flex justify-content-end mt-4">
-                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                         </div>
-                    </form>
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Deseja excluir as informações?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <button class="btn btn-primary">Sim</button>
-                    <button class="btn btn-secondary">Não</button>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
+            <!---->
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
-    <script src="scripts.js"></script>
-    <script src="menu-lateral.js"></script>
+            <script src="scripts.js"></script>
+            <script src="menu-lateral.js"></script>
 </body>
 
 </html>

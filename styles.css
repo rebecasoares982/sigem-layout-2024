@@ -34,7 +34,7 @@ a:focus {
     background-color: #ffffff;
     padding-top: 20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-}  
+}
 
 @media (min-width: 320px) and (max-width:359px) {
     .element-box {
@@ -703,4 +703,19 @@ footer {
     margin-bottom: 2rem;
     position: relative;
     z-index: 1;
+}
+
+.add-category-btn {
+    cursor: pointer;
+}
+
+#new-category-section {
+    display: none;
+}
+
+.container#new-category-section {
+    background-color: #eaeaea;
+    border-radius: 8px;
+    padding: 15px;
+    margin: auto;
 }
