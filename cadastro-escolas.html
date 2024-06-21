@@ -84,6 +84,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/menu-escola.html">Escola</a></li>
+                <li class="breadcrumb-item"><a href="/lista-escolas.html">Lista de Escolas</a></li>
                 <li class="breadcrumb-item active" aria-current="page"> Cadastrar Escola</a></li>
             </ol>
         </nav>
@@ -526,7 +527,7 @@
                             <div class="row">
                                 <div class="col-sm-3">
                                     <label for="salas_dentro" class="bold">Dentro do prédio<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label> 
+                                            title="Preenchimento Obrigatório">*</span></label>
                                     <input type="text" class="form-control" id="salas_dentro" name="salas_dentro"
                                         value="10" required>
                                 </div>
@@ -534,8 +535,8 @@
                                 <div class="col-sm-3">
                                     <label for="salas_fora" class="bold">Fora do prédio<span class="text-danger"
                                             title="Preenchimento Obrigatório">*</span></label>
-                                    <input type="text" class="form-control" id="salas_fora" name="salas_fora"
-                                        value="9" required>
+                                    <input type="text" class="form-control" id="salas_fora" name="salas_fora" value="9"
+                                        required>
                                 </div>
 
                                 <div class="col-sm-6">
@@ -581,38 +582,606 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-sm-3">
-                                    <label for="eixoCampo" class="bold">Avaliação (Ordem)<span class="text-danger"
-                                            title="Preenchimento Obrigatório">*</span></label>
-                                    <select name="eixoCampo" id="eixoCampo" class="form-control" required>
-                                        <option value="">Selecione Um Registro</option>
-                                        <option value="">Teste</option>
-                                    </select>
+                                <div class="col-sm-12">
+                                    <label class="bold">Escola:</label>
+                                    <p>ESCOLA TESTE</p>
                                 </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="bold">Acesso à Internet<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <div>
+                                        <label><input type="checkbox" name="internet" value="Para uso dos alunos"> Para
+                                            uso dos aluno(a)s</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" name="internet" value="Para uso administrativo">
+                                            Para uso administrativo</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" name="internet"
+                                                value="Para uso no processo de ensino e aprendizagem"> Para uso no
+                                            processo de ensino e aprendizagem</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" name="internet" value="Para uso da comunidade">
+                                            Para uso da comunidade</label>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" name="internet"
+                                                value="Não possui acesso à internet">
+                                            Não possui acesso à
+                                            internet</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label class="bold">Rede local de interligação de computadores<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <div>
+                                        <label><input type="checkbox" name="rede_local" value="A cabo"> A
+                                            cabo</label><br>
+                                        <label><input type="checkbox" name="rede_local" value="Wireless">
+                                            Wireless</label><br>
+                                        <label><input type="checkbox" name="rede_local"
+                                                value="Não há rede local interligando computadores"> Não há rede local
+                                            interligando computadores</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <label class="bold">Equipamentos que os alunos usam para acesso à internet da
+                                        escola:</label>
+                                    <div>
+                                        <label><input type="checkbox" name="equipamentos_alunos"
+                                                value="Computadores de mesa, portáteis e tablets da escola">
+                                            Computadores de mesa, portáteis e tablets da escola (no laboratório de
+                                            informática, biblioteca, sala de aula etc.)</label><br>
+                                        <label><input type="checkbox" name="equipamentos_alunos"
+                                                value="Dispositivos pessoais">
+                                            Dispositivos pessoais (computadores
+                                            portáteis, celulares, tablets etc.)</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mt-3">
+                                    <label class="bold">Internet banda larga:</label>
+                                    <div>
+                                        <label><input type="radio" name="banda_larga" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="banda_larga" value="Não"> Não</label>
+                                    </div>
+
+                                    <label class="bold">Alimentação escolar para os aluno(a)s:</label>
+                                    <div>
+                                        <label><input type="radio" name="alimentacao_escolar" value="Oferece">
+                                            Oferece</label>
+                                        <label><input type="radio" name="alimentacao_escolar" value="Não oferece"> Não
+                                            oferece</label>
+                                    </div>
+
+                                    <label class="bold">Fornece água potável para o consumo humano:</label>
+                                    <div>
+                                        <label><input type="radio" name="agua_potavel" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="agua_potavel" value="Não"> Não</label>
+                                    </div>
+
+                                    <label class="bold">Oferece Sala para Projeto Brasil Alfabetizado:</label>
+                                    <div>
+                                        <label><input type="radio" name="sala_alfabetizado" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="sala_alfabetizado" value="Não"> Não</label>
+                                    </div>
+
+                                    <label class="bold">Escola Aberta Final de Semana:</label>
+                                    <div>
+                                        <label><input type="radio" name="escola_aberta" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="escola_aberta" value="Não"> Não</label>
+                                    </div>
+
+                                    <label class="bold">Ensino fundamental em ciclos:</label>
+                                    <div>
+                                        <label><input type="radio" name="ensino_fundamental" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="ensino_fundamental" value="Não"> Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-6">
+                                    <label class="bold">Regulamentação/autorização no conselho ou órgão municipal,
+                                        estadual ou federal de educação:</label>
+                                    <div>
+                                        <label><input type="radio" name="ensino_fundamental" value="Sim">Sim</label>
+                                        <label><input type="radio" name="ensino_fundamental" value="Não">Não</label>
+                                        <label><input type="radio" name="ensino_fundamental" value="Não">Em
+                                            Tramitação</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label class="bold">Esfera administrativa do conselho ou órgão responsável pela
+                                        regulamentação/autorização<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <div>
+                                        <label><input type="checkbox" name="esfera_administrativa" value="Federal">
+                                            Federal</label>
+                                        <label><input type="checkbox" name="esfera_administrativa" value="Estadual">
+                                            Estadual</label>
+                                        <label><input type="checkbox" name="esfera_administrativa" value="Municipal">
+                                            Municipal</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-6">
+                                    <label class="bold">Oferece Atividade Educacional Especializado - AEE<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <div>
+                                        <label><input type="radio" name="atividade_educacional" value=" ">
+                                            Exclusivamente</label>
+                                        <label><input type="radio" name="atividade_educacional" value=" "> Não
+                                            Exclusivamente</label>
+                                        <label><input type="radio" name="atividade_educacional" value=" " checked>Não
+                                            Oferece</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label class="bold">Oferece Atividade Complementar<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <div>
+                                        <label><input type="radio" name="atividade_educacional" value="Sim">
+                                            Exclusivamente</label>
+                                        <label><input type="radio" name="atividade_educacional" value="Sim"> Não
+                                            Exclusivamente</label>
+                                        <label><input type="radio" name="atividade_educacional" value="Não" checked>Não
+                                            Oferece</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-6">
+                                    <label class="bold">Oferece proposta pedagógica de formação por alternância:</label>
+                                    <div>
+                                        <label><input type="radio" name="formacao_alternancia" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="formacao_alternancia" value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label class="bold">Material específico para atendimento a diversidade
+                                        Socio-Cultural:</label>
+                                    <div>
+                                        <label><input type="radio" name="material_diversidade" value="Sim"> Sim</label>
+                                        <label><input type="radio" name="material_diversidade" value="Não"> Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <h5>Gestor Escolar</h5>
+                            <div class="row mt-2">
                                 <div class="col-sm-4">
-                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação</label>
-                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
-                                        <option value="">Selecione Um Registro</option>
+                                    <label for="funcionario" class="bold">Funcionário<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="funcionario" name="funcionario" required>
+                                        <option value="">Selecione</option>
+                                        <option value="funcionario1">Funcionário 1</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-2">
-                                    <label for="dataCadastro" class="bold">Data<span class="text-danger"
+
+                                <div class="col-sm-4">
+                                    <label for="email" class="bold">E-mail<span class="text-danger"
                                             title="Preenchimento Obrigatório">*</span></label>
-                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro"
-                                        required>
+                                    <input type="text" class="form-control" id="email" name="email">
                                 </div>
 
-                                <div class="col-sm-3">
-                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação<span class="text-danger"
+                                <div class="col-sm-4">
+                                    <label for="numeroAtoNomeacao" class="bold">Nº do ato de nomeação:</label>
+                                    <input type="text" class="form-control" id="numeroAtoNomeacao"
+                                        name="numeroAtoNomeacao">
+                                </div>
+
+                                <div class="col-sm-4 mt-2">
+                                    <label for="cargo" class="bold">Cargo<span class="text-danger"
                                             title="Preenchimento Obrigatório">*</span></label>
-                                    <input type="text" class="form-control" id="conteudo" name="conteudo" required>
+                                    <select class="form-control" id="cargo" name="cargo" required>
+                                        <option value="">Selecione</option>
+                                        <option value="cargo1">Cargo 1</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 mt-3">
+                                    <button class="btn btn-primary-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Gestor
+                                    </button>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h6 class="mb-2">Lista de Gestor Escolar</h6>
+                                    <div class="table-responsive bg-white">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Funcionário</th>
+                                                    <th>E-mail</th>
+                                                    <th>Cargo</th>
+                                                    <th>Critério de Acesso</th>
+                                                    <th>Situação Funcional</th>
+                                                    <th>Nº Ato Nomeação</th>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>246</td>
+                                                    <td>Teste</td>
+                                                    <td>Teste@gmail.com</td>
+                                                    <td>Outro Cargo</td>
+                                                    <td>--</td>
+                                                    <td>--</td>
+                                                    <td>Teste 12345687</td>
+                                                    <td>
+                                                        <a href="##"><i class="fas fa-edit icon-edit" title="Editar"
+                                                                data-toggle="modal"
+                                                                data-target="#editarFuncionamento"></i></a>
+                                                        <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                data-toggle="modal" data-target="#excluir"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary btn-icon mt-4" type="submit"><i class="fas fa-save"></i>
-                                    Salvar</button>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="modalidade" class="bold">Modalidade:</label>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="modalidade"
+                                                value="Ensino Regular"> Ensino Regular</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="modalidade"
+                                                value="EJA"> Educação de jovens e adultos (EJA)</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="modalidade"
+                                                value="Educacao Especial"> Educação Especial</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="modalidade"
+                                                value="Educacao Indigena"> Educação Indígena</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">Escola indígena:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="escola_indigena"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="escola_indigena"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h6>Língua em que o ensino é ministrado</h6>
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label bold">Língua Portuguesa:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio"
+                                                    name="lingua_portuguesa" value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="lingua_portuguesa"
+                                                    value="Não"> Não</label>
+                                        </div>
+
+                                        <label class="col-sm-12 col-form-label bold">Língua Indígena:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio" name="lingua_indigena"
+                                                    value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="lingua_indigena"
+                                                    value="Não"> Não</label>
+                                        </div>
+                                    </div>
+                                    <h6 class="text-danger">*É obrigatório a seleção de pelo menos um campo com a opção
+                                        "Sim".</h6>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h5>Local de funcionamento da escola</h5>
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label bold">Prédio Escolar:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio" name="predio_escolar"
+                                                    value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="predio_escolar"
+                                                    value="Não"> Não</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label bold">Sala(s) em outra escola:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio"
+                                                    name="sala_outra_escola" value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="sala_outra_escola"
+                                                    value="Não"> Não</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label bold">Unidade Prisional:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio"
+                                                    name="unidade_prisional" value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="unidade_prisional"
+                                                    value="Não"> Não</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label bold">Unidade de atendimento
+                                            Socioeducativa:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio"
+                                                    name="unidade_socioeducativa" value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio"
+                                                    name="unidade_socioeducativa" value="Não"> Não</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label
+                                            class="col-sm-12 col-form-label bold">Galpão/Rancho/Paiol/Barracão:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio" name="galpao"
+                                                    value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="galpao" value="Não">
+                                                Não</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label bold">Outros:</label>
+                                        <div class="col-sm-12">
+                                            <label class="radio-inline mr-3"><input type="radio" name="outros"
+                                                    value="Sim"> Sim</label>
+                                            <label class="radio-inline"><input type="radio" name="outros" value="Não">
+                                                Não</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label for="formas-organizacao" class="bold">Formas de Organização do
+                                        Ensino:</label>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="organizacao"
+                                                value="Series Anuais"> Série/Ano (Séries Anuais)</label>
+                                    </div>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="organizacao"
+                                                value="Periodos Semestrais"> Períodos Semestrais</label>
+                                    </div>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="organizacao"
+                                                value="Ciclos Ensino Fundamental"> Ciclo(s) do ensino
+                                            fundamental</label>
+                                    </div>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="organizacao"
+                                                value="Grupos Nao Seriados"> Grupos não seriados com base na idade ou
+                                            competência (art. 23 LDB)</label>
+                                    </div>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="organizacao"
+                                                value="Modulos"> Módulos</label>
+                                    </div>
+                                    <div>
+                                        <label class="checkbox-inline"><input type="checkbox" name="organizacao"
+                                                value="Alternancia"> Alternância regular de períodos de estudos
+                                            (proposta pedagógica de formação por alternância: tempo-escola e
+                                            tempo-comunidade)</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label for="materiais" class="bold">Instrumentos e materiais socioculturais e/ou
+                                        pedagógicos em uso na escola:</label>
+                                    <div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais" value="Acervo Multimidia">
+                                                Acervo Multimídia</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais" value="Equipamentos Horta">
+                                                Equipamentos e instrumentos para atividades em área de horta, plantio
+                                                e/ou produção agrícola</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Instrumentos Musicais"> Instrumentos musicais para conjunto,
+                                                banda/fanfarra e/ou alas de música</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Pedagogicos Indigena"> Materiais pedagógicos para a
+                                                educação escolar indígena</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Brinquedos Educacao Infantil"> Brinquedos para educação
+                                                infantil</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais" value="Jogos Educativos">
+                                                Jogos educativos</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Pedagogicos Etinico Raciais"> Materiais pedagógicos
+                                                para a educação das relações étnico-raciais</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Cientificos"> Conjunto de materiais
+                                                científicos</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Culturais Artisticos"> Materiais para atividades
+                                                culturais e artísticas</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Educacao Campo"> Materiais pedagógicos para a
+                                                educação do campo</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Equipamento Amplificacao"> Equipamento para amplificação e
+                                                difusão de som/áudio</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Pratica Desportiva"> Materiais para prática
+                                                desportiva e recreação</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Educacao Profissional"> Materiais para educação
+                                                profissional</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Educacao Biligue"> Materiais pedagógicos para a
+                                                educação bilíngue de surdos</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Educacao Especial"> Materiais pedagógicos para a
+                                                educação especial</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais"
+                                                    value="Materiais Educacao Quilombola"> Materiais pedagógicos para a
+                                                educação escolar quilombola</label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label><input type="checkbox" name="materiais" value="Nenhum"> Nenhum dos
+                                                instrumentos listados</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">A escola faz exame de seleção para ingresso de seus
+                                        aluno(a)s:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="exame_selecao"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="exame_selecao"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">Reserva de vagas por sistema de cotas para grupos específicos de
+                                        aluno(a)s:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="reserva_cotas"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="reserva_cotas"
+                                                value="Não"> Não</label>
+                                    </div>
+                                    <div id="cotas-detalhes" style="display: none;">
+                                        <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
+                                                value="PPI"> Autodeclarado preto, pardo ou indígena (PPI)</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
+                                                value="Renda"> Condição de renda</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
+                                                value="Escola Publica"> Oriundo de escola pública</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
+                                                value="PCD"> Pessoa com deficiência (PCD)</label>
+                                        <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
+                                                value="Outros"> Outros grupos que não os listados</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">A escola possui site ou blog ou página em redes sociais para
+                                        comunicação institucional:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="comunicacao_institucional"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="comunicacao_institucional"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">A escola compartilha espaços para atividades de integração
+                                        escola-comunidade:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="integracao_comunidade"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="integracao_comunidade"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">A escola usa espaços e equipamentos do entorno escolar para
+                                        atividades regulares com os aluno(a)s:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="uso_espacos_entorno"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="uso_espacos_entorno"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">Órgãos colegiados em funcionamento na escola:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="orgao_colegiado"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="orgao_colegiado"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">O projeto político pedagógico ou a proposta pedagógica da escola
+                                        (conforme art. 12 da LDB) foi atualizada nos últimos 12 meses:</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="projeto_pedagogico"
+                                                value="Atualizado"> Possui e está atualizado</label>
+                                        <label class="radio-inline"><input type="radio" name="projeto_pedagogico"
+                                                value="Nao Atualizado"> Possui e não está atualizado</label>
+                                        <label class="radio-inline"><input type="radio" name="projeto_pedagogico"
+                                                value="Nao Possui"> Não possui</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <label class="bold">A escola desenvolve ações na área de educação ambiental?</label>
+                                    <div>
+                                        <label class="radio-inline"><input type="radio" name="educacao_ambiental"
+                                                value="Sim"> Sim</label>
+                                        <label class="radio-inline"><input type="radio" name="educacao_ambiental"
+                                                value="Não"> Não</label>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit"
+                                    class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -1179,6 +1748,81 @@
                             <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                         </div>
                     </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="editarFuncionamento" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Acertos de Matrículas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="funcionario" class="bold">Funcionário:<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="funcionario" name="funcionario" required>
+                                    <option value="">Selecione</option>
+                                    <option value="funcionario1">Funcionário 1</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="email" class="bold">E-mail:<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="email" name="email">
+                            </div>
+
+                            <div class="col-sm-4 mt-2">
+                                <label for="numeroAtoNomeacao" class="bold">Nº do ato de nomeação:</label>
+                                <input type="text" class="form-control" id="numeroAtoNomeacao" name="numeroAtoNomeacao">
+                            </div>
+
+                            <div class="col-sm-6 mt-2">
+                                <label for="cargo" class="bold">Cargo:<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="cargo" name="cargo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="cargo1">Cargo 1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
 
                 </div>
             </div>

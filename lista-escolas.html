@@ -88,13 +88,93 @@
 
         <div class="d-flex justify-content-between mt-5">
             <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Lista de Escolas</h4>
-            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarEscola"><i
-                    class="fas fa-user-plus"></i> Cadastrar</button>
+            <a href="cadastro-escolas.html" class="btn btn-cadastro"><i class="fas fa-user-plus"></i> Cadastrar</a>
         </div>
 
         <br>
 
         <div class="element-box">
+            <div class="d-flex justify-content-between">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                        </button>
+                        <!--<div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Nº</a>
+                    <a class="dropdown-item" href="#">Id</a>
+                    <a class="dropdown-item" href="#">Escola</a>
+                    <a class="dropdown-item" href="#">Nome</a>
+                    <a class="dropdown-item" href="#">Matrícula</a>
+                    <a class="dropdown-item" href="#">Situação</a>
+                    <a class="dropdown-item" href="#">Funções</a>
+                </div> -->
+
+                        <div class="dropdown-menu p-3">
+                            <form id="filter-form">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                                    <label class="form-check-label" for="colNo">#</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                                    <label class="form-check-label" for="colNome">Nome</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Parte" id="colParte">
+                                    <label class="form-check-label" for="colParte">Parte</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
+                                    <label class="form-check-label" for="colMatricula">Ações</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
+                                        class="fas fa-filter"></i> Filtrar </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
             <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
@@ -114,8 +194,7 @@
                         <td>ESCOLA TESTE</td>
                         <td>Ativo</td>
                         <td>
-                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
-                                    data-target="#editar"></i></a>
+                            <a href="cadastro-escolas.html"><i class="fas fa-edit icon-edit" title="Editar"></i></a>
                             <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
                                     data-target="#excluir"></i></a>
                         </td>

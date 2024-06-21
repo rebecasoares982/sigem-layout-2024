@@ -238,7 +238,7 @@
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5>Cadastro de Atendimento</h5>
+                    <h5>Cadastrar Agenda</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -295,33 +295,31 @@
 
                             <div class="col-sm-4">
                                 <button class="btn btn-primary-light btn-icon mt-4" type="button">
-                                    <i class="fas fa-plus"></i> Adicionar Transporte
+                                    <i class="fas fa-plus"></i> Adicionar Categoria
                                 </button>
                             </div>
 
-                            <div class="col-sm-12 mt-3"> 
-                                <h5 class="mb-2">Lista dos Transportes</h5>
+                            <div class="col-sm-12 mt-3">
+                                <h5 class="mb-2">Lista de Categorias de Agenda</h5>
                                 <div class="table-responsive bg-white">
                                     <table class="table table-bordered">
                                         <thead class="table-primary">
                                             <tr>
-                                                <th>Transporte</th>
+                                                <th>Nº</th>
+                                                <th>ID</th>
+                                                <th>Nome</th>
                                                 <th>Ação</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Rodoviário - Ônibus</td>
-                                                <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
-                                                        data-toggle="modal" data-target="#excluir"><i
-                                                            class="fas fa-trash-alt"></i></button></td>
+                                                <td>1</td>
+                                                <td>10</td>
+                                                <td>Teste</td>
+                                                <td><button class="btn btn-danger btn-sm" title="Excluir" type="button">
+                                                        <i class="fas fa-trash-alt"></i></button></td>
                                             </tr>
-                                            <tr>
-                                                <td>Rodoviário - Ônibus</td>
-                                                <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
-                                                        data-toggle="modal" data-target="#excluir"><i
-                                                            class="fas fa-trash-alt"></i></button></td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -419,7 +417,7 @@
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5>Editar Cadastro de Atendimento</h5>
+                    <h5>Editar Agenda</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -428,76 +426,157 @@
                     <form>
                         <div class="row">
                             <div class="col-sm-4">
-                                <label for="turmas" class="bold">Turmas<span class="text-danger"
+                                <label for="nome" class="bold">Nome<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="turmas" name="turmas" required>
+                                <input type="text" class="form-control" id="nome" name="nome" value="TESTE" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="arquivo" class="bold">Arquivo<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <br>
+                                <input type="file" id="arquivo" name="arquivo"
+                                    accept=".jpg, .png, .doc, .docx, .xls, .xlsx" required>
+                                <small>(Tamanho máximo: 5 MB) Somente arquivos do tipo 'jpg','png','doc','docx','xls' e
+                                    'xlsx'.</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="categoria" class="bold">Categoria<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span> <i
+                                        class="fas fa-plus-circle add-category-btn" id="add-category-btn"
+                                        title="Adicionar Categoria"></i></label>
+                                <select class="form-control" id="categoria" name="categoria" required>
                                     <option value="">Selecione</option>
-                                    <option value="">Teste</option>
+                                    <option value="">Teste </option>
                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 container" id="new-category-section">
+                            <div class="col-sm-4">
+                                <label for="nova-categoria" class="bold">Nome Nova Categoria<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="nova-categoria" name="nova-categoria">
                             </div>
 
                             <div class="col-sm-4">
-                                <label for="aluno" class="bold">Aluno<span class="text-danger"
+                                <label class="bold">Status<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="aluno" name="aluno" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
+                                <div>
+                                    <label class="radio-inline"><input type="radio" name="status" value="Ativo"
+                                            required> Ativo</label>
+                                    <label class="radio-inline"><input type="radio" name="status" value="Desativado">
+                                        Desativado</label>
+                                </div>
                             </div>
 
                             <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label class="bold">Possui vínculo com a Escola?</label><br>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="vinculo_escola" value="nao"> Não
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="vinculo_escola" value="sim"> Sim
-                                    </label>
+                                <button class="btn btn-primary-light btn-icon mt-4" type="button">
+                                    <i class="fas fa-plus"></i> Adicionar Categoria
+                                </button>
+                            </div>
+
+                            <div class="col-sm-12 mt-3">
+                                <h5 class="mb-2">Lista de Categorias de Agenda</h5>
+                                <div class="table-responsive bg-white">
+                                    <table class="table table-bordered">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th>Nº</th>
+                                                <th>ID</th>
+                                                <th>Nome</th>
+                                                <th>Ação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>10</td>
+                                                <td>Teste</td>
+                                                <td><button class="btn btn-danger btn-sm" title="Excluir" type="button">
+                                                        <i class="fas fa-trash-alt"></i></button></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row mt-5 align-items-center">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10
+                                            registros)
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination justify-content-end mb-0">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1"
+                                                        aria-disabled="true">Anterior</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Próximo</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label for="funcionario" class="bold">Funcionário<span class="text-danger"
+                        <div class="row mt-2">
+                            <div class="col-sm-2">
+                                <label for="data_inicio" class="bold">Data Início<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="funcionario" name="funcionario" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
+                                <input type="date" class="form-control" id="data_inicio" name="data_inicio"
+                                    value="2024-06-13" required>
                             </div>
 
-                            <div class="col-sm-4">
-                                <label for="funcao" class="bold">Função<span class="text-danger"
+                            <div class="col-sm-2">
+                                <label for="data_termino" class="bold">Data Término<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="funcao" name="funcao" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="data_atendimento" class="bold">Data do atendimento<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data_atendimento" name="data_atendimento"
-                                    value="2024-03-08" required>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="local_atendimento" class="bold">Local do atendimento<span
-                                        class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="local_atendimento" name="local_atendimento"
-                                    value="SALA DE AULA" required>
+                                <input type="date" class="form-control" id="data_termino" name="data_termino"
+                                    value="2024-06-11" required>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <label for="relato_atendimento" class="bold">Relato do atendimento<span
-                                        class="text-danger" title="Preenchimento Obrigatório">*</span></label>
-                                <textarea class="form-control" id="relato_atendimento" name="relato_atendimento"
-                                    rows="4" required></textarea>
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label class="bold">Disponibilizar para os perfis<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <div>
+                                    <label><input type="checkbox" name="perfil" value="COORDENADOR PEDAGÓGICO">
+                                        COORDENADOR PEDAGÓGICO</label>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="perfil" value="DIRETORIA"> DIRETORIA</label>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="perfil" value="PROFESSOR"> PROFESSOR</label>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="perfil" value="SECRETARIA DA ESCOLA"> SECRETARIA
+                                        DA ESCOLA</label>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="perfil" value="SECRETARIA MUNICIPAL"> SECRETARIA
+                                        MUNICIPAL</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label class="bold">Status<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <div>
+                                    <label class="radio-inline"><input type="radio" name="status" value="Ativo"
+                                            required> Ativo</label>
+                                    <label class="radio-inline"><input type="radio" name="status" value="Desativado">
+                                        Desativado</label>
+                                </div>
                             </div>
                         </div>
 
@@ -506,24 +585,6 @@
                             <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Deseja excluir as informações?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <button class="btn btn-primary">Sim</button>
-                    <button class="btn btn-secondary">Não</button>
 
                 </div>
             </div>
