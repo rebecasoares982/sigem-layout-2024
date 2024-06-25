@@ -165,37 +165,473 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-sm-3">
-                                    <label for="eixoCampo" class="bold">Avaliação (Ordem)<span class="text-danger"
-                                            title="Preenchimento Obrigatório">*</span></label>
-                                    <select name="eixoCampo" id="eixoCampo" class="form-control" required>
-                                        <option value="">Selecione Um Registro</option>
-                                        <option value="">Teste</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-4">
-                                    <label for="eixoCampo" class="bold">Instrumento de Avaliação</label>
-                                    <select name="eixoCampo" id="eixoCampo" class="form-control">
-                                        <option value="">Selecione Um Registro</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-2">
-                                    <label for="dataCadastro" class="bold">Data<span class="text-danger"
-                                            title="Preenchimento Obrigatório">*</span></label>
-                                    <input type="date" class="form-control" id="dataCadastro" name="dataCadastro"
-                                        required>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <label for="conteudo" class="bold">Nota Máxima da Avaliação<span class="text-danger"
-                                            title="Preenchimento Obrigatório">*</span></label>
-                                    <input type="text" class="form-control" id="conteudo" name="conteudo" required>
+                                <div class="col-sm-12">
+                                    <label class="bold">Escola:</label>
+                                    <p>ESCOLA TESTE</p>
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary btn-icon mt-4" type="submit"><i class="fas fa-save"></i>
-                                    Salvar</button>
+                            <hr>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="funcionario" class="bold">Situação de Funcionamento<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="funcionario" name="funcionario" required>
+                                        <option value="">Selecione</option>
+                                        <option value="funcionario1">Funcionário 1</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="date" class="bold">Data<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="date" name="date">
+                                </div>
+
+                                <div class="col-sm-4 mt-3">
+                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Condição de Funcionamento
+                                    </button>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h6 class="mb-2">Lista de Condições de Funcionamento</h6>
+                                    <div class="table-responsive bg-white">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Código</th>
+                                                    <th>Status</th>
+                                                    <th>Data</th>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>246</td>
+                                                    <td>Paralisada</td>
+                                                    <td>05/08/2024</td>
+                                                    <td>
+                                                        <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                data-toggle="modal" data-target="#excluir"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <label for="endereco" class="bold">Endereço<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="endereco" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="numero" class="bold">Número<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="numero" required>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="complemento" class="bold">Complemento:</label>
+                                    <input type="text" class="form-control" id="complemento">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="bairro" class="bold">Bairro:</label>
+                                    <input type="text" class="form-control" id="bairro">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="uf" class="bold">UF<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="uf" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="municipio" class="bold">Município<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="municipio" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="distrito" class="bold">Distrito<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="distrito" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="cep" class="bold">CEP<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="cep" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="caixa-postal" class="bold">Caixa Postal:</label>
+                                    <input type="text" class="form-control" id="caixa-postal">
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="latitude" class="bold">Latitude:</label>
+                                    <input type="text" class="form-control" id="latitude">
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="longitude" class="bold">Longitude:</label>
+                                    <input type="text" class="form-control" id="longitude">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-2">
+                                    <label for="telefone" class="bold">Telefone:</label>
+                                    <input type="text" class="form-control" id="telefone">
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="telefone-publico" class="bold">Telefone Público:</label>
+                                    <input type="text" class="form-control" id="telefone-publico">
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="outro-telefone" class="bold">Outro Telefone:</label>
+                                    <input type="text" class="form-control" id="outro-telefone">
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="fax" class="bold">Fax:</label>
+                                    <input type="text" class="form-control" id="fax">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="email" class="bold">Email:</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Informações Complementares</h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label for="dependencia-administrativa" class="bold">Dependência Administrativa<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="dependenciaAdministrativa" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="localizacao-zona" class="bold">Localização/Zona da
+                                        escola:</label>
+                                    <select class="form-control" id="localizacaoZona" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <label for="orgao-regional" class="bold">Órgão Regional<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="orgaoRegional" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">00012 - NUCLEO REGIONAL DE EDUCACAO - MACAUBAS</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label for="localizacao-diferenciada" class="bold">Localização
+                                        diferenciada da escola<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="localizacaoDiferenciada" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="ato-criacao" class="bold">Ato de Criação:</label>
+                                    <input type="text" class="form-control" id="ato-criacao">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="diario-oficial" class="bold">Diário Oficial:</label>
+                                    <input type="text" class="form-control" id="diario-oficial">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label for="orgao-vinculado" class="bold">Órgão ao qual a escola
+                                        pública está vinculada</label>
+                                    <select class="form-control" id="orgao-vinculado" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="codigo-escola-sede" class="bold">Código da Escola
+                                        Sede:</label>
+                                    <select class="form-control" id="codigoEscolaSede">
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="codigo-ies" class="bold">Código da instituição de Ensino
+                                        Superior:</label>
+                                    <input type="text" class="form-control" id="codigo-ies">
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <label for="unidade-vinculada" class="bold">Unidade Vinculada à
+                                        escola de educação básica ou unidade ofertante de educação superior</label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="unidade_vinculada"
+                                            id="sem_vinculo" value="Sem vínculo com outra instituição">
+                                        <label class="form-check-label" for="sem_vinculo">
+                                            Sem vínculo com outra instituição
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="unidade_vinculada"
+                                            id="vinculada_escola" value="Unidade vinculada a escola de educação básica">
+                                        <label class="form-check-label" for="vinculada_escola">
+                                            Unidade vinculada a escola de educação básica
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="unidade_vinculada"
+                                            id="ofertante_superior" value="Unidade ofertante de educação superior">
+                                        <label class="form-check-label" for="ofertante_superior">
+                                            Unidade ofertante de educação superior
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Poder público responsável pela parceria ou convênio entre a Administração Pública e
+                                outras instituições</h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label class="bold">Não possui parceria ou convênio</label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="parceria-convenio"
+                                            id="parceria-sim" value="Sim">
+                                        <label class="form-check-label" for="parceria-sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="parceria-convenio"
+                                            id="parceria-nao" value="Não">
+                                        <label class="form-check-label" for="parceria-nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <label class="bold">Secretaria Municipal</label>
+                                    <Br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="secretaria-municipal"
+                                            id="secretaria-municipal-sim" value="Sim">
+                                        <label class="form-check-label" for="secretaria-municipal-sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="secretaria-municipal"
+                                            id="secretaria-municipal-nao" value="Não">
+                                        <label class="form-check-label" for="secretaria-municipal-nao">Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <label class="bold">Secretaria Estadual</label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="secretaria-estadual"
+                                            id="secretaria-estadual-sim" value="Sim">
+                                        <label class="form-check-label" for="secretaria-estadual-sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="secretaria-estadual"
+                                            id="secretaria-estadual-nao" value="Não">
+                                        <label class="form-check-label" for="secretaria-estadual-nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Unidade Executora</h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-10">
+                                    <label class="bold">Possui Unidade Executora?</label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="unidade-executora"
+                                            id="unidade-executora-sim" value="Sim">
+                                        <label class="form-check-label" for="unidade-executora-sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="unidade-executora"
+                                            id="unidade-executora-nao" value="Não">
+                                        <label class="form-check-label" for="unidade-executora-nao">Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-10">
+                                    <label class="bold">Compartilhada?</label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="compartilhada"
+                                            id="compartilhada-sim" value="Sim">
+                                        <label class="form-check-label" for="compartilhada-sim">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="compartilhada"
+                                            id="compartilhada-nao" value="Não">
+                                        <label class="form-check-label" for="compartilhada-nao">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Benefícios (Programas do MEC)</h5>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="Beneficio" class="bold">Benefício</label>
+                                    <select class="form-control" id="Beneficio" name="Beneficio" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 mt-3">
+                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Benefício
+                                    </button>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h6 class="mb-2">Lista de Benefícios</h6>
+                                    <div class="table-responsive bg-white">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Código</th>
+                                                    <th>Nome</th>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>470</td>
+                                                    <td>Mais Educação</td>
+                                                    <td>
+                                                        <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                data-toggle="modal" data-target="#excluir"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <h5>Documentos Oficiais</h5>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="documentos" class="bold">Documentos Oficiais:</label>
+                                    <select class="form-control" id="numeroDiarioOficial" name="numeroDiarioOficial"
+                                        required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="numeroDiarioOficial" class="bold">Número do Diário Oficial:</label>
+                                    <input type="text" class="form-control" id="numeroDiarioOficial">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="dataDiarioOficial" class="bold">Data do Diário Oficial:</label>
+                                    <input type="text" class="form-control" id="dataDiarioOficial">
+                                </div>
+
+                                <div class="col-sm-4 mt-3">
+                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Documento
+                                    </button>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h6 class="mb-2">Lista de Benefícios</h6>
+                                    <div class="table-responsive bg-white">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Código</th>
+                                                    <th>Nome</th>
+                                                    <th>Número</th>
+                                                    <th>Data no Diário Oficial</th>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>470</td>
+                                                    <td>TESTE</td>
+                                                    <td>6</td>
+                                                    <td>17/06/2023</td>
+                                                    <td>
+                                                        <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                data-toggle="modal" data-target="#excluir"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit"
+                                    class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                             </div>
                         </form>
                     </div>
@@ -226,6 +662,8 @@
                                     <p>ESCOLA TESTE</p>
                                 </div>
                             </div>
+
+                            <hr>
 
                             <div class="row">
                                 <div class="col-sm-4">
@@ -445,6 +883,8 @@
                                 </div>
                             </div>
 
+                            <hr>
+
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
@@ -523,6 +963,8 @@
                                 </div>
                             </div>
 
+                            <hr>
+
                             <h5>Sala de Aula:</h5>
                             <div class="row">
                                 <div class="col-sm-3">
@@ -557,8 +999,13 @@
                                         name="salas_acessibilidade" value="7" required>
                                 </div>
                             </div>
-                        </form>
 
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit"
+                                    class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -588,10 +1035,12 @@
                                 </div>
                             </div>
 
+                            <hr>
+
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label class="bold">Acesso à Internet<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
+                                            title="Preenchimento Obrigatório">*</span></label>
                                     <div>
                                         <label><input type="checkbox" name="internet" value="Para uso dos alunos"> Para
                                             uso dos aluno(a)s</label>
@@ -618,8 +1067,8 @@
                                 </div>
 
                                 <div class="col-sm-6">
-                                    <label class="bold">Rede local de interligação de computadores<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
+                                    <label class="bold">Rede local de interligação de computadores<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
                                     <div>
                                         <label><input type="checkbox" name="rede_local" value="A cabo"> A
                                             cabo</label><br>
@@ -704,7 +1153,7 @@
                                 <div class="col-sm-6">
                                     <label class="bold">Esfera administrativa do conselho ou órgão responsável pela
                                         regulamentação/autorização<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
+                                            title="Preenchimento Obrigatório">*</span></label>
                                     <div>
                                         <label><input type="checkbox" name="esfera_administrativa" value="Federal">
                                             Federal</label>
@@ -732,7 +1181,7 @@
 
                                 <div class="col-sm-6">
                                     <label class="bold">Oferece Atividade Complementar<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
+                                            title="Preenchimento Obrigatório">*</span></label>
                                     <div>
                                         <label><input type="radio" name="atividade_educacional" value="Sim">
                                             Exclusivamente</label>
@@ -763,7 +1212,7 @@
                                 </div>
                             </div>
 
-                            <br>
+                            <hr>
 
                             <h5>Gestor Escolar</h5>
                             <div class="row mt-2">
@@ -852,7 +1301,8 @@
                                         <label class="checkbox-inline"><input type="checkbox" name="modalidade"
                                                 value="Ensino Regular"> Ensino Regular</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="modalidade"
-                                                value="EJA"> Educação de jovens e adultos (EJA)</label>
+                                                value="EJA">
+                                            Educação de jovens e adultos (EJA)</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="modalidade"
                                                 value="Educacao Especial"> Educação Especial</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="modalidade"
@@ -864,9 +1314,11 @@
                                     <label class="bold">Escola indígena:</label>
                                     <div>
                                         <label class="radio-inline"><input type="radio" name="escola_indigena"
-                                                value="Sim"> Sim</label>
+                                                value="Sim">
+                                            Sim</label>
                                         <label class="radio-inline"><input type="radio" name="escola_indigena"
-                                                value="Não"> Não</label>
+                                                value="Não">
+                                            Não</label>
                                     </div>
                                 </div>
 
@@ -892,6 +1344,9 @@
                                     <h6 class="text-danger">*É obrigatório a seleção de pelo menos um campo com a opção
                                         "Sim".</h6>
                                 </div>
+
+
+                                <hr>
 
                                 <div class="col-sm-12 mt-3">
                                     <h5>Local de funcionamento da escola</h5>
@@ -937,7 +1392,8 @@
                                             class="col-sm-12 col-form-label bold">Galpão/Rancho/Paiol/Barracão:</label>
                                         <div class="col-sm-12">
                                             <label class="radio-inline mr-3"><input type="radio" name="galpao"
-                                                    value="Sim"> Sim</label>
+                                                    value="Sim">
+                                                Sim</label>
                                             <label class="radio-inline"><input type="radio" name="galpao" value="Não">
                                                 Não</label>
                                         </div>
@@ -946,7 +1402,8 @@
                                         <label class="col-sm-12 col-form-label bold">Outros:</label>
                                         <div class="col-sm-12">
                                             <label class="radio-inline mr-3"><input type="radio" name="outros"
-                                                    value="Sim"> Sim</label>
+                                                    value="Sim">
+                                                Sim</label>
                                             <label class="radio-inline"><input type="radio" name="outros" value="Não">
                                                 Não</label>
                                         </div>
@@ -1001,7 +1458,8 @@
                                         </div>
                                         <div class="checkbox-inline">
                                             <label><input type="checkbox" name="materiais"
-                                                    value="Instrumentos Musicais"> Instrumentos musicais para conjunto,
+                                                    value="Instrumentos Musicais">
+                                                Instrumentos musicais para conjunto,
                                                 banda/fanfarra e/ou alas de música</label>
                                         </div>
                                         <div class="checkbox-inline">
@@ -1025,7 +1483,8 @@
                                         </div>
                                         <div class="checkbox-inline">
                                             <label><input type="checkbox" name="materiais"
-                                                    value="Materiais Cientificos"> Conjunto de materiais
+                                                    value="Materiais Cientificos">
+                                                Conjunto de materiais
                                                 científicos</label>
                                         </div>
                                         <div class="checkbox-inline">
@@ -1035,12 +1494,14 @@
                                         </div>
                                         <div class="checkbox-inline">
                                             <label><input type="checkbox" name="materiais"
-                                                    value="Materiais Educacao Campo"> Materiais pedagógicos para a
+                                                    value="Materiais Educacao Campo">
+                                                Materiais pedagógicos para a
                                                 educação do campo</label>
                                         </div>
                                         <div class="checkbox-inline">
                                             <label><input type="checkbox" name="materiais"
-                                                    value="Equipamento Amplificacao"> Equipamento para amplificação e
+                                                    value="Equipamento Amplificacao">
+                                                Equipamento para amplificação e
                                                 difusão de som/áudio</label>
                                         </div>
                                         <div class="checkbox-inline">
@@ -1080,9 +1541,11 @@
                                         aluno(a)s:</label>
                                     <div>
                                         <label class="radio-inline"><input type="radio" name="exame_selecao"
-                                                value="Sim"> Sim</label>
+                                                value="Sim">
+                                            Sim</label>
                                         <label class="radio-inline"><input type="radio" name="exame_selecao"
-                                                value="Não"> Não</label>
+                                                value="Não">
+                                            Não</label>
                                     </div>
                                 </div>
 
@@ -1091,19 +1554,23 @@
                                         aluno(a)s:</label>
                                     <div>
                                         <label class="radio-inline"><input type="radio" name="reserva_cotas"
-                                                value="Sim"> Sim</label>
+                                                value="Sim">
+                                            Sim</label>
                                         <label class="radio-inline"><input type="radio" name="reserva_cotas"
-                                                value="Não"> Não</label>
+                                                value="Não">
+                                            Não</label>
                                     </div>
                                     <div id="cotas-detalhes" style="display: none;">
                                         <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
-                                                value="PPI"> Autodeclarado preto, pardo ou indígena (PPI)</label>
+                                                value="PPI">
+                                            Autodeclarado preto, pardo ou indígena (PPI)</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
                                                 value="Renda"> Condição de renda</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
                                                 value="Escola Publica"> Oriundo de escola pública</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
-                                                value="PCD"> Pessoa com deficiência (PCD)</label>
+                                                value="PCD">
+                                            Pessoa com deficiência (PCD)</label>
                                         <label class="checkbox-inline"><input type="checkbox" name="grupo_cota"
                                                 value="Outros"> Outros grupos que não os listados</label>
                                     </div>
@@ -1146,9 +1613,11 @@
                                     <label class="bold">Órgãos colegiados em funcionamento na escola:</label>
                                     <div>
                                         <label class="radio-inline"><input type="radio" name="orgao_colegiado"
-                                                value="Sim"> Sim</label>
+                                                value="Sim">
+                                            Sim</label>
                                         <label class="radio-inline"><input type="radio" name="orgao_colegiado"
-                                                value="Não"> Não</label>
+                                                value="Não">
+                                            Não</label>
                                     </div>
                                 </div>
 
@@ -1210,6 +1679,8 @@
                                     <p>Escola Teste</p>
                                 </div>
                             </div>
+
+                            <hr>
 
                             <div class="row">
                                 <div class="col-sm-3">
@@ -1311,9 +1782,10 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-end mt-4">
-                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
-                                    Salvar</button>
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit"
+                                    class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                             </div>
                         </form>
 
@@ -1345,6 +1817,8 @@
                                     <p>Escola Teste</p>
                                 </div>
                             </div>
+
+                            <hr>
 
                             <div class="row">
                                 <div class="col-sm-4">
@@ -1447,7 +1921,7 @@
 
                             <br>
 
-                            <h5 class="mb-2">Listagem de Dependências da Escola</h5>
+                            <h6 class="mb-2">Listagem de Dependências da Escola</h6>
                             <div class="table responsive">
                                 <table class="table table-bordered">
                                     <thead class="table-primary">
@@ -1480,6 +1954,12 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit"
+                                    class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -1508,6 +1988,8 @@
                                     <p>Escola Teste</p>
                                 </div>
                             </div>
+
+                            <hr>
 
                             <div class="row">
                                 <div class="col-sm-4">
@@ -1580,7 +2062,7 @@
 
                             <br>
 
-                            <h5 class="mb-2">Listagem de Dependências da Escola</h5>
+                            <h6 class="mb-2">Listagem de Dependências da Escola</h6>
                             <div class="table responsive">
                                 <table class="table table-bordered">
                                     <thead class="table-primary">
@@ -1606,6 +2088,12 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit"
+                                    class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                             </div>
                         </form>
                     </div>
