@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/menu-escola.html">Escola</a></li>
+                <li class="breadcrumb-item"><a href="/grades-curriculares.html">Grades Curriculares</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cadastrar Grades Curriculares</a></li>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Cadastrar Grades Curriculares</h4>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionDefinicao">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingDefinicao">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#collapseDefinicao" aria-expanded="true" aria-controls="collapseDefinicao">
+                            Definição <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseDefinicao" class="collapse show" aria-labelledby="headingDefinicao"
+                    data-parent="#accordionDefinicao">
+                    <div class="card-body">
+                        <form>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="funcionario" class="bold">Tipo de Curriculo<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="funcionario" name="funcionario" required>
+                                        <option value="">Selecione</option>
+                                        <option value=" ">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h5>Dados Gerais</h5>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="nome" class="bold">Nome<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="nome" name="nome">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="modalidade" class="bold">Modalidade<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span> <i
+                                            class="fas fa-plus-circle add-category-btn" id="add-category-btn"
+                                            title="Adicionar Nova Modalidade" data-toggle="modal"
+                                            data-target="#adicionarModalidade"></i></label>
+                                    <select class="form-control" id="modalidade" name="modalidade" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="turno" class="bold">Turno<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span> <i
+                                            class="fas fa-plus-circle add-category-btn" id="add-category-btn"
+                                            title="Adicionar Nova Modalidade" data-toggle="modal"
+                                            data-target="#adicionarTurno"></i></label>
+                                    <select class="form-control" id="turno" name="turno" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-2">
+                                    <label for="homologacao" class="bold">Homologação<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="homologacao" name="homologacao">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="tipoAtendimento" class="bold">Tipo de Atendimento<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="tipoAtendimento" name="tipoAtendimento" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="anoInicio" class="bold">Ano de Início<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="anoInicio" name="anoInicio">
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="numeroAto" class="bold">Número do Ato</label>
+                                    <input type="text" class="form-control" id="numeroAto" name="numeroAto">
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-5">
+                                    <label for="descricaoAto" class="bold">Descrição do Ato<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="descricaoAto" name="descricaoAto">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="tipoAto" class="bold">Tipo do Ato</label>
+                                    <select class="form-control" id="tipoAto" name="tipoAto" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-8">
+                                    <label for="anoInicio" class="bold">Observação:</label>
+                                    <textarea class="form-control" id="observacao" name="observacao"
+                                        rows="4"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="button" class="btn btn-primary-light mr-2" data-toggle="modal"
+                                    data-target="#copiarEtapasGrade"><i class="fas fa-copy"></i>
+                                    Copiar Etapas e Grade</button>
+                                <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+                                <button type="submit" class="btn btn-outline-primary">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionEtapas">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingEtapas">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEtapas"
+                            aria-expanded="true" aria-controls="collapseEtapas">
+                            Etapas <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEtapas" class="collapse" aria-labelledby="headingEtapas"
+                    data-parent="#accordionEtapas">
+                    <div class="card-body">
+                        <form>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="tipoAto" class="bold">Etapa<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="tipoAto" name="tipoAto" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="frequencia" class="bold">Frequência<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <br>
+                                    <input type="radio" id="dias" name="matriculaDependencia" value="dias">
+                                    <label for="dias">Dias Letivos</label>
+                                    <input type="radio" id="aulas" name="matriculaDependencia" value="aulas">
+                                    <label for="aulas">Aulas Ministradas</label>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-8">
+                                    <label for="anoInicio" class="bold">Descrição:</label>
+                                    <textarea class="form-control" id="observacao" name="observacao"
+                                        rows="4"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar Etapa
+                                    </button>
+                                </div>
+
+                                <div class="col-sm-12 mt-3">
+                                    <h6 class="mb-2">Lista de Etapas</h6>
+                                    <div class="table-responsive bg-white">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Código</th>
+                                                    <th>Etapa</th>
+                                                    <th>Sub-Etapa</th>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>470</td>
+                                                    <td>Educação Infantil - Pré-escola (4 e 5 anos)</td>
+                                                    <td>---</td>
+                                                    <td>
+                                                        <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                data-toggle="modal" data-target="#excluir"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
+                                    Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionDisciplina">
+            <div class="card">
+                <div class="card-header card-header-cadastro" id="headingDisciplina">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            data-target="#collapseDisciplina" aria-expanded="true" aria-controls="collapseDisciplina">
+                            Disciplina da Grade Currícular <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseDisciplina" class="collapse" aria-labelledby="headingDisciplina"
+                    data-parent="#accordionDisciplina">
+                    <div class="card-body">
+                        <form>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="etapa" class="bold">Etapa<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="etapa" name="etapa" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="metodo" class="bold">Método<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="metodo" name="metodo" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label for="disciplina" class="bold">Disciplina<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span><i
+                                            class="fas fa-plus-circle add-category-btn" id="add-category-btn"
+                                            title="Adicionar Nova Modalidade" data-toggle="modal"
+                                            data-target="#adicionarDisciplina"></i></label>
+                                    <select class="form-control" id="disciplina" name="disciplina" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="aulas" class="bold">Número de Aulas Semanais<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="aulas" name="aulas" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="cargaHorariaSemanal" class="bold">Carga Horária Semanal</label>
+                                    <input type="text" class="form-control" id="cargaHorariaSemanal"
+                                        name="cargaHorariaSemanal" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="cargaHorariaAnual" class="bold">Carga Horária Anual<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="cargaHorariaAnual"
+                                        name="cargaHorariaAnual" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-5">
+                                <button type="button" class="btn btn-primary-light mr-2" data-toggle="modal"
+                                    data-target="#copiarGradeDisciplinas"><i class="fas fa-copy"></i>
+                                    Copiar Grade e Disciplinas</button>
+                                <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-save"></i>
+                                    Salvar</button>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12 mt-3">
+                                    <h6 class="mb-2">Lista de Grade Curricular</h6>
+                                    <div class="table-responsive bg-white">
+                                        <table class="table table-bordered">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Código</th>
+                                                    <th>Etapa</th>
+                                                    <th>Disciplina</th>
+                                                    <th>Carga Horária Anual</th>
+                                                    <th>Carga Horária Semanal</th>
+                                                    <th>Método</th>
+                                                    <th>Nº Aula Semanais</th>
+                                                    <th>Ação</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>162952</td>
+                                                    <td>Ensino Fundamental de 9 anos - 9º Ano</td>
+                                                    <td>HISTÓRIA</td>
+                                                    <td>40</td>
+                                                    <td>-</td>
+                                                    <td>Disciplina</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                data-toggle="modal" data-target="#excluir"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="adicionarModalidade" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar Modalidade</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="nome" class="bold">Nome<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="nome" name="nome">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="email" class="bold">Mnemônico<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="email" name="email">
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-4 mt-2">
+                                <label for="habilitacao" class="bold">Habilitação<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="habilitacao" name="habilitacao">
+                            </div>
+
+                            <div class="col-sm-4 mt-2">
+                                <label for="matriculaDependencia" class="bold">Matrícula com Dependência<span
+                                        class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <br>
+                                <input type="radio" id="sim" name="matriculaDependencia" value="sim">
+                                <label for="sim">Sim</label>
+                                <input type="radio" id="nao" name="matriculaDependencia" value="nao">
+                                <label for="nao">Não</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h5>Associações ao MEC</h5>
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <div class="alert alert-warning bold" role="alert">
+                                    As modalidades são ativadas no cadastro da escola, no item "funcionamento" .
+                                    <br>
+                                    As opções
+                                    disponíveis são Ensino regular, Educação especial e Educação de jovens e adultos
+                                    (EJA).
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 mt-2">
+                                <label for="modalidade" class="bold">Modalidade<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="modalidade" name="modalidade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="adicionarDisciplina" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar Modalidade</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <label for="componenteCurricular" class="bold">Componente Curricular<span
+                                        class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="componenteCurricular"
+                                    name="componenteCurricular">
+                            </div>
+                            <div class="col-sm-5 mt-2">
+                                <label for="componenteCurricularMEC" class="bold">Componente Curricular - MEC<span
+                                        class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="componenteCurricularMEC" name="componenteCurricularMEC"
+                                    required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-4">
+                                <label for="eixoTematico" class="bold">Eixo Temático
+                                    <i class="fas fa-plus-circle add-category-btn" id="add-eixo-btn"
+                                        title="Adicionar Nova Modalidade" data-toggle="modal"
+                                        data-target="#eixoTematico"></i></label>
+                                <select class="form-control" id="eixoTematico" name="eixoTematico" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste </option>
+                                </select>
+                            </div>
+
+                            <div class="row mt-3 container" id="new-eixo-section" style="display: none;">
+                                <div class="col-sm-4">
+                                    <label for="nova-categoria" class="bold">Nome do Eixo Temático<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="nova-categoria" name="nova-categoria">
+                                </div>
+
+                                <div class="col-sm-6 mt-4">
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="adicionarTurno" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar Turno</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="turno" class="bold">Turno<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="turno" name="turno">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="abreviacao" class="bold">Abreviação<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="abreviacao" name="abreviacao">
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-10 mt-2">
+                                <label for="descricao" class="bold">Descrição<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <textarea class="form-control" id="descricao" name="descricao" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="copiarGradeDisciplinas" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar Turno</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12 mt-2">
+                                <label for="seriesOrigem" class="bold">Series de Origem<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="seriesOrigem" name="seriesOrigem" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-12 mt-2">
+                                <label for="seriesDestino" class="bold">Series Destino<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="seriesDestino" name="seriesDestino" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="copiarEtapasGrade" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar Turno</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12 mt-2">
+                                <label for="seriesOrigem" class="bold">Currículo<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="seriesOrigem" name="seriesOrigem" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+
+    <script>
+        document.getElementById('add-eixo-btn').addEventListener('click', function () {
+            document.getElementById('new-eixo-section').style.display = 'block';
+        });
+
+        document.getElementById('save-eixo-btn').addEventListener('click', function () {
+            const newCategory = document.getElementById('nova-categoria').value;
+            if (newCategory) {
+                document.getElementById('categoria').value = newCategory;
+                document.getElementById('new-eixo-section').style.display = 'none';
+                document.getElementById('novo-eixo').value = '';
+            } else {
+                alert('Por favor, insira um novo eixo.');
+            }
+        });
+    </script>
+</body>
+
+</html>
