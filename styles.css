@@ -719,3 +719,15 @@ footer {
     padding: 15px;
     margin: auto;
 }
+
+.container-cinza {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.excluir-icon {
+    color: #dc3545;
+    cursor: pointer;
+}

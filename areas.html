@@ -83,76 +83,137 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
-                <li class="breadcrumb-item"><a href="/menu-escola.html">Escola</a></li>
-                <li class="breadcrumb-item"><a href="/menu-escola.html">Cadastros Gerais</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Modelos de Documentos</li>
+                <li class="breadcrumb-item"><a href="/menu-gerencial.html">Gerencial</a></li>
+                <li class="breadcrumb-item"><a href="/menu-gerencial.html">Relatórios</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Áreas</li>
             </ol>
         </nav>
 
-        <div class="d-flex justify-content-between mt-5">
-            <h4 class="text-primary"><i class="fas fa-school"></i> Modelos de Documentos</h4>
-            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrar"><i
-                    class="fas  fa-user-plus"></i> Cadastrar</button>
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-cogs"></i> Áreas</h4>
         </div>
-
-        <br>
-
-        <div class="element-box">
-            <div class="element-wrapper">
-                <div class="element-header">
-                    <h5>Filtro</h5>
-                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
-                </div>
-            </div>
-
-            <form class="mt-2">
+ 
+        <div class="element-box mt-4">
+            <div class="d-flex justify-content-between">
                 <div class="row">
-                    <div class="col-sm-5">
-                        <label for="descricao" class="bold">Descrição</label>
-                        <input type="text" class="form-control" id="descricao" name="descricao">
-                    </div>
-
-
-                    <div class="col-sm-3  mt-4">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
-                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
-                            Limpar</button>
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                        </select>
                     </div>
                 </div>
-            </form>
-        </div>
-
-        <br>
-
-        <div class="element-box mt-3">
-            <div class="element-wrapper">
-                <div class="element-header">
-                    <h5>Listagem de Órgãos Regionais</h5>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
                 </div>
             </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                        </button>
+                        <!--<div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Nº</a>
+                    <a class="dropdown-item" href="#">Id</a>
+                    <a class="dropdown-item" href="#">Escola</a>
+                    <a class="dropdown-item" href="#">Nome</a>
+                    <a class="dropdown-item" href="#">Matrícula</a>
+                    <a class="dropdown-item" href="#">Situação</a>
+                    <a class="dropdown-item" href="#">Funções</a>
+                </div> -->
+
+                        <div class="dropdown-menu p-3">
+                            <form id="filter-form">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                                    <label class="form-check-label" for="colNo">#</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                                    <label class="form-check-label" for="colNome">Nome</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Parte" id="colParte">
+                                    <label class="form-check-label" for="colParte">Parte</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
+                                    <label class="form-check-label" for="colMatricula">Ações</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
+                                        class="fas fa-filter"></i> Filtrar </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <br>
 
             <table class="table table-bordered table-striped mt-3">
                 <thead class="bg-white">
                     <tr>
-                        <th>Código</th>
-                        <th>Descrição</th>
-                        <th>Ações</th>
+                        <th>Área</th>
+                        <th>Sub àrea</th>
+                        <th>Coluna</th>
+                        <th>Tipo de Dado</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
+                        <td>Log</td>
+                        <td>Acesso</td>
                         <td>Teste</td>
-                        <td>
-                            <a href="modelo-relatorios.html"><i class="fas fa-eye icon-view" title="Visualizar"></i></a>
-                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
-                                    data-target="#editar"></i></a>
-                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
-                                    data-target="#excluir"></i></a>
-                        </td>
+                        <td>Numérico</td>
                     </tr>
                 </tbody>
             </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -171,35 +232,52 @@
                 <div class="modal-body">
                     <form>
                         <div class="row">
-                            <div class="col-sm-12">
-                                <label for="tipo" class="bold">Tipo<span class="text-danger"
+                            <div class="col-sm-8">
+                                <label for="tipo" class="bold">Escola<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
                                 <select class="form-control" id="tipo" name="tipo" required>
-                                    <option value="documento_funcionario" selected>DOCUMENTO PARA FUNCIONÁRIO
-                                    </option>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="descricao" class="bold">Data da Publicação<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="descricao" name="descricao" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-8">
+                                <label for="descricao" class="bold">Título<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="descricao" name="descricao" required>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group form-check mt-4">
+                                    <input type="checkbox" class="form-check-input" id="exibirDashboard"
+                                        name="exibirDashboard">
+                                    <label class="form-check-label" for="exibirDashboard">Exibir no dashboard</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-8">
+                                <label for="tipo" class="bold">Perfil<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="tipo" name="tipo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-sm-12">
-                                <label for="descricao" class="bold">Descrição<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="descricao" name="descricao" required>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="anexarArquivo" class="bold">Anexar Arquivo:</label>
-                                <input type="file" class="form-control-file btn-primary" id="anexarArquivo"
-                                    name="anexarArquivo">
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="documento" class="bold">Documento<span class="text-danger"
+                                <label for="documento" class="bold">Mensagem<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
                                 <textarea class="form-control" id="documento" name="documento" rows="1"></textarea>
                                 <h3 class="text-danger">Manter o textarea do SIGEM original (TinyMCE core editor).
@@ -210,13 +288,15 @@
                         <div class="row mt-3">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="bold">Este documento é um Comprovante de Matrícula?</label>
-                                    <div class="form-check">
+                                    <label class="bold">Ativo?<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="comprovanteMatricula"
                                             id="comprovanteSim" value="sim">
                                         <label class="form-check-label" for="comprovanteSim">Sim</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="comprovanteMatricula"
                                             id="comprovanteNao" value="nao">
                                         <label class="form-check-label" for="comprovanteNao">Não</label>
@@ -249,35 +329,52 @@
                 <div class="modal-body">
                     <form>
                         <div class="row">
-                            <div class="col-sm-12">
-                                <label for="tipo" class="bold">Tipo<span class="text-danger"
+                            <div class="col-sm-8">
+                                <label for="tipo" class="bold">Escola<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
                                 <select class="form-control" id="tipo" name="tipo" required>
-                                    <option value="documento_funcionario" selected>DOCUMENTO PARA FUNCIONÁRIO
-                                    </option>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="descricao" class="bold">Data da Publicação<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="descricao" name="descricao" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-8">
+                                <label for="descricao" class="bold">Título<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="descricao" name="descricao" required>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group form-check mt-4">
+                                    <input type="checkbox" class="form-check-input" id="exibirDashboard"
+                                        name="exibirDashboard">
+                                    <label class="form-check-label" for="exibirDashboard">Exibir no dashboard</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-8">
+                                <label for="tipo" class="bold">Perfil<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="tipo" name="tipo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-sm-12">
-                                <label for="descricao" class="bold">Descrição<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="descricao" name="descricao" required>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="anexarArquivo" class="bold">Anexar Arquivo:</label>
-                                <input type="file" class="form-control-file btn-primary" id="anexarArquivo"
-                                    name="anexarArquivo">
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-sm-12">
-                                <label for="documento" class="bold">Documento<span class="text-danger"
+                                <label for="documento" class="bold">Mensagem<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
                                 <textarea class="form-control" id="documento" name="documento" rows="1"></textarea>
                                 <h3 class="text-danger">Manter o textarea do SIGEM original (TinyMCE core editor).
@@ -288,13 +385,15 @@
                         <div class="row mt-3">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="bold">Este documento é um Comprovante de Matrícula?</label>
-                                    <div class="form-check">
+                                    <label class="bold">Ativo?<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="comprovanteMatricula"
                                             id="comprovanteSim" value="sim">
                                         <label class="form-check-label" for="comprovanteSim">Sim</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="comprovanteMatricula"
                                             id="comprovanteNao" value="nao">
                                         <label class="form-check-label" for="comprovanteNao">Não</label>
