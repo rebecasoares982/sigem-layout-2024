@@ -18,14 +18,17 @@
         <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
 
         <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
         <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
         <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
         <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
-        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
         <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
         <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
-        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
     </div>
 
     <div class="content">
@@ -82,7 +85,7 @@
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/menu-academico.html">Acadêmico</a></li>
                 <li class="breadcrumb-item"><a href="/menu-academico.html">Diário de Classe</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Critérios de Avaliação</a></li> 
+                <li class="breadcrumb-item active" aria-current="page">Critérios de Avaliação</a></li>
             </ol>
         </nav>
 
@@ -217,7 +220,15 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="4">Nenhum registro encontrado.</td>
+                        <td>1</td>
+                        <td>5112</td>
+                        <td>Teste</td>
+                        <td>
+                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
+                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -504,10 +515,432 @@
 
                     <br>
 
+                    <div class="accordion" id="accordionVinculacaoEtapas">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingVinculacaoEtapas">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseVinculacaoEtapas" aria-expanded="true"
+                                        aria-controls="collapseVinculacaoEtapas">
+                                        Vinculação de Etapas <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseVinculacaoEtapas" class="collapse show"
+                                aria-labelledby="headingVinculacaoEtapas" data-parent="#accordionVinculacaoEtapas">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="aluno" class="bold">Serie/Etapa</label>
+                                                <select class="form-control" id="aluno" name="aluno" required>
+                                                    <option value="">Selecione</option>
+                                                    <option value="">Teste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <Br>
+
+                                        <h6 class="mb-2">Lista das Etapas Vinculadas</h6>
+                                        <div class="table-responsive bg-white">
+                                            <table class="table table-bordered">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>serie/Etapa</th>
+                                                        <th>Ação</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>470</td>
+                                                        <td>TESTE</td>
+                                                        <td>
+                                                            <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                    data-toggle="modal" data-target="#excluir"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
                     <div class="d-flex justify-content-end mt-3">
                         <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
                         <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Cadastro de Critérios de Avaliações</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="accordionCadastrar">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingCadastrar">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseCadastrar" aria-expanded="true"
+                                        aria-controls="collapseCadastrar">
+                                        Avaliação <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseCadastrar" class="collapse show" aria-labelledby="headingCadastrar"
+                                data-parent="#accordionCadastrar">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <label for="turma" class="bold">Nome<span class="text-danger"
+                                                        title="Preenchimento Obrigatório">*</span></label>
+                                                <input type="text" class="form-control" id="nome" name="nome" required>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <label for="ano" class="bold">Ano<span class="text-danger"
+                                                        title="Preenchimento Obrigatório">*</span></label>
+                                                <select class="form-control" id="ano" name="ano" required>
+                                                    <option value="">Selecione um registro</option>
+                                                    <option value="">Teste</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="turma" class="bold">Conceito Final Mínimo<span
+                                                        class="text-danger" title="Preenchimento Obrigatório">*</span>
+                                                    <i class="fas fa-question-circle" title="Define a média final limite para aprovação do aluno.
+                                                     Quando a atividade for avaliada por conceito, 
+                                                        nota-se que cada conceito representa uma escala de números, então a média é aplicada com 
+                                                        base nesta escala numérica."></i>
+                                                </label>
+                                                <select class="form-control" id="conceito" name="conceito" required>
+                                                    <option value="">Selecione um registro</option>
+                                                    <option value="">Teste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionFormulaAvaliacao">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingFormulaAvaliacao">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseFormulaAvaliacao" aria-expanded="true"
+                                        aria-controls="collapseFormulaAvaliacao">
+                                        Formula Avaliação Ano Letivo <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFormulaAvaliacao" class="collapse show"
+                                aria-labelledby="headingFormulaAvaliacao" data-parent="#accordionFormulaAvaliacao">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="bold">Resultado da unidade:</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="somaNotas" value="somaNotas">
+                                                        <label class="form-check-label" for="somaNotas">
+                                                            Resultado do Ano será a soma das notas das Unidade. (Ex:
+                                                            UN1+UN2 = Resultado da unidade) / Média de Aprovação
+                                                            CONCEITUAL.
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="mediaAritmetica"
+                                                            value="mediaAritmetica">
+                                                        <label class="form-check-label" for="mediaAritmetica">
+                                                            Resultado do Ano será a média aritmética das notas das
+                                                            Unidades.(Ex: UN1+UN2 / 2 = Resultado da unidade)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="formulaEspecifica"
+                                                            value="formulaEspecifica">
+                                                        <label class="form-check-label" for="formulaEspecifica">
+                                                            Utilizar Fórmula Específica.
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="formulaEspecifica"
+                                                            value="formulaEspecifica">
+                                                        <label class="form-check-label" for="formulaEspecifica">
+                                                            Utiliza Relatório/Parecer como avaliação. Não possui
+                                                            avaliação por nota ou conceito.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <label for="formulaMediaFinal" class="bold">Fórmula da Média Final do
+                                                    Ano Letivo<span class="text-danger"
+                                                        title="Preenchimento Obrigatório">*</span><i
+                                                        class="fas fa-question-circle"
+                                                        title="Para que serve a Fórmula de Média Final? Este campo serve para informar ao sistema qual 
+                                                        cálculo matemático será feito para identificar o resultado final do ano letivo."></i></label>
+                                                <input type="text" class="form-control" id="formulaMediaFinal"
+                                                    name="formulaMediaFinal">
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="avaliacao" class="bold">Unidade:</label>
+                                                <select class="form-control" id="avaliacao" name="avaliacao">
+                                                    <option value="">Selecione</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-sm-4 mt-4">
+                                                <button type="button" class="btn btn-primary"
+                                                    id="inserirAvaliacao">Inserir Unidade</button>
+                                                <button type="button" class="btn btn-outline-secondary"
+                                                    id="limparFormula"><i class="fas fa-trash"></i> Limpar
+                                                    Fórmula</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <Br>
+
+                    <div class="accordion" id="accordionRegrasCalculo">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingRegrasCalculo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseRegrasCalculo" aria-expanded="true"
+                                        aria-controls="collapseRegrasCalculo">
+                                        Regras para Cálculo de Recuperação Final <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseRegrasCalculo" class="collapse show" aria-labelledby="headingRegrasCalculo"
+                                data-parent="#accordionRegrasCalculo">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="somaNotas" value="somaNotas">
+                                                        <label class="form-check-label" for="somaNotas">
+                                                            <b>REGRA 1:
+                                                                <br>
+                                                                Nota da Recuperação final sobrepõe a média final do
+                                                                aluno.</b>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="mediaAritmetica"
+                                                            value="mediaAritmetica">
+                                                        <label class="form-check-label" for="mediaAritmetica">
+                                                            REGRA 2:
+                                                            <br>
+                                                            Nota final do aluno será a média aritimética da média final
+                                                            das unidades e nota da recuperação final.
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="formulaEspecifica"
+                                                            value="formulaEspecifica">
+                                                        <label class="form-check-label" for="formulaEspecifica">
+                                                            REGRA 3:
+                                                            <br>
+                                                            Não possui recuperação, aprovação direta.
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="formulaEspecifica"
+                                                            value="formulaEspecifica">
+                                                        <label class="form-check-label" for="formulaEspecifica">
+                                                            REGRA 4:
+                                                            <br>
+                                                            A Nota final do aluno será a maior nota entre a média final
+                                                            das unidades e nota da recuperação final.
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="resultadoUnidade" id="formulaEspecifica"
+                                                            value="formulaEspecifica">
+                                                        <label class="form-check-label" for="formulaEspecifica">
+                                                            REGRA 5:
+                                                            <br>
+                                                            Não possui recuperação, reprovação direta quando nota for
+                                                            abaixo da média anual.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionFormulaAvaliacao">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingFormulaAvaliacao">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseFormulaAvaliacao" aria-expanded="true"
+                                        aria-controls="collapseFormulaAvaliacao">
+                                        Configuração de Frequência <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFormulaAvaliacao" class="collapse show"
+                                aria-labelledby="headingFormulaAvaliacao" data-parent="#accordionFormulaAvaliacao">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <label for="formulaMediaFinal" class="bold">Dias Letivos Previstos<span
+                                                        class="text-danger"
+                                                        title="Preenchimento Obrigatório">*</span></label>
+                                                <input type="text" class="form-control" id="formulaMediaFinal"
+                                                    name="formulaMediaFinal" required>
+                                            </div>
+
+                                            <div class="col-sm-3">
+                                                <label for="avaliacao" class="bold">Presença Mínima<span
+                                                        class="text-danger"
+                                                        title="Preenchimento Obrigatório">*</span></label>
+                                                <input type="text" class="form-control" id="formulaMediaFinal"
+                                                    name="formulaMediaFinal" required>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="accordion" id="accordionVinculacaoEtapas">
+                        <div class="card">
+                            <div class="card-header card-header-cadastro" id="headingVinculacaoEtapas">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseVinculacaoEtapas" aria-expanded="true"
+                                        aria-controls="collapseVinculacaoEtapas">
+                                        Vinculação de Etapas <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseVinculacaoEtapas" class="collapse show"
+                                aria-labelledby="headingVinculacaoEtapas" data-parent="#accordionVinculacaoEtapas">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="aluno" class="bold">Serie/Etapa</label>
+                                                <select class="form-control" id="aluno" name="aluno" required>
+                                                    <option value="">Selecione</option>
+                                                    <option value="">Teste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <Br>
+
+                                        <h6 class="mb-2">Lista das Etapas Vinculadas</h6>
+                                        <div class="table-responsive bg-white">
+                                            <table class="table table-bordered">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>serie/Etapa</th>
+                                                        <th>Ação</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>470</td>
+                                                        <td>TESTE</td>
+                                                        <td>
+                                                            <a href="##"><i class="fas fa-trash" title="Excluir"
+                                                                    data-toggle="modal" data-target="#excluir"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="d-flex justify-content-end mt-3">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
                 </div>
             </div>
         </div>
