@@ -18,14 +18,17 @@
         <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
 
         <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i> Acadêmico</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
         <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
         <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
         <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
-        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i> Alimentação</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
         <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
         <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
-        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i> Relatórios</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
     </div>
 
     <div class="content">
@@ -207,8 +210,17 @@
                                     </small>
                                 </div>
                             </div>
+
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary btn-icon mt-4" type="button">Salvar</button>
+                                <div class="row mt-3">
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary-light" data-toggle="modal"
+                                            data-target="#copiarConteudo"><i class="fas fa-copy"></i>
+                                            Copiar Conteúdo</button>
+                                        <button class="btn btn-primary" type="button"><i class="fas fa-plus"></i>
+                                            Adicionar</button>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -248,6 +260,70 @@
 
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="copiarConteudo" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Copiar Conteúdo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="professor" class="bold">Professor<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="professor" name="professor" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <label for="turmas" class="bold">Turmas<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="turmas" name="turmas">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="periodo" class="bold">Período<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="periodo" name="periodo">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="disciplinas" class="bold">Disciplinas<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="disciplinas" name="disciplinas">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary btn-icon mt-4" type="button"><i class="fas fa-copy"></i>
+                                Copiar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

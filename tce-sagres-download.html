@@ -76,90 +76,69 @@
             </div>
         </header>
 
-        <div class="margin-top mt-4"></div>
+        <div class="margin-top"></div>
+
+        <br>
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Gerencial</li>
+                <li class="breadcrumb-item"><a href="/menu-gerencial.html">Gerencial</a></li>
+                <li class="breadcrumb-item"><a href="/menu-gerencial.html">TCE Sagres</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Download do Arquivo</li>
             </ol>
         </nav>
 
-        <div class="mt-4">
-            <h2 class="text-primary"><i class="fas fa-cogs"></i> Gerencial</h1>
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-cogs"></i> Download do Arquivo TCE Sagres</h4>
         </div>
 
-        <div class="mt-4">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Relatórios</h4>
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="areas.html">Áreas</a>
+        <br>
 
-                        <a class="btn btn-primary mb-2 btn-sm text-white"
-                            href="gerencial-relatorios.html">Relatórios</a>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 mt-3">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Gerencial</h4>
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="dados-sagres.html">Dados SAGRES</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="gerencial-usuarios.html">Usuários</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="anosLetivos.html">Ano Letivo</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white"
-                            href="semestreRecuperacoes.html">Recuperação</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="log-acesso.html">Log de Acesso</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="implantacoes.html">Implantação</a>
-
-
-                    </div>
-                </div>
-
-                <div class="col-sm-12 mt-3">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">Educacenso</h4>
-                        <a class="btn btn-primary mb-2 btn-sm text-white">Análise de Dados</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white">Relatório Censo</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white">Download Educacenso</a>
-
-                        <a class="btn btn-primary mb-2 btn-sm text-white">Exportação</a>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 mt-3">
-                    <div class="p-3 bg-white text-dark rounded">
-                        <h4 class="mb-3">TCE Sagres</h4>
-                        <a class="btn btn-primary mb-2 btn-sm text-white" href="tce-sagres-download.html">Download do Arquivo</a>
-                    </div>
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
                 </div>
             </div>
 
-            <Br>
+            <form class="mt-2">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="ano" class="bold">Ano<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="ano" name="ano" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
 
-            <footer class="text-center mt-5">
-                <div class="container">
-                    <p class="mb-0">&copy; 2024 Todos os direitos reservados</p>
+                    <div class="col-sm-3">
+                        <label for="mes" class="bold">Mês<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="mes" name="mes" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+ 
+                    <div class="col-sm-3 mt-4">
+                        <a href="/assets/_tmp_new-file.pdf" target="_blank" class="btn btn-primary"><i
+                                class="fas fa-download"></i> Download</a>
+                    </div>
                 </div>
-            </footer>
-
+            </form>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script src="scripts.js"></script>
     <script src="menu-lateral.js"></script>
-
 </body>
 
 </html>
