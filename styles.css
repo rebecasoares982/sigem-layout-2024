@@ -407,6 +407,10 @@ footer {
     color: #545454 !important;
 }
 
+.form-control-file.bg-primary {
+    background-color: #e3b04b !important;
+}
+
 /*.btn-blue-light,
 .table-primary {
     background-color: #e6ecff;
@@ -593,6 +597,30 @@ footer {
 
 .icon-delete {
     color: red;
+}
+
+.icon-etapas {
+    color: #007bff;
+}
+
+.icon-unidades {
+    color: #28a745;
+}
+
+.icon-calendario {
+    color: #17a2b8;
+}
+
+.icon-relatorio {
+    color: #064172;
+}
+
+.icon-configurar-avaliacao {
+    color: #565656;
+}
+
+.icon-detalhes-calendario-anual {
+    color: #539e6f;
 }
 
 .photo-box {
