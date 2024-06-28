@@ -84,84 +84,48 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/menu-alimentacao.html">Alimentação</a></li>
-                <li class="breadcrumb-item"><a href="/menu-alimentacao.html">Cardápio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Refeição</li>
+                <li class="breadcrumb-item active" aria-current="page">Cardápio</li>
             </ol>
         </nav>
 
         <div class="d-flex justify-content-between mt-5">
-            <h4 class="text-primary"><i class="fas fa-utensils"></i> Refeição</h4>
+            <h4 class="text-primary"><i class="fas fa-utensils"></i> Cardápio</h4>
             <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrar"><i
                     class="fas  fa-user-plus"></i> Cadastrar</button>
         </div>
 
         <br>
 
-        <div class="element-box">
-            <div class="element-wrapper">
-                <div class="element-header">
-                    <h5>Filtro</h5>
-                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+        <div class="element-box mt-3">
+            <div class="d-flex justify-content-end">
+                <div class="row mt-3">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary-light" data-toggle="modal"
+                            data-target="#copiarConteudo"><i class="fas fa-copy"></i>
+                            Copiar Conteúdo</button>
+                    </div>
                 </div>
             </div>
-
-            <form class="mt-2">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <label for="descricao" class="bold">Descrição da Refeição</label>
-                        <input type="text" class="form-control" id="descricao" name="descricao">
-                    </div>
-
-                    <div class="col-sm-5">
-                        <div class="form-group">
-                            <label class="bold">Ativo:</label>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ativa" id="ativaSim" value="sim">
-                                <label class="form-check-label" for="ativaSim">Sim</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ativa" id="ativaNao" value="nao">
-                                <label class="form-check-label" for="ativaNao">Não</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ativa" id="ativaTodos" value="todos">
-                                <label class="form-check-label" for="ativaTodos">Todos</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3  mt-4">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
-                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
-                            Limpar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <br>
-
-        <div class="element-box mt-3">
-            <h5>Listagem de Refeições</h5>
             <table class="table table-bordered table-striped mt-3">
                 <thead class="bg-white">
                     <tr>
+                        <th>Nº</th>
                         <th>Código</th>
-                        <th>Descrição da Refeição</th>
+                        <th>Data</th>
+                        <th>Turno</th>
                         <th>Tipo de Refeição</th>
-                        <th>Programa de Ensino</th>
-                        <th>Semana</th>
+                        <th>Refeição</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
                         <td>9002</td>
-                        <td>Teste</td>
-                        <td>Entrada</td>
-                        <td>Fundamental</td>
-                        <td>1ª Semana</td>
+                        <td>20/05/2024</td>
+                        <td>Matutino</td>
+                        <td>Desjejum</td>
+                        <td>Refeição 1</td>
                         <td>
                             <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
                                     data-target="#editar"></i></a>
@@ -190,29 +154,20 @@
                     <form>
                         <div class="element-wrapper">
                             <div class="element-header">
-                                <h5>Refeição</h5>
+                                <h5>Cardápio</h5>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-5">
-                                <label for="descricao" class="bold">Descrição da Refeição<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="descricao" name="descricao" required>
-                            </div>
-
                             <div class="col-sm-3">
-                                <label for="tipoRefeicao" class="bold">Tipo de Refeição<span class="text-danger"
+                                <label for="dataCardapio" class="bold">Data<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="tipoRefeicao" name="tipoRefeicao" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
+                                <input type="date" class="form-control" id="dataCardapio" name="dataCardapio" required>
                             </div>
 
-                            <div class="col-sm-4">
-                                <label for="habilidades" class="bold">Programa de Ensino<span class="text-danger"
+                            <div class="col-sm-7">
+                                <label for="turno" class="bold">Turno<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="habilidades" name="habilidades">
+                                <select class="form-control" id="turno" name="turno" required>
                                     <option value="">Selecione</option>
                                     <option value="">Teste</option>
                                 </select>
@@ -220,39 +175,7 @@
                         </div>
 
                         <div class="row mt-2">
-                            <div class="col-sm-4">
-                                <label for="habilidades" class="bold">Semana<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="habilidades" name="habilidades">
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
-                            </div>
-
-                            <div class="col-sm-5">
-                                <div class="form-group">
-                                    <label class="bold">Ativo<span class="text-danger"
-                                            title="Preenchimento Obrigatório">*</span></label>
-                                    <br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="ativa" id="ativaSim"
-                                            value="sim" required>
-                                        <label class="form-check-label" for="ativaSim">Sim</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="ativa" id="ativaNao"
-                                            value="nao" required>
-                                        <label class="form-check-label" for="ativaNao">Não</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="ativa" id="ativaTodos"
-                                            value="todos" required>
-                                        <label class="form-check-label" for="ativaTodos">Todos</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-8 mt-2">
+                            <div class="col-sm-10 mt-2">
                                 <label for="observacao" class="bold">Observação:</label>
                                 <textarea class="form-control" id="observacao" name="observacao" rows="4"></textarea>
                             </div>
@@ -270,37 +193,29 @@
                     <hr>
                     <div class="element-wrapper">
                         <div class="element-header">
-                            <h5>Ingredientes</h5>
+                            <h5>Refeições</h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-5">
-                            <label for="alimentos" class="bold">Alimentos<span class="text-danger"
+                            <label for="tipoRefeicao" class="bold">Tipo de Refeição<span class="text-danger"
                                     title="Preenchimento Obrigatório">*</span></label>
-                            <select class="form-control" id="alimentos" name="alimentos" required>
+                            <select class="form-control" id="tipoRefeicao" name="tipoRefeicao" required>
                                 <option value="">Selecione</option>
                                 <option value="">Teste</option>
                             </select>
                         </div>
 
-                        <div class="col-sm-3">
-                            <label for="quantidade" class="bold">Quantidade<span class="text-danger"
-                                    title="Preenchimento Obrigatório">*</span></label>
-                            <input type="text" class="form-control" id="quantidade" name="quantidade" required>
-                        </div>
-                    </div>
-
-                    <div class="row mt-3">
                         <div class="col-sm-4">
-                            <label for="unidadeMedida" class="bold">Unidade de Medida<span class="text-danger"
+                            <label for="refeicoes" class="bold">Refeições<span class="text-danger"
                                     title="Preenchimento Obrigatório">*</span></label>
-                            <select class="form-control" id="unidadeMedida" name="unidadeMedida" required>
+                            <select class="form-control" id="refeicoes" name="refeicoes" required>
                                 <option value="">Selecione</option>
                                 <option value="">Teste</option>
                             </select>
                         </div>
 
-                        <div class="col-sm-4 mt-4">
+                        <div class="col-sm-3 mt-4">
                             <button type="button" class="btn btn-primary-light btn-sm" id="btnIncluir"><i
                                     class="fas fa-plus"></i> Incluir</button>
                         </div>
@@ -311,19 +226,17 @@
                             <table class="table table-bordered table-striped">
                                 <thead class="bg-white">
                                     <tr>
-                                        <th scope="col">Código</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Quantidade</th>
-                                        <th scope="col">Unidade</th>
+                                        <th scope="col">Tipo de Refeição</th>
+                                        <th scope="col">Refeição</th>
+                                        <th scope="col">Plano de Ensino</th>
                                         <th scope="col">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>10</td>
-                                        <td>Arroz</td>
-                                        <td>1</td>
-                                        <td>Quilo</td>
+                                        <td>Desjejum</td>
+                                        <td>Refeição 1</td>
+                                        <td>Creche</td>
                                         <td>
                                             <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
                                                     data-target="#excluir"></i></a>
@@ -341,10 +254,10 @@
 
     <!-- Modal -->
     <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5>Editar Cadastro de Refeições</h5>
+                    <h5>Editar Cardápio</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -353,29 +266,20 @@
                     <form>
                         <div class="element-wrapper">
                             <div class="element-header">
-                                <h5>Refeição</h5>
+                                <h5>Cardápio</h5>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-5">
-                                <label for="descricao" class="bold">Descrição da Refeição<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="text" class="form-control" id="descricao" name="descricao" required>
-                            </div>
-
                             <div class="col-sm-3">
-                                <label for="tipoRefeicao" class="bold">Tipo de Refeição<span class="text-danger"
+                                <label for="dataCardapio" class="bold">Data<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="tipoRefeicao" name="tipoRefeicao" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
+                                <input type="date" class="form-control" id="dataCardapio" name="dataCardapio" required>
                             </div>
 
-                            <div class="col-sm-4">
-                                <label for="habilidades" class="bold">Programa de Ensino<span class="text-danger"
+                            <div class="col-sm-7">
+                                <label for="turno" class="bold">Turno<span class="text-danger"
                                         title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="habilidades" name="habilidades">
+                                <select class="form-control" id="turno" name="turno" required>
                                     <option value="">Selecione</option>
                                     <option value="">Teste</option>
                                 </select>
@@ -383,39 +287,7 @@
                         </div>
 
                         <div class="row mt-2">
-                            <div class="col-sm-4">
-                                <label for="habilidades" class="bold">Semana<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="habilidades" name="habilidades">
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
-                            </div>
-
-                            <div class="col-sm-5">
-                                <div class="form-group">
-                                    <label class="bold">Ativo<span class="text-danger"
-                                            title="Preenchimento Obrigatório">*</span></label>
-                                    <br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="ativa" id="ativaSim"
-                                            value="sim" required>
-                                        <label class="form-check-label" for="ativaSim">Sim</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="ativa" id="ativaNao"
-                                            value="nao" required>
-                                        <label class="form-check-label" for="ativaNao">Não</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="ativa" id="ativaTodos"
-                                            value="todos" required>
-                                        <label class="form-check-label" for="ativaTodos">Todos</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-8 mt-2">
+                            <div class="col-sm-10 mt-2">
                                 <label for="observacao" class="bold">Observação:</label>
                                 <textarea class="form-control" id="observacao" name="observacao" rows="4"></textarea>
                             </div>
@@ -433,37 +305,29 @@
                     <hr>
                     <div class="element-wrapper">
                         <div class="element-header">
-                            <h5>Ingredientes</h5>
+                            <h5>Refeições</h5>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-5">
-                            <label for="alimentos" class="bold">Alimentos<span class="text-danger"
+                            <label for="tipoRefeicao" class="bold">Tipo de Refeição<span class="text-danger"
                                     title="Preenchimento Obrigatório">*</span></label>
-                            <select class="form-control" id="alimentos" name="alimentos" required>
+                            <select class="form-control" id="tipoRefeicao" name="tipoRefeicao" required>
                                 <option value="">Selecione</option>
                                 <option value="">Teste</option>
                             </select>
                         </div>
 
-                        <div class="col-sm-3">
-                            <label for="quantidade" class="bold">Quantidade<span class="text-danger"
-                                    title="Preenchimento Obrigatório">*</span></label>
-                            <input type="text" class="form-control" id="quantidade" name="quantidade" required>
-                        </div>
-                    </div>
-
-                    <div class="row mt-3">
                         <div class="col-sm-4">
-                            <label for="unidadeMedida" class="bold">Unidade de Medida<span class="text-danger"
+                            <label for="refeicoes" class="bold">Refeições<span class="text-danger"
                                     title="Preenchimento Obrigatório">*</span></label>
-                            <select class="form-control" id="unidadeMedida" name="unidadeMedida" required>
+                            <select class="form-control" id="refeicoes" name="refeicoes" required>
                                 <option value="">Selecione</option>
                                 <option value="">Teste</option>
                             </select>
                         </div>
 
-                        <div class="col-sm-4 mt-4">
+                        <div class="col-sm-3 mt-4">
                             <button type="button" class="btn btn-primary-light btn-sm" id="btnIncluir"><i
                                     class="fas fa-plus"></i> Incluir</button>
                         </div>
@@ -474,19 +338,17 @@
                             <table class="table table-bordered table-striped">
                                 <thead class="bg-white">
                                     <tr>
-                                        <th scope="col">Código</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Quantidade</th>
-                                        <th scope="col">Unidade</th>
+                                        <th scope="col">Tipo de Refeição</th>
+                                        <th scope="col">Refeição</th>
+                                        <th scope="col">Plano de Ensino</th>
                                         <th scope="col">Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>10</td>
-                                        <td>Arroz</td>
-                                        <td>1</td>
-                                        <td>Quilo</td>
+                                        <td>Desjejum</td>
+                                        <td>Refeição 1</td>
+                                        <td>Creche</td>
                                         <td>
                                             <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
                                                     data-target="#excluir"></i></a>
@@ -516,6 +378,50 @@
                     <button class="btn btn-primary">Sim</button>
                     <button class="btn btn-secondary">Não</button>
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="copiarConteudo" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Copiar Conteúdo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="cardapio" class="bold">Cardápio que vai ser copiado<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="cardapio" name="cardapio">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="turno" class="bold">Novo turno<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="turno" name="turno">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary btn-icon mt-4" type="button"><i class="fas fa-copy"></i>
+                                Copiar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
