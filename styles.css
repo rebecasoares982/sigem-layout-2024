@@ -759,3 +759,7 @@ footer {
     color: #dc3545;
     cursor: pointer;
 }
+
+.text-danger {
+    color: #721c24 !important;
+}

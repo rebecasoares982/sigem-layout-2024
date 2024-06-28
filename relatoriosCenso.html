@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+        <br>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                    <li class="breadcrumb-item"><a href="/menu-gerencial.html">Gerencial</a></li>
+                    <li class="breadcrumb-item"><a href="/menu-gerencial.html">EducaCenso</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Relatorio Censo</li>
+                </ol>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-cogs"></i> Relatorio Censo</h4>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+                </div>
+            </div>
+
+            <!--Obs: As opções do forms do filtro altera de acordo com o registro selecionado. 
+            Manter a estrutura do formulário original, porém estilizar os campos de input com a class ''form-control''.-->
+            <form>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label for="escolas" class="bold">Escolas<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="escolas" name="escolas" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="registro" class="bold">Registro<span class="text-danger"
+                                title="Preenchimento Obrigatório">*</span></label>
+                        <select class="form-control" id="registro" name="registro" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-sm-5">
+                        <label for="turmas" class="bold">Turmas:</label>
+                        <select class="form-control" id="turmas" name="turmas" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="alunos" class="bold">Alunos</label>
+                        <select class="form-control" id="alunos" name="alunos" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3 mt-4">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="element-box">
+            <div>
+                <!--Se houver erros encontrados, exibirá os accordions no resultado e a mensagem de "quantidade de campos com erros".-->
+                <div class="alert alert-danger bold text-center" role="alert">Erros encontrados no registro.</div>
+
+                <!--Se não tiver erros encontrados, o resultado é vazio. Dispensando a exibição do accordion.-->
+                <div class="alert alert-success bold text-center" role="alert">Nenhum erro encontrado no registro.</div>
+            </div>
+
+            <div class="bold text-danger mt-3">
+                <h6>Quantidade de campos com erros: 6</h6>
+            </div>
+
+            <div class="resultado mt-3">
+                <div class="accordion" id="accordionErro1">
+                    <div class="card">
+                        <div class="card-header" id="headingErro1">
+                            <p class="mb-0">
+                                <button class="btn btn-link" style="font-size: 15px; margin-right: 150px !important"
+                                    type="button" data-toggle="collapse" data-target="#collapseErro1"
+                                    aria-expanded="true" aria-controls="collapseErro1">
+                                    Erro para o campo: 18 a 20 - Tipo de atendimento <i
+                                        class="fas fa-chevron-right"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseErro1" class="collapse" aria-labelledby="headingErro1"
+                            data-parent="#accordionErro1">
+                            <div class="card-body">
+                                <h6>TESTE IVAN DELETAR</h6>
+
+                                <p>1. Pelo menos um dos campos de 18 a 20 deve ser preenchido com 1 (Sim).</p>
+
+                                <span class="bold">Erro: "Tipo de atendimento" não foi preenchido corretamente. Não
+                                    podem ser
+                                    informadas todas as opções com valor igual a 0 (Não).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="accordion" id="accordionErro2">
+                    <div class="card">
+                        <div class="card-header" id="headingErro2">
+                            <p class="mb-0">
+                                <button class="btn btn-link" style="font-size: 15px; margin-right: 150px !important"
+                                    type="button" data-toggle="collapse" data-target="#collapseErro2"
+                                    aria-expanded="true" aria-controls="collapseErro2">
+                                    Erro para o campo: 21 a 23 - Estrutura curricular <i
+                                        class="fas fa-chevron-right"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseErro2" class="collapse" aria-labelledby="headingErro2"
+                            data-parent="#accordionErro2">
+                            <div class="card-body">
+                                <h6>TESTE IVAN DELETAR</h6>
+
+                                <p>1. Não podem todos os campos de 21 a 23 serem preenchidos com 0 (Não).</p>
+
+                                <span class="bold">Erro: Estrutura curricular" não foi preenchido corretamente. Não
+                                    podem ser informadas todas as opções com valor igual a 0 (Não).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="accordion" id="accordionErro3">
+                    <div class="card">
+                        <div class="card-header" id="headingErro3">
+                            <p class="mb-0">
+                                <button class="btn btn-link" style="font-size: 15px; margin-right: 150px !important"
+                                    type="button" data-toggle="collapse" data-target="#collapseErro3"
+                                    aria-expanded="true" aria-controls="collapseErro3">
+                                    Erro para o campo: 30 - Local de funcionamento diferenciado da turma <i
+                                        class="fas fa-chevron-right"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseErro3" class="collapse" aria-labelledby="headingErro3"
+                            data-parent="#accordionErro3">
+                            <div class="card-body">
+                                <h6>TESTE IVAN DELETAR</h6>
+
+                                <p>1. Deve ser preenchido quando o campo 6 (Tipo de mediação didático-pedagógica) for
+                                    preenchido com 1 (Presencial).</p>
+
+                                <span class="bold">Erro: O campo não foi preenchido quando deveria ser
+                                    preenchido.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="accordion" id="accordionErro4">
+                    <div class="card">
+                        <div class="card-header" id="headingErro4">
+                            <p class="mb-0">
+                                <button class="btn btn-link" style="font-size: 15px; margin-right: 150px !important"
+                                    type="button" data-toggle="collapse" data-target="#collapseErro4"
+                                    aria-expanded="true" aria-controls="collapseErro4">
+                                    Erro para o campo: 31 - Modalidade <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseErro4" class="collapse" aria-labelledby="headingErro4"
+                            data-parent="#accordionErro4">
+                            <div class="card-body">
+                                <h6>TESTE IVAN DELETAR</h6>
+
+                                <p>3. Não pode ser preenchido quando os campos 21 (Formação geral básica) e 23 (Não se
+                                    aplica) não forem preenchidos com 1 (Sim).</p>
+
+                                <span class="bold">Erro: O campo foi preenchido quando deveria não ser
+                                    preenchido.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="accordion" id="accordionErro5">
+                    <div class="card">
+                        <div class="card-header" id="headingErro5">
+                            <p class="mb-0">
+                                <button class="btn btn-link" style="font-size: 15px; margin-right: 150px !important"
+                                    type="button" data-toggle="collapse" data-target="#collapseErro5"
+                                    aria-expanded="true" aria-controls="collapseErro5">
+                                    Erro para o campo: 32 - Etapa <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseErro5" class="collapse" aria-labelledby="headingErro5"
+                            data-parent="#accordionErro5">
+                            <div class="card-body">
+                                <h6>TESTE IVAN DELETAR</h6>
+
+                                <p>3. Não pode ser preenchido quando os campos 21 (Formação geral básica) e 23 (Não se
+                                    aplica) não forem preenchidos com 1 (Sim).</p>
+
+                                <span class="bold">Erro: O campo foi preenchido quando deveria não ser
+                                    preenchido.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="accordion" id="accordionErro6">
+                    <div class="card">
+                        <div class="card-header" id="headingErro6">
+                            <p class="mb-0">
+                                <button class="btn btn-link" style="font-size: 15px; margin-right: 150px !important"
+                                    type="button" data-toggle="collapse" data-target="#collapseErro6"
+                                    aria-expanded="true" aria-controls="collapseErro6">
+                                    Erro para o campo: 34 a 39 - Formas de organização da turma <i
+                                        class="fas fa-chevron-right"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseErro6" class="collapse" aria-labelledby="headingErro6"
+                            data-parent="#accordionErro6">
+                            <div class="card-body">
+                                <h6>TESTE IVAN DELETAR</h6>
+
+                                <p>1. Não podem todos os campos de 34 a 39 serem preenchidos com 0 (Não).</p>
+
+                                <span class="bold">Erro: "Formas de organização da turma" não foi preenchido
+                                    corretamente. Não podem ser informadas todas as opções com valor igual a 0
+                                    (Não).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>
