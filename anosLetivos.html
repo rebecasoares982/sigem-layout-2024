@@ -17,7 +17,7 @@
         <div id="abre_janela_wp" class="open"><span class="fa fa-chevron-left"><i>abre</i></span></div>
         <p class="ribbon ribbon.ribbon-bottom-left ribbon-md ribbon-warning">Homologação</p>
     </div>
-    
+
     <div class="sidebar d-flex flex-column p-3 page-academico">
         <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
         <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
@@ -204,91 +204,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5>Cadastrar Ano Letivo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-warning bold" role="alert">
-                        Já existe um ano letivo com período de matricula ativo para este cliente.
-                    </div>
-
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label for="nome" class="bold">Nome<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span>
-                                </label>
-                                <input type="text" class="form-control" id="nome" name="nome" required>
-                            </div>
-                            <div class="col-sm-4">
-                                <label for="dataInicio" class="bold">Data de início<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span>
-                                </label>
-                                <input type="date" class="form-control" id="dataInicio" name="dataInicio" required>
-                            </div>
-                            <div class="col-sm-4">
-                                <label for="dataTermino" class="bold">Data de término<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span>
-                                </label>
-                                <input type="date" class="form-control" id="dataTermino" name="dataTermino" required>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-sm-6">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="periodoEncerrado"
-                                        name="periodoEncerrado">
-                                    <label class="form-check-label" for="periodoEncerrado">Período letivo
-                                        encerrado</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <table class="table table-bordered mt-3">
-                            <thead>
-                                <tr>
-                                    <th>Tipo de Inscrição</th>
-                                    <th>Tipo de Matrícula</th>
-                                    <th>Situação</th>
-                                    <th>Data de início</th>
-                                    <th>Data de término</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Externa</td>
-                                    <td>Novos alunos</td>
-                                    <td>
-                                        <select class="form-control">
-                                            <option value="ativado">ATIVADO</option>
-                                            <option value="desativado" selected>DESATIVADO</option>
-                                        </select>
-                                    </td>
-                                    <td><input type="date" class="form-control"></td>
-                                    <td><input type="date" class="form-control"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="d-flex justify-content-end mt-4">
-                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-
-    <!-- Modal -->
-    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Editar Cadastro do Ano Letivo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -838,6 +753,411 @@
     </div>
     <!---->
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="detalhesCalendario" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Detalhes do Calendário Anual</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="dataInicio" class="bold">Data de início<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span>
+                                </label>
+                                <input type="date" class="form-control" id="dataInicio" name="dataInicio" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="dataTermino" class="bold">Data de término<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span>
+                                </label>
+                                <input type="date" class="form-control" id="dataTermino" name="dataTermino" required>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion" id="accordion1">
+                            <div class="card">
+                                <div class="card-header card-header-cadastro" id="heading1">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                            Registro mensal dos dias letivos e feriados <i
+                                                class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse1" class="collapse" aria-labelledby="heading1"
+                                    data-parent="#accordion1">
+                                    <div class="card-body">
+                                        <h5>Cadastrar Motivos</h5>
+                                        <form>
+                                            <div class="row mt-3">
+                                                <div class="col-sm-3">
+                                                    <label for="mesCalendario" class="bold">Mês:</label>
+                                                    <input type="date" id="mesCalendario" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-4">
+                                                <div class="col-sm-12">
+                                                    <button type="button" class="btn btn-secondary">
+                                                        <i class="fas fa-angle-double-left"></i> Anterior</button>
+                                                    <button type="button" class="btn btn-secondary">Próximo <i
+                                                            class="fas fa-angle-double-right"></i></button>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row mt-2">
+                                                <div class="col-sm-12">
+                                                    <table class="table table-bordered mt-3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th><input type="checkbox"> Domingo</th>
+                                                                <th><input type="checkbox"> Segunda</th>
+                                                                <th><input type="checkbox"> Terça</th>
+                                                                <th><input type="checkbox"> Quarta</th>
+                                                                <th><input type="checkbox"> Quinta</th>
+                                                                <th><input type="checkbox"> Sexta</th>
+                                                                <th><input type="checkbox"> Sábado</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td><input type="checkbox"> 13/06/2024 <i
+                                                                        class="fas fa-plus-circle add-category-btn"
+                                                                        id="add-category-btn"
+                                                                        title="Adicionar Nova Modalidade"></i>
+                                                                </td>
+                                                                <td> <input type="checkbox"> 14/06/2024 <i
+                                                                        class="fas fa-plus-circle add-category-btn"
+                                                                        id="add-category-btn"
+                                                                        title="Adicionar Nova Modalidade"></i> </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <div class="row container" id="new-eixo-section"
+                                                        style="display: none;">
+                                                        <div class="col-sm-12">
+                                                            <label for="nome" class="bold">Motivo <span
+                                                                    class="text-danger"
+                                                                    title="Preenchimento Obrigatório">*</span></label>
+                                                            <input type="text" class="form-control" id="nome"
+                                                                name="nome" required>
+                                                            <button id="save-eixo-btn"
+                                                                class="btn btn-primary mt-2">Salvar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion" id="accordion2">
+                            <div class="card">
+                                <div class="card-header card-header-cadastro" id="heading2">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                            Períodos para trabalhos extraclasse <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="heading2"
+                                    data-parent="#accordion2">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <label for="ano" class="bold">Unidade do Ano Letivo:</label>
+                                                    <select name="tipo_transporte" id="tipo_transporte"
+                                                        class="form-control">
+                                                        <option value="">Selecione</option>
+                                                        <option value="">Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label for="dataInicio" class="bold">Data de início</label>
+                                                    <input type="date" class="form-control" id="dataInicio"
+                                                        name="dataInicio" required>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label for="dataTermino" class="bold">Data de término</label>
+                                                    <input type="date" class="form-control" id="dataTermino"
+                                                        name="dataTermino" required>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                                        <i class="fas fa-plus"></i> Adicionar Período
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <br>
+
+                                            <h5 class="mb-2">Lista de Período de Trabalhos Extraclasse</h5>
+                                            <div class="table responsive">
+                                                <table class="table table-bordered  ">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th>Unidade</th>
+                                                            <th>Data Início</th>
+                                                            <th>Data Término</th>
+                                                            <th>Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Teste</td>
+                                                            <td>20/05/2024</td>
+                                                            <td>21/05/2024</td>
+                                                            <td><button class="btn btn-danger btn-sm" title="Excluir"
+                                                                    type="button" data-toggle="modal"
+                                                                    data-target="#excluir"><i
+                                                                        class="fas fa-trash-alt"></i></button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion" id="accordion3">
+                            <div class="card">
+                                <div class="card-header card-header-cadastro" id="heading3">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                            Datas de avaliação <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse3" class="collapse" aria-labelledby="heading3"
+                                    data-parent="#accordion3">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label for="ano" class="bold">Unidade do Ano Letivo:</label>
+                                                    <select name="unidadeAnoLetivo" id="unidadeAnoLetivo"
+                                                        class="form-control">
+                                                        <option value="">Selecione</option>
+                                                        <option value="">Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <label for="dataInicio" class="bold">Data de início</label>
+                                                    <input type="date" class="form-control" id="dataInicio"
+                                                        name="dataInicio" required>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <label for="dataTermino" class="bold">Data de término</label>
+                                                    <input type="date" class="form-control" id="dataTermino"
+                                                        name="dataTermino" required>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                                        <i class="fas fa-plus"></i> Adicionar Período de Avaliação
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <br>
+
+                                            <h5 class="mb-2">Lista de Período de Avaliações</h5>
+                                            <div class="table responsive">
+                                                <table class="table table-bordered  ">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th>Unidade</th>
+                                                            <th>Data Início</th>
+                                                            <th>Data Término</th>
+                                                            <th>Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Teste</td>
+                                                            <td>20/05/2024</td>
+                                                            <td>21/05/2024</td>
+                                                            <td><button class="btn btn-danger btn-sm" title="Excluir"
+                                                                    type="button" data-toggle="modal"
+                                                                    data-target="#excluir"><i
+                                                                        class="fas fa-trash-alt"></i></button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion" id="accordion4">
+                            <div class="card">
+                                <div class="card-header card-header-cadastro" id="heading4">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                            Matrícula Fechada <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse4" class="collapse" aria-labelledby="heading4"
+                                    data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <label for="dataInicio" class="bold">Data de início</label>
+                                                <input type="date" class="form-control" id="dataInicio"
+                                                    name="dataInicio" required>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <label for="dataTermino" class="bold">Data de término</label>
+                                                <input type="date" class="form-control" id="dataTermino"
+                                                    name="dataTermino" required>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                                    <i class="fas fa-save"></i> Salvar Período de Recuperação
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Editar Cadastro do Ano Letivo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning bold" role="alert">
+                        Já existe um ano letivo com período de matricula ativo para este cliente.
+                    </div>
+
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="nome" class="bold">Nome<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="dataInicio" class="bold">Data de início<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span>
+                                </label>
+                                <input type="date" class="form-control" id="dataInicio" name="dataInicio" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="dataTermino" class="bold">Data de término<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span>
+                                </label>
+                                <input type="date" class="form-control" id="dataTermino" name="dataTermino" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-6">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="periodoEncerrado"
+                                        name="periodoEncerrado">
+                                    <label class="form-check-label" for="periodoEncerrado">Período letivo
+                                        encerrado</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table class="table table-bordered mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Inscrição</th>
+                                    <th>Tipo de Matrícula</th>
+                                    <th>Situação</th>
+                                    <th>Data de início</th>
+                                    <th>Data de término</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Externa</td>
+                                    <td>Novos alunos</td>
+                                    <td>
+                                        <select class="form-control">
+                                            <option value="ativado">ATIVADO</option>
+                                            <option value="desativado" selected>DESATIVADO</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="date" class="form-control"></td>
+                                    <td><input type="date" class="form-control"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
     <!-- Modal -->
     <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -858,6 +1178,22 @@
     </div>
     <!---->
 
+    <script>
+        document.getElementById('add-eixo-btn').addEventListener('click', function () {
+            document.getElementById('new-eixo-section').style.display = 'block';
+        });
+
+        document.getElementById('save-eixo-btn').addEventListener('click', function () {
+            const newCategory = document.getElementById('nome').value;
+            if (newCategory) {
+                alert(`Nova categoria salva: ${newCategory}`);
+                document.getElementById('new-eixo-section').style.display = 'none';
+                document.getElementById('nome').value = '';
+            } else {
+                alert('Por favor, insira um motivo.');
+            }
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

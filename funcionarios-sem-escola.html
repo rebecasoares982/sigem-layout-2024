@@ -17,7 +17,7 @@
         <div id="abre_janela_wp" class="open"><span class="fa fa-chevron-left"><i>abre</i></span></div>
         <p class="ribbon ribbon.ribbon-bottom-left ribbon-md ribbon-warning">Homologação</p>
     </div>
-    
+
     <div class="sidebar d-flex flex-column p-3 page-academico">
         <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
         <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
@@ -47,6 +47,7 @@
             <div class="icons d-flex align-items-center">
                 <div class="icon-container mr-3" id="bellDropdown">
                     <i class="fas fa-bell"></i>
+                    <span class="badge badge-danger badge-notificacoes">3</span>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Notificação 1</a>
                         <a class="dropdown-item" href="#">Notificação 2</a>
@@ -55,6 +56,7 @@
                 </div>
                 <div class="icon-container mr-3" id="envelopeDropdown">
                     <i class="fas fa-envelope"></i>
+                    <span class="badge badge-danger badge-notificacoes">3</span>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Mensagem 1</a>
                         <a class="dropdown-item" href="#">Mensagem 2</a>
@@ -91,72 +93,13 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/menu-pessoal.html">Pessoal</a></li>
-                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Frequência</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Frequência dos Funcionários</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Funcionários e Professores</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Funcionários sem Escola</a></li>
             </ol>
         </nav>
 
         <div class="d-flex justify-content-between mt-5">
-            <h4 class="text-primary"><i class="fas fa-user"></i> Frequência dos Funcionários</h4>
-            <button class="btn btn-cadastro" data-toggle="modal" data-target="#cadastrarOcorrencia"><i
-                    class="fas fa-user-plus"></i> Cadastrar Frequência</button>
-        </div>
-
-        <br>
-
-        <div class="element-box">
-            <div class="element-wrapper">
-                <div class="element-header">
-                    <h5>Filtro</h5>
-                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
-                </div>
-            </div>
-
-            <form class="mt-3">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <label for="ano" class="bold">De:</label>
-                        <input type="date" class="form-control" id="nome">
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label for="ano" class="bold">Até:</label>
-                        <input type="date" class="form-control" id="nome">
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="visualizacao" class="bold">Visualização:</label>
-                        <select class="form-control" id="visualizacao" name="visualizacao">
-                            <option value="">Selecione</option>
-                            <option value="">Teste</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col-sm-4">
-                        <label for="funcionario" class="bold">Funcionário:</label>
-                        <select class="form-control" id="funcionario" name="funcionario">
-                            <option value="">Selecione</option>
-                            <option value="">Teste</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="tipo" class="bold">Tipo:</label>
-                        <select class="form-control" id="tipo" name="tipo">
-                            <option value="">Selecione</option>
-                            <option value="">Teste</option>
-                        </select>
-                    </div>
-
-                    <div class="col-sm-3 mt-4">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
-                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
-                            Limpar</button>
-                    </div>
-                </div>
-            </form>
+            <h4 class="text-primary"><i class="fas fa-user"></i> Funcionários sem Escola</h4>
         </div>
 
         <br>
@@ -168,29 +111,112 @@
                 </div>
             </div>
 
+            <div class="d-flex justify-content-between mt-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                        </button>
+                        <!--<div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Nº</a>
+                        <a class="dropdown-item" href="#">Id</a>
+                        <a class="dropdown-item" href="#">Escola</a>
+                        <a class="dropdown-item" href="#">Nome</a>
+                        <a class="dropdown-item" href="#">Matrícula</a>
+                        <a class="dropdown-item" href="#">Situação</a>
+                        <a class="dropdown-item" href="#">Funções</a>
+                    </div> -->
+
+                        <div class="dropdown-menu p-3">
+                            <form id="filter-form">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                                    <label class="form-check-label" for="colNo">Nº</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Id" id="colId">
+                                    <label class="form-check-label" for="colId">Id</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
+                                    <label class="form-check-label" for="colEscola">Escola</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                                    <label class="form-check-label" for="colNome">Nome</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Curso" id="coCurso">
+                                    <label class="form-check-label" for="colCurso">Curso</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Turno" id="colTurno">
+                                    <label class="form-check-label" for="colTurno">Turno</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
+                                    <label class="form-check-label" for="colFuncoes">Funções</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
+                                        class="fas fa-filter"></i> Filtrar </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <Br>
+
             <table class="table table-bordered table-striped">
                 <thead class="bg-white">
                     <tr>
-                        <th scope="col">Código</th>
-                        <th scope="col">Funcionário</th>
+                        <th scope="col">Nº</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Escola</th>
-                        <th scope="col">De</th>
-                        <th scope="col">Até</th>
-                        <th scope="col">Tipo</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Situação</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>42</td>
+                        <td>1</td>
+                        <td>74523</td>
+                        <td>Sem Vínculos</td>
                         <td>Teste</td>
-                        <td>Escola Teste</td>
-                        <td>11/02/2024</td>
-                        <td>11/03/2024</td>
-                        <td>Férias</td>
+                        <td>075.854.159-98</td>
+                        <td>Pendente</td>
                         <td>
-                            <a href="##"><i class="fas fa-edit icon-edit" title="Editar" data-toggle="modal"
-                                    data-target="#editar"></i></a>
+                            <a href="##"><i class="fas fa-user-circle icon-view" title="Acesso ao Sistema"
+                                    data-toggle="modal" data-target="#acessoSistema"></i></a>
+                            <a href="editar-funcionarios-sem-escola.html" target="_blank"><i
+                                    class="fas fa-edit icon-edit" title="Editar"></i></a>
                             <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
                                     data-target="#excluir"></i></a>
                         </td>
@@ -223,7 +249,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="cadastrarOcorrencia" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+    <div class="modal fade" id="acessoSistema" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -237,51 +263,112 @@
                     <form>
                         <div class="row">
                             <div class="col-sm-3">
-                                <label for="data" class="bold">De<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data" name="data" required>
+                                <label class="bold" for="nome">Nome:</label>
+                                <p id="nome">teste</p>
                             </div>
 
-                            <div class="col-sm-3">
-                                <label for="data" class="bold">Até<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <input type="date" class="form-control" id="data" name="data" required>
-                            </div>
-                        </div>
-
-                        <div class="row mt-2">
-                            <div class="col-sm-6">
-                                <label for="funcionario" class="bold">Funcionário<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="funcionario" name="funcionario" required>
+                            <div class="col-sm-4">
+                                <label class="bold" for="vinculoPrincipal">Vínculo Principal do Cadastro:</label>
+                                <select class="form-control" id="gradeCurricular" name="gradeCurricular">
                                     <option value="">Selecione</option>
                                     <option value="">Teste</option>
                                 </select>
                             </div>
 
-                            <div class="col-sm-6">
-                                <label for="funcionario" class="bold">Tipo de Frequência<span class="text-danger"
-                                        title="Preenchimento Obrigatório">*</span></label>
-                                <select class="form-control" id="funcionario" name="funcionario" required>
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
+                            <div class="col-sm-4 mt-4">
+                                <button type="button" class="btn btn-primary">Alterar Vínculo Principal</button>
                             </div>
                         </div>
 
-                        <div class="row mt-2">
-                            <div class="col-sm-12">
-                                <label for="relato" class="bold">Observação</label>
-                                <textarea class="form-control" id="relato" name="relato" rows="3"></textarea>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="bold">Situação 1:</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="situacao"
+                                            id="situacaoAtivado" value="Ativado">
+                                        <label class="form-check-label" for="situacaoAtivado">Ativado</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="situacao"
+                                            id="situacaoDesativado" value="Desativado">
+                                        <label class="form-check-label" for="situacaoDesativado">Desativado</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-end mt-3">
-                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="bold" for="senha">Senha:</label>
+                                <input type="password" class="form-control" id="senha" name="senha">
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="bold" for="confirmarSenha">Confirmação da Senha:</label>
+                                <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha">
+                            </div>
+                            <div class="col-sm-4 mt-4">
+                                <button type="button" class="btn btn-secondary">Alterar Senha</button>
+                            </div>
                         </div>
                     </form>
 
+                    <hr>
+
+                    <h5>Permissão</h5>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="funcionario" class="bold">Escola<span class="text-danger"
+                                    title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="funcionario" name="funcionario" required>
+                                <option value="">Selecione</option>
+                                <option value="">Teste</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="date" class="bold">Selecione o Perfil<span class="text-danger"
+                                    title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="funcionario" name="funcionario" required>
+                                <option value="">Selecione</option>
+                                <option value="">Teste</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4 mt-3">
+                            <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                <i class="fas fa-plus"></i> Adicionar Perfil
+                            </button>
+                        </div>
+
+                        <div class="col-sm-12 mt-3">
+                            <h6 class="mb-2">Listagem de Escolas</h6>
+                            <div class="table-responsive bg-white">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Cidade/Estado</th>
+                                            <th>Nome</th>
+                                            <th>Escola</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Feira de Santana-BA</td>
+                                            <td>Teste</td>
+                                            <td>Teste</td>
+                                            <td>
+                                                <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                        data-target="#excluir"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

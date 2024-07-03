@@ -764,10 +764,10 @@ footer {
 .text-danger {
     color: #721c24 !important;
 }
- 
+
 .ribbon {
     position: fixed;
-    top: 0px; 
+    top: 0px;
     z-index: 9999;
     width: 17em;
     height: 25px;
@@ -856,4 +856,16 @@ footer {
 #fecha_janela_wp {
     z-index: 500;
     top: 120px;
+}
+
+.icon-container {
+    position: relative;
+}
+
+.badge-notificacoes {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    zoom: 75%;
+    border-radius: 12px;
 }

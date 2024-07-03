@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="marcadores-sigem">
+        <div id="abre_janela_wp" class="open"><span class="fa fa-chevron-left"><i>abre</i></span></div>
+        <p class="ribbon ribbon.ribbon-bottom-left ribbon-md ribbon-warning">Homologação</p>
+    </div>
+
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+        <a href="/menu-ajuda.html" class="nav-link" id="ajuda"><i class="fas fa-question-circle"></i>
+            Ajuda</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Pessoal</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Funcionários e Professores</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Funcionários sem Escola</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Editar Funcionários sem Escola</a></li>
+            </ol>
+        </nav>
+
+        <br>
+
+        <div class="mt-4">
+            <h4 class="text-primary"><i class="fas fa-pen"></i> Editar Funcionários sem Escola</h4>
+        </div>
+
+        <br>
+        <div class="card">
+            <div class="card-header card-header-cadastro">
+                <h5 class="card-title">Dados do Funcionário</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="aluno" class="bold">Identificação única(INEP):</label>
+                            <input type="text" class="form-control" id="aluno" name="aluno" value=" " disabled>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="matricula" class="bold">Número de Identificação Social(NIS):</label>
+                            <input type="text" class="form-control" id="matricula" name="matricula"
+                                value="4442023369119">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="accordion p-3" id="accordionInfoGerais">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingInfoGerais">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseInfoGerais" aria-expanded="true"
+                                aria-controls="collapseInfoGerais">
+                                Identificação <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseInfoGerais" class="collapse show" aria-labelledby="headingInfoGerais"
+                        data-parent="#accordionInfoGerais">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <!-- Caixa com ícone de foto e campo de envio -->
+                                    <div class="col-sm-3">
+                                        <label for="foto">Foto:</label>
+                                        <input type="file" class="form-control-file" id="foto" name="foto">
+                                        <div class="photo-box">
+                                            <i class="fas fa-camera"></i>
+                                            <p>Foto do Aluno</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Formulário -->
+                                    <div class="col-sm-9">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <label class="bold" for="nomeCompleto">Nome<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <input type="text" class="form-control" id="nomeCompleto"
+                                                        name="nomeCompleto" value="ALUNO RECUPERACAO SEMESTRAL">
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label class="bold">Ativo<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <br>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="sim" id="sim"
+                                                            value="sim">
+                                                        <label class="form-check-label" for="sim">Sim</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="nao" id="nao"
+                                                            value="nao">
+                                                        <label class="form-check-label" for="nao">Não</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="nomeSocial">Nome Social:</label>
+                                                    <input type="text" class="form-control" id="nomeSocial"
+                                                        name="nomeSocial">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-4">
+                                                    <label class="bold">Sexo<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <br>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="sexo"
+                                                            id="masculino" value="masculino">
+                                                        <label class="form-check-label"
+                                                            for="masculino">Masculino</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="sexo"
+                                                            id="feminino" value="feminino">
+                                                        <label class="form-check-label" for="feminino">Feminino</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-5">
+                                                    <label class="bold" for="estadoCivil">Estado civil<span
+                                                            class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <select class="form-control" id="estadoCivil" name="estadoCivil">
+                                                        <option>Selecione</option>
+                                                        <option>Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label class="bold" for="dataNascimento">Data de nascimento<span
+                                                            class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <input type="date" class="form-control" id="dataNascimento"
+                                                        name="dataNascimento" value="2013-11-01">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="ufNascimento">UF de nascimento<span
+                                                            class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <select class="form-control" id="ufNascimento" name="ufNascimento">
+                                                        <option>Selecione</option>
+                                                        <option>Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="paisNacionalidade">País de
+                                                        nacionalidade<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <select class="form-control" id="paisNacionalidade"
+                                                        name="paisNacionalidade">
+                                                        <option>Selecione</option>
+                                                        <option>Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label class="bold" for="anoChegada">Ano da chegada:</label>
+                                                    <input type="text" class="form-control" id="anoChegada"
+                                                        name="anoChegada" value="2013">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-3">
+                                                    <label class="bold" for="corRaca">Cor/Raça<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <select class="form-control" id="corRaca" name="corRaca">
+                                                        <option>Selecione</option>
+                                                        <option>Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label class="bold">Deficiência<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <br>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="deficiencia"
+                                                            id="nao" value="nao">
+                                                        <label class="form-check-label" for="nao">Não</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="deficiencia"
+                                                            id="sim" value="sim">
+                                                        <label class="form-check-label" for="sim">Sim</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="dataIngressoServicoPublico">Ingresso no
+                                                        serviço publico em<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <input type="date" class="form-control"
+                                                        id="dataIngressoServicoPublico"
+                                                        name="dataIngressoServicoPublico" value="2013-11-01">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="anoPrimeiroEmprego">Ano do primeiro
+                                                        emprego:</label>
+                                                    <input type="text" class="form-control" id="anoPrimeiroEmprego"
+                                                        name="anoPrimeiroEmprego" value="2013">
+                                                </div>
+
+                                                <div class="col-sm-3">
+                                                    <label class="bold">Cargo Comissionado:</label>
+                                                    <br>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="cargoComissionado" id="cargoComissionadoSim"
+                                                            value="sim">
+                                                        <label class="form-check-label"
+                                                            for="cargoComissionadoSim">Sim</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="cargoComissionado" id="cargoComissionadoNao"
+                                                            value="nao">
+                                                        <label class="form-check-label"
+                                                            for="cargoComissionadoNao">Não</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="municipioNascimento">Município de
+                                                        nascimento<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <select class="form-control" id="municipioNascimento"
+                                                        name="municipioNascimento">
+                                                        <option>Selecione</option>
+                                                        <option>Teste</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-4">
+                                                    <label class="bold" for="nacionalidade">Nacionalidade<span
+                                                            class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <select class="form-control" id="nacionalidade"
+                                                        name="nacionalidade">
+                                                        <option>Selecione</option>
+                                                        <option>Teste</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label class="bold" for="email">E-mail<span class="text-danger"
+                                                            title="Preenchimento Obrigatório">*</span></label>
+                                                    <input type="email" class="form-control" id="email" name="email"
+                                                        value="no-reply@sigem.imap.com">
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionDocumentos">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingDocumentos">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseDocumentos" aria-expanded="true"
+                                aria-controls="collapseDocumentos">
+                                Documentos <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseDocumentos" class="collapse show" aria-labelledby="headingDocumentos"
+                        data-parent="#accordionDocumentos">
+                        <div class="card-body">
+                            <h5>Carteira de Identidade</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="rg" class="bold">RG:</label>
+                                    <input type="text" class="form-control" id="rg" name="rg" value="000.000.000-00">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="orgao_emissor" class="bold">Orgão Expeditor:</label>
+                                    <select class="form-control" id="orgao_emissor" name="orgao_emissor">
+                                        <option value="">Selecione um órgão emissor</option>
+                                        <option value="ssp">Secretaria de Segurança Pública (SSP)</option>
+                                        <option value="detran">Departamento Estadual de Trânsito (DETRAN)</option>
+                                        <option value="pf">Polícia Federal (PF)</option>
+                                        <option value="crea">Conselho Regional de Engenharia e Agronomia (CREA)</option>
+                                        <option value="crm">Conselho Regional de Medicina (CRM)</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="data_expedicao_rg" class="bold">Data de expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_rg"
+                                        name="data_expedicao_rg">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="estado" class="bold">Estado:</label>
+                                    <select class="form-control" id="estado" name="estado">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Carteira Profissional -->
+                            <h5>Carteira Profissional</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="carteira_profissional_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="carteira_profissional_numero"
+                                        name="carteira_profissional_numero">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="carteira_profissional_serie" class="bold">Série:</label>
+                                    <input type="text" class="form-control" id="carteira_profissional_serie"
+                                        name="carteira_profissional_serie">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_expedicao_carteira" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_carteira"
+                                        name="data_expedicao_carteira">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="uf_rg" class="bold">Estado:</label>
+                                    <select class="form-control" id="uf_rg" name="uf_rg">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h5>Título Eleitoral</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="titulo_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="titulo_numero" name="titulo_numero">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="zona_eleitoral" class="bold">Zona Eleitoral:</label>
+                                    <input type="text" class="form-control" id="zona_eleitoral" name="zona_eleitoral">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="sessao_eleitoral" class="bold">Sessão Eleitoral:</label>
+                                    <input type="text" class="form-control" id="sessao_eleitoral"
+                                        name="sessao_eleitoral">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="data_expedicao_titulo" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_titulo"
+                                        name="data_expedicao_titulo">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="uf_rg" class="bold">Estado:</label>
+                                    <select class="form-control" id="uf_rg" name="uf_rg">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Certificado Militar -->
+                            <h5>Certificado Militar</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="alistamento_numero" class="bold">Classe:</label>
+                                    <input type="text" class="form-control" id="alistamento_numero"
+                                        name="alistamento_numero">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="alistamento_serie" class="bold">Categoria:</label>
+                                    <input type="text" class="form-control" id="alistamento_serie"
+                                        name="alistamento_serie">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_expedicao_alistamento" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao_alistamento"
+                                        name="data_expedicao_alistamento">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Carteira de Habilitação -->
+                            <h5>Carteira de Habilitação</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="cnh_numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="cnh_numero" name="cnh_numero">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="cnh_categoria" class="bold">Categoria:</label>
+                                    <select class="form-control" id="cnh_categoria" name="cnh_categoria">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_validade" class="bold">Data de validade CNH:</label>
+                                    <input type="date" class="form-control" id="data_validade" name="data_validade">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Certificado de Sanidade/Laudo Médico -->
+                            <h5>Certificado de Sanidade/Laudo Médico</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="numero" name="numero">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="orgao" class="bold">Órgão:</label>
+                                    <input type="text" class="form-control" id="orgao" name="orgao">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="data_expedicao" class="bold">Data de Expedição:</label>
+                                    <input type="date" class="form-control" id="data_expedicao" name="data_expedicao">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Outros -->
+                            <h5>Outros</h5>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="cpf" class="bold">CPF<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="pis" class="bold">PIS/PASEP:</label>
+                                    <input type="text" class="form-control" id="pis" name="pis">
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="dpme" class="bold">Inscrição no DPME:</label>
+                                    <input type="text" class="form-control" id="dpme" name="dpme">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionResidencia">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingResidencia">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseResidencia" aria-expanded="true"
+                                aria-controls="collapseResidencia">
+                                Residência <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseResidencia" class="collapse show" aria-labelledby="headingResidencia"
+                        data-parent="#accordionResidencia">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="estado" class="bold">País de Residência<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="estado" name="estado">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="cep" class="bold">CEP:</label>
+                                    <input type="text" class="form-control" id="cep" name="cep" value="41110-560">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="endereco" class="bold">Endereço:</label>
+                                    <input type="text" class="form-control" id="endereco" name="endereco"
+                                        value="RUA DA LEGALIDADE">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="bairro" class="bold">Bairro:</label>
+                                    <select class="form-control" id="bairro" name="bairro">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="municipio_residencia" class="bold">Município de residência:</label>
+                                    <select class="form-control" id="municipio_residencia" name="municipio_residencia">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="numero" class="bold">Número:</label>
+                                    <input type="text" class="form-control" id="numero" name="numero">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="complemento" class="bold">Complemento:</label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento">
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label for="estado" class="bold">Estado:</label>
+                                    <select class="form-control" id="estado" name="estado">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="telefone_residencial" class="bold">Telefone:</label>
+                                    <input type="text" class="form-control" id="telefone_residencial"
+                                        name="telefone_residencial">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label class="bold">Localização/ Zona de residência:</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="zona_residencia" id="urbana"
+                                            value="urbana">
+                                        <label class="form-check-label" for="urbana">Urbana</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="zona_residencia" id="rural"
+                                            value="rural">
+                                        <label class="form-check-label" for="rural">Rural</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-4">
+                                    <label for="localizacao_diferenciada" class="bold">Localização diferenciada de
+                                        residência:</label>
+                                    <select class="form-control" id="localizacao_diferenciada"
+                                        name="localizacao_diferenciada">
+                                        <option value="">Selecione um registro</option>
+                                        <option value="1">Área de assentamento</option>
+                                        <option value="2">Terra indígena</option>
+                                        <option value="3">Comunidade quilombola</option>
+                                        <option value="7" selected>Não está em área de localização diferenciada
+                                        </option>
+                                        <option value="8">Área onde se localizam povos e comunidades tradicionais
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionDadosBancarios">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingDadosBancarios">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseDadosBancarios" aria-expanded="true"
+                                aria-controls="collapseDadosBancarios">
+                                Ficha Financeira <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseDadosBancarios" class="collapse show" aria-labelledby="headingDadosBancarios"
+                        data-parent="#accordionDadosBancarios">
+                        <div class="card-body">
+                            <form>
+                                <div class="row mt-3">
+                                    <div class="col-sm-3">
+                                        <label class="bold" for="rendaAnual">Renda Anual:</label>
+                                        <input type="text" class="form-control" id="rendaAnual" name="rendaAnual"
+                                            value="5.000,00">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label class="bold" for="porcentagemDedicacao">Porcentagem de Dedicação:</label>
+                                        <input type="text" class="form-control" id="porcentagemDedicacao"
+                                            name="porcentagemDedicacao" value="22,22">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-sm-4">
+                                        <label class="bold" for="banco">Banco:</label>
+                                        <select class="form-control" id="banco" name="banco">
+                                            <option>Selecione</option>
+                                            <option>Teste</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <label class="bold" for="numeroConta">Número da Conta:</label>
+                                        <input type="text" class="form-control" id="numeroConta" name="numeroConta"
+                                            value="11">
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <label class="bold" for="numeroAgencia">Número da Agência:</label>
+                                        <input type="text" class="form-control" id="numeroAgencia" name="numeroAgencia"
+                                            value="11">
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <label class="bold" for="tipo">Tipo:</label>
+                                        <select class="form-control" id="tipo" name="tipo">
+                                            <option>Selecione</option>
+                                            <option>Teste</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-sm-12">
+                                        <label class="bold" for="observacao">Observação:</label>
+                                        <textarea class="form-control" id="observacao" name="observacao"
+                                            rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionOutrosDados">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingOutrosDados">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseOutrosDados" aria-expanded="true"
+                                aria-controls="collapseOutrosDados">
+                                Outros Dados <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOutrosDados" class="collapse show" aria-labelledby="headingOutrosDados"
+                        data-parent="#accordionOutrosDados">
+                        <div class="card-body">
+                            <h5>Filiação<span class="text-danger" title="Preenchimento Obrigatório">*</span></h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-12"> 
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="deficiencia"
+                                            id="deficienciaNao" value="nao">
+                                        <label class="form-check-label" for="deficienciaNao">Não</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="deficiencia"
+                                            id="deficienciaSim" value="sim">
+                                        <label class="form-check-label" for="deficienciaSim">Sim</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 mt-3">
+                                    <label class="bold" for="nomePai">Nome do Pai:</label>
+                                    <input type="text" class="form-control" id="nomePai" name="nomePai">
+                                </div>
+
+                                <div class="col-sm-6 mt-3">
+                                    <label class="bold" for="nomeMae">Nome da Mãe:</label>
+                                    <input type="text" class="form-control" id="nomeMae" name="nomeMae" >
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion p-3" id="accordionEstagio">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingEstagio">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseEstagio" aria-expanded="true" aria-controls="collapseEstagio">
+                                Estágio <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseEstagio" class="collapse show" aria-labelledby="headingEstagio"
+                        data-parent="#accordionEstagio">
+                        <div class="card-body">
+                            <div>
+                                <button class="btn btn-primary-light btn-icon" type="button" data-toggle="modal"
+                                    data-target="#adicionarEstagio">
+                                    <i class="fas fa-plus"></i> Adicionar Estágio
+                                </button>
+                            </div>
+
+                            <br>
+
+                            <h5 class="mb-2">Lista dos Estágios</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered  ">
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th>Empresa</th>
+                                            <th>Início</th>
+                                            <th>Fim</th>
+                                            <th>Horas</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
+                                                    data-toggle="modal" data-target="#excluir"><i
+                                                        class="fas fa-trash-alt"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <Br>
+
+            <div class="d-flex justify-content-end mt-3">
+                <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Deseja excluir as informações?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <button class="btn btn-primary">Sim</button>
+                        <button class="btn btn-secondary">Não</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="adicionarEstagio" tabindex="-1" role="dialog" aria-labelledby="adicionarEstagio"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Adicionar Estágio</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container">
+                        <form>
+                            <div class="row mt-3">
+                                <div class="col-sm-5">
+                                    <label for="empresa" class="bold">Empresa<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="empresa" name="empresa" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="data_inicio" class="bold">Data de Início<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="data_inicio" name="data_inicio"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="data_fim" class="bold">Data de Fim<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="data_fim" name="data_fim" required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-5">
+                                    <label for="endereco" class="bold">Endereço<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="endereco" name="endereco" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="numero" class="bold">Número<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="numero" name="numero" required>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="complemento" class="bold">Complemento<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-3">
+                                    <label for="estado" class="bold">Estado<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="estado" name="estado" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="municipio" class="bold">Município<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="municipio" name="municipio" required>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="bairro" class="bold">Bairro<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="bairro" name="bairro" required>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label for="cep" class="bold">CEP<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="cep" name="cep" required>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-sm-2">
+                                    <label for="horas" class="bold">Horas<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="time" class="form-control" id="horas" name="horas" required>
+                                </div>
+
+
+
+                                <div class="col-sm-4">
+                                    <label for="telefone" class="bold">Telefone<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-3 mb-3">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+
+                    </div>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+
+</body>
+
+</html>
