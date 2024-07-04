@@ -756,7 +756,7 @@
                         <div class="card-body">
                             <h5>Filiação<span class="text-danger" title="Preenchimento Obrigatório">*</span></h5>
                             <div class="row mt-3">
-                                <div class="col-sm-12"> 
+                                <div class="col-sm-12">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="deficiencia"
                                             id="deficienciaNao" value="nao">
@@ -776,75 +776,195 @@
 
                                 <div class="col-sm-6 mt-3">
                                     <label class="bold" for="nomeMae">Nome da Mãe:</label>
-                                    <input type="text" class="form-control" id="nomeMae" name="nomeMae" >
+                                    <input type="text" class="form-control" id="nomeMae" name="nomeMae">
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="accordion p-3" id="accordionEstagio">
+            <div class="accordion p-3" id="accordionEscolas">
                 <div class="card">
-                    <div class="card-header btn-blue-light" id="headingEstagio">
+                    <div class="card-header btn-blue-light" id="headingEscolas">
                         <h5 class="mb-0">
                             <button class="btn btn-link blue" type="button" data-toggle="collapse"
-                                data-target="#collapseEstagio" aria-expanded="true" aria-controls="collapseEstagio">
-                                Estágio <i class="fas fa-chevron-right"></i>
+                                data-target="#collapseEscolas" aria-expanded="true" aria-controls="collapseEscolas">
+                                Escolas <i class="fas fa-chevron-right"></i>
                             </button>
                         </h5>
                     </div>
-                    <div id="collapseEstagio" class="collapse show" aria-labelledby="headingEstagio"
-                        data-parent="#accordionEstagio">
+                    <div id="collapseEscolas" class="collapse show" aria-labelledby="headingEscolas"
+                        data-parent="#accordionEscolas">
                         <div class="card-body">
-                            <div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="bold" for="instituicao">Instituição<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="instituicao" name="instituicao">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label class="bold" for="dataIngresso">Data de Ingresso<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="dataIngresso" name="dataIngresso">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="modalidade" class="bold">Cargo<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span> <i
+                                            class="fas fa-plus-circle add-category-btn" id="add-category-btn"
+                                            title="Adicionar Nova Modalidade" data-toggle="modal"
+                                            data-target="#adicionarModalidade"></i></label>
+                                    <select class="form-control" id="modalidade" name="modalidade" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label class="bold" for="dataIngresso">Grupo Operacional:</label>
+                                    <input type="text" class="form-control" id="dataIngresso" name="dataIngresso">
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-3">
+                                    <label class="bold" for="instituicao">Regime de Trabalho<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="instituicao" name="instituicao">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label class="bold" for="categoriaFuncional">Categoria Funcional:</label>
+                                    <input type="text" class="form-control" id="categoriaFuncional"
+                                        name="categoriaFuncional">
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <label for="funcao" class="bold">Função<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span> <i
+                                            class="fas fa-plus-circle add-category-btn" id="add-category-btn"
+                                            title="Adicionar Nova Modalidade" data-toggle="modal"
+                                            data-target="#adicionarModalidade"></i></label>
+                                    <select class="form-control" id="funcao" name="funcao" required>
+                                        <option value="">Selecione</option>
+                                        <option value="">Teste </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-3">
+                                    <label class="bold" for="categoriaFuncional">Quantidade de Horas Semanais<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="text" class="form-control" id="categoriaFuncional"
+                                        name="categoriaFuncional">
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label class="bold" for="situacao">Situação:</label>
+                                    <select class="form-control" id="situacao" name="situacao">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <label class="bold" for="dataIngresso">Nível:</label>
+                                    <input type="text" class="form-control" id="dataIngresso" name="dataIngresso">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="bold" for="situacao">Salário pago com recurso do Fundeb<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="deficiencia"
+                                            id="deficienciaNao" value="nao">
+                                        <label class="form-check-label" for="deficienciaNao">Não</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="deficiencia"
+                                            id="deficienciaSim" value="sim">
+                                        <label class="form-check-label" for="deficienciaSim">Sim</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-2">
+                                    <label class="bold" for="dataIngresso">Classe:</label>
+                                    <input type="text" class="form-control" id="dataIngresso" name="dataIngresso">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="bold" for="tipoRecurso">Tipo de Recurso<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="tipoRecurso" name="tipoRecurso">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
                                 <button class="btn btn-primary-light btn-icon" type="button" data-toggle="modal"
-                                    data-target="#adicionarEstagio">
-                                    <i class="fas fa-plus"></i> Adicionar Estágio
+                                    data-target="#adicionarEscolas">
+                                    <i class="fas fa-plus"></i> Adicionar
                                 </button>
                             </div>
 
                             <br>
 
-                            <h5 class="mb-2">Lista dos Estágios</h5>
+                            <h5 class="mb-2">Lista de Instituições</h5>
                             <div class="table responsive">
                                 <table class="table table-bordered  ">
                                     <thead class="table-warning">
                                         <tr>
-                                            <th>Empresa</th>
-                                            <th>Início</th>
-                                            <th>Fim</th>
-                                            <th>Horas</th>
-                                            <th>Ação</th>
+                                            <th>ID</th>
+                                            <th>Instituição</th>
+                                            <th>Cargo</th>
+                                            <th>Função</th>
+                                            <th>Regime de Trabalho</th>
+                                            <th>Data de Ingresso</th>
+                                            <th>Horas Semanais</th>
+                                            <th>Principal Vínculo</th>
+                                            <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>...</td>
-                                            <td>...</td>
-                                            <td>...</td>
-                                            <td>...</td>
-                                            <td><button class="btn btn-danger btn-sm" title="Excluir" type="button"
-                                                    data-toggle="modal" data-target="#excluir"><i
-                                                        class="fas fa-trash-alt"></i></button></td>
+                                            <td colspan="9">Nenhum registro encontrado.</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div class="alert alert-danger bold text-center" role="alert">
+                                Somente perfis de Secretaria e da Instituição vinculada ao cadastro podem remover um
+                                vínculo funcional.
+                                <br>
+                                Observe se o registro que está tentando excluir está com o nome de
+                                instuição igual ao do seu perfil de acesso.
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <br>
 
-
-            <Br>
-
-            <div class="d-flex justify-content-end mt-3">
-                <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                </div>
             </div>
         </div>
 

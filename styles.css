@@ -765,6 +765,10 @@ footer {
     color: #721c24 !important;
 }
 
+span.text-danger {
+    color: #ff0019 !important;
+}
+
 .ribbon {
     position: fixed;
     top: 0px;
