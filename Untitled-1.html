@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração para o Bolsa Família</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-color: #ededed;
+        }
+
+        body {
+            margin: 0 auto;
+            padding: 8px;
+            width: calc(100% - 40px);
+            max-width: 1000px;
+        }
+
+        .btn.btn-primary {
+            background: #e3b04b !important;
+            border: 1px solid #e3b04b !important;
+            color: #fff !important;
+        }
+
+        .btn.btn-primary:active {
+            background: #757575 !important;
+            border: 1px solid #e3b04b !important;
+            color: #fff !important;
+        }
+
+        .btn.btn-primary:hover {
+            border: 1px solid #e3b04b;
+            background-color: #393939;
+        }
+
+        .btn.btn-primary:focus,
+        .btn-primary-light:focus,
+        .btn-outline-primary:focus,
+        .btn-primary-light:active .btn.btn-primary.focus,
+        .btn-primary-light.focus,
+        .btn-outline-primary.focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        hr {
+            height: 3px;
+            background-color: #333;
+        }
+
+        .info-card {
+            margin-bottom: 20px;
+         }
+
+        .info-title {
+            font-weight: 500;
+            padding-left: 5px;
+            background-color: #D9D9D9;
+        }
+
+        @page {
+            size: a4 portrait;
+            margin-left: 1.5cm;
+            margin-right: 1.5cm;
+            margin-top: 0.2cm;
+            margin-bottom: 0.2cm;
+        }
+
+        @media print {
+            .noprint {
+                display: none;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+
+            .col-md-4 {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .col-md-8 {
+                flex: 0 0 66.666666%;
+                max-width: 66.666666%;
+            }
+
+            .col-md-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            .col-md-9 {
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+
+            .col-md-2 {
+                flex: 0 0 16.666666%;
+                max-width: 16.666666%;
+            }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            margin-top: 80px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        .response {
+            padding-left: 5px;
+            padding-top: 10px;
+            margin: 5px;
+            text-transform: uppercase;
+        }
+
+        #brand {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            margin: 10px;
+        }
+
+        #brand img {
+            width: 195px;
+            height: auto;
+            margin-bottom: 30px;
+            margin-left: 10px;
+        }
+
+        #brand-foto {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 89.5px;
+            margin-left: 15px;
+        }
+
+        #brand-foto img {
+            width: 200px;
+            height: 223px;
+        }
+
+        .col-margin {
+            margin-left: 217px;
+        }
+
+        .element-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .signature {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .signature hr {
+            border-top: 0.5px solid #000;
+            width: 80%;
+        }
+
+        .address {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container element-box">
+        <h1 id="brand">
+            <a href="https://homologacao.sigem.portalimap.org.br/">
+                <img src="https://homologacao.sigem.portalimap.org.br/img/brands/brand.png"
+                    alt="SIGEM - Sistema de Gestão da Educação Municipal">
+            </a>
+        </h1>
+        <div class="text-right">
+            <button class="noprint position-butao btn btn-primary" onclick="window.print();"><i
+                    class="fa fas fa-print"></i> Imprimir</button>
+        </div>
+
+        <h2>DECLARAÇÃO PARA O BOLSA FAMÍLIA</h2>
+    
+        <br>
+        
+        <div class="info-card">
+            <p>Declaro para os devidos fins, que o (a) aluno(a), IVAN TESTE C, filho (a) de ___________________________
+                e de ___________________________, nascido(a) em 01/01/2001, número do NIS _______________ está
+                matriculado (a) nesse estabelecimento de ensino, frequentando o (a) TURMA INFANTIL - MATUTINO, no ano
+                letivo de 2021.</p>
+        </div>
+
+        <div class="signature">
+            <p>Xapuri - Bahia, 08 de julho de 2024.</p>
+           
+            <p>____________________________________<br>Diretor(a) ou Responsável</p>
+
+            <br>
+
+            <p>INEP 20202020 - ENDEREÇO: KM 08 DA EST. DO COCO COND. BUSCA VILLE Q14 L10, ABCDEFGHIJ - BAIRRO<br>CEP:
+                42825-901 - XAPURI - BAHIA</p>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

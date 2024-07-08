@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="marcadores-sigem">
+        <div id="abre_janela_wp" class="open"><span class="fa fa-chevron-left"><i>abre</i></span></div>
+        <p class="ribbon ribbon.ribbon-bottom-left ribbon-md ribbon-warning">Homologação</p>
+    </div>
+
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+        <a href="/menu-ajuda.html" class="nav-link" id="ajuda"><i class="fas fa-question-circle"></i>
+            Ajuda</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/menu-academico.html">Acadêmico</a></li>
+                <li class="breadcrumb-item"><a href="/menu-academico.html">Diário de Classe</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Documentos de Classe</a></li>
+            </ol>
+        </nav>
+
+        <div class="mt-5">
+            <h4 class="text-primary"><i class="fas fa-graduation-cap"></i> Documentos de Classe</h4>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+                </div>
+            </div>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="professor" class="bold">Ano Letivo:</label>
+                        <select class="form-control" id="professor" name="professor" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-sm-4">
+                        <label for="professor" class="bold">Professor:</label>
+                        <select class="form-control" id="professor" name="professor" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="turma" class="bold">Turma:</label>
+                        <select class="form-control" id="turma" name="turma" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="aluno" class="bold">Aluno:</label>
+                        <select class="form-control" id="aluno" name="aluno" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-sm-4">
+                        <label for="eixo" class="bold">Eixo:</label>
+                        <select class="form-control" id="eixo" name="eixo" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4 mt-3">
+                        <label for="disciplina" class="bold">Disciplina:</label>
+                        <select class="form-control" id="disciplina" name="disciplina" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="turma" class="bold">Ano:</label>
+                        <p>Ano Letivo 2021</p>
+                    </div>
+
+                    <div class="col-sm-4 mt-3">
+                        <label for="disciplina" class="bold">Unidade:</label>
+                        <select class="form-control" id="disciplina" name="disciplina" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-5">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="element-box mt-4">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Resultado</h5>
+                </div>
+
+                <div class="row mt-3">
+                    <a href="#" target="_blank" class="btn custom-color-1 ml-2 mt-2">
+                        <i class="fas fa-users"></i> Vagas
+                    </a>
+
+                    <a href="relatorioAtaPontoSintetico.html" target="_blank" class="btn custom-color-2 ml-2 mt-2">
+                        <i class="fas fa-clipboard-list"></i> Ata de Resultados Finais (Sintética)
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-3 ml-2 mt-2">
+                        <i class="fas fa-clipboard-check"></i> Ata de Resultados Final
+                    </a>
+
+                    <a href="relatorioAtaPonto.html" target="_blank" class="btn custom-color-4 ml-2 mt-2">
+                        <i class="fas fa-list-ol"></i> Ata em Pontos e Notas
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-5 ml-2 mt-2">
+                        <i class="fas fa-stream"></i> Ata Parcial por Eixos
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-6 ml-2 mt-2">
+                        <i class="fas fa-book"></i> Boletim
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-7 ml-2 mt-2">
+                        <i class="fas fa-user-graduate"></i> Boletim por Aluno
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-8 ml-2 mt-2">
+                        <i class="fas fa-pencil-alt"></i> Avaliação Escrita por Turma
+                    </a>
+
+                    <a  href="conteudos.html" target="_blank" class="btn custom-color-9 ml-2 mt-2">
+                        <i class="fas fa-list-ul"></i> Conteúdos
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-10 ml-2 mt-2">
+                        <i class="fas fa-file-upload"></i> Arquivos de Avaliações
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-11 ml-2 mt-2">
+                        <i class="fas fa-calendar-alt"></i> Calendário
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-12 ml-2 mt-2">
+                        <i class="fas fa-clipboard"></i> Caderneta de Notas
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-13 ml-2 mt-2">
+                        <i class="fas fa-book-open"></i> Diario de Classe
+                    </a>
+
+                    <a href="gerarDocumentoBolsaFamilia.html" target="_blank" class="btn custom-color-14 ml-2 mt-2">
+                        <i class="fas fa-file-contract"></i> Declaração de Bolsa Família
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-15 ml-2 mt-2">
+                        <i class="fas fa-file-signature"></i> Declaração de Transferência
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-16 ml-2 mt-2">
+                        <i class="fas fa-file-invoice"></i> Declaração de Matrícula
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-17 ml-2 mt-2">
+                        <i class="fas fa-award"></i> Declaração de Conclusão
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-18 ml-2 mt-2">
+                        <i class="fas fa-user"></i> Aluno - Socioeconômico
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-19 ml-2 mt-2">
+                        <i class="fas fa-chart-bar"></i> Relatório de Frequência
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-20 ml-2 mt-2">
+                        <i class="fas fa-list"></i> Lista de Frequência
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-21 ml-2 mt-2">
+                        <i class="fas fa-chalkboard-teacher"></i> Relatório de Aulas Ministradas
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-22 ml-2 mt-2">
+                        <i class="fas fa-handshake"></i> Relatório de Atendimentos Realizados
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-23 ml-2 mt-2">
+                        <i class="fas fa-file-signature"></i> Ficha de Convocação
+                    </a>
+
+                    <a href="#" target="_blank" class="btn custom-color-24 ml-2 mt-2">
+                        <i class="fas fa-users-cog"></i> Relatório Funcionário Censo 2024
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="frequenciaDiaAula" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Registro de Frequência por Dia de Aula</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="escola" class="bold">Escola:</label>
+                                <p>Escola Teste</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="turmas" class="bold">Turma<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="turmas" name="turmas">
+                                    <option value="">SELECIONE UM REGISTRO</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="professor" class="bold">Ano:</label>
+                                <p>2021</p>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="professor" class="bold">Professor:</label>
+                                <p>Xavier Antunes</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-3">
+                                <label for="data" class="bold">Data da aula<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data" name="data">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="disciplinas" class="bold">Local da Aula</label>
+                                <select class="form-control" id="disciplinas" name="disciplinas">
+                                    <option value="">SELECIONE UM REGISTRO</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                </form>
+
+                <div class="container">
+                    <div class="alert alert-danger mt-3" role="alert">
+                        <h6> <i class="fas fa-exclamation-triangle"></i> A data informada está fora do intervalo de
+                            datas do ano letivo.</h6>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-3 mb-3 mr-2">
+                    <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="frequenciaHoraAula" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Registro de Frequência por Hora Aula</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="escola" class="bold">Escola:</label>
+                                <p>Escola Teste</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="turmas" class="bold">Turma</label>
+                                <p>Turma Teste</p>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="professor" class="bold">Ano:</label>
+                                <p>2021</p>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="disciplina" class="bold">Disciplina:</label>
+                                <p>Matemática</p>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="professor" class="bold">Professor:</label>
+                                <p>Xavier Antunes</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-3">
+                                <label for="data" class="bold">Data da aula<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data" name="data">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="disciplinas" class="bold">Horário da Aula<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="disciplinas" name="disciplinas">
+                                    <option value="">SELECIONE UM REGISTRO</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="disciplinas" class="bold">Local da Aula</label>
+                                <select class="form-control" id="disciplinas" name="disciplinas">
+                                    <option value="">SELECIONE UM REGISTRO</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                </form>
+
+                <div class="container">
+                    <div class="alert alert-danger mt-3" role="alert">
+                        <h6> <i class="fas fa-exclamation-triangle"></i> A data informada está fora do intervalo de
+                            datas do ano letivo.</h6>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-3 mb-3 mr-2">
+                    <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="planoAula" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Plano de Aula Realizado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="data" class="bold">Data<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="date" class="form-control" id="data" name="data"></textarea>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="quantidade" class="bold">Quantidade de Horas/Aula<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <input type="text" class="form-control" id="quantidade" name="quantidade"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-5">
+                                <label for="habilidades" class="bold">Habilidades<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="habilidades" name="habilidades">
+                                    <option value="">Selecione</option>
+                                    <option value="habilidade1">Habilidade 1</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="habilidades" class="bold">Competências<span class="text-danger"
+                                        title="Preenchimento Obrigatório">*</span></label>
+                                <select class="form-control" id="habilidades" name="habilidades">
+                                    <option value="">Selecione</option>
+                                    <option value="habilidade1">Habilidade 1</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-8">
+                                <label for="observacao" class="bold">Observação:</label>
+                                <textarea class="form-control" id="observacao" name="observacao" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary btn-icon mt-4" type="button"><i class="fas fa-save"></i>
+                                Salvar</button>
+                            <button class="btn btn-primary-light btn-icon mt-4 ml-2" type="button"><i
+                                    class="fas fa-copy"></i>
+                                Copiar para Nova Data</button>
+                            <button class="btn btn-outline-secondary btn-icon mt-4 ml-2" href="modelo-relatorios.html"
+                                type="button"><i class="fas fa-external-link-alt"></i> Visualizar informações</button>
+                        </div>
+                    </form>
+
+                    <hr>
+                    <div class="element-box">
+                        <div class="d-flex justify-content-between">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="resultsPerPage">Resultados por página:</label>
+                                    <select class="form-control" id="resultsPerPage">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="search">Pesquisar:</label>
+                                    <input type="text" class="form-control" id="search">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <div>
+                                <button type="button" class="btn btn-primary-light" title="Copiar">
+                                    <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                                </button>
+                            </div>
+
+                            <div class="btn-group" role="group" aria-label="Exportar Dados">
+                                <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                                    <i class="far fa-file-excel text-dark fa-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                                    <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                                    <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <table class="table table-bordered table-striped">
+                            <thead class="bg-white">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Habilidades</th>
+                                    <th scope="col">Competências</th>
+                                    <th scope="col">Objetos de Conhecimento</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>TEXTO</td>
+                                    <td>TEXTO</td>
+                                    <td>TEXTO</td>
+                                    <td>
+                                        <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                data-target="#excluir"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row mt-5 align-items-center">
+                            <div class="col-sm-6">
+                                <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination justify-content-end mb-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1"
+                                                aria-disabled="true">Anterior</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Próximo</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="conselhoClasse" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Conselho de Classe</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="bold" for="escola">Escola:</label>
+                                <p id="escola">ESCOLA TESTE</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-3">
+                                <label class="bold" for="ano">Ano:</label>
+                                <p id="ano">ANO LETIVO 2021</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="turma">Turma:</label>
+                                <p id="turma">RECUPERACAO SEMESTRAL TURMA</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="disciplina">Disciplina:</label>
+                                <p id="disciplina">MATEMÁTICA</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="professor">Professor:</label>
+                                <p id="professor">FUNCIONARIO PROFESSOR</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-sm-3  mt-4">
+                                <button type="submit" class="btn btn-blue-light"><i class="fas fa-trash"></i>
+                                    Zerar Registros</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <br>
+
+                    <div class="table-responsive mt-2">
+                        <table class="table table-bordered">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th scope="col">Aluno</th>
+                                    <th scope="col">Resultado Final</th>
+                                    <th scope="col">Nota Conselho</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Teste</td>
+                                    <td>Teste</td>
+                                    <td>Teste</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-3 mb-3 mr-2">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="notas" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Notas/Conceito</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="bold" for="escola">Escola:</label>
+                                <p id="escola">ESCOLA TESTE</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-3">
+                                <label class="bold" for="turma">Turma:</label>
+                                <p id="turma">RECUPERACAO SEMESTRAL TURMA</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="disciplina">Disciplina:</label>
+                                <p id="disciplina">MATEMÁTICA</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="professor">Professor:</label>
+                                <p id="professor">FUNCIONARIO PROFESSOR</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="unidade" class="bold">Unidade</label>
+                                <select class="form-control" id="unidade" name="unidade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                    <br>
+
+                    <div class="table-responsive mt-2">
+                        <table class="table table-bordered">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th scope="col">Aluno</th>
+                                    <th scope="col">Avaliação 1</th>
+                                    <th scope="col">Avaliação 2</th>
+                                    <th scope="col">Avaliação 3</th>
+                                    <th scope="col">Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Teste</td>
+                                    <td><input type="text" class="form-control" name="avaliacao1"></td>
+                                    <td><input type="text" class="form-control" name="avaliacao2"></td>
+                                    <td><input type="text" class="form-control" name="avaliacao3"></td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="d-flex justify-content-end mt-3 mb-3 mr-2">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recuperacao" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Recuperação Final</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="bold" for="escola">Escola:</label>
+                                <p id="escola">ESCOLA TESTE</p>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label class="bold" for="ano">Ano:</label>
+                                <p id="ano">ANO LETIVO 2021</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-3">
+                                <label class="bold" for="turma">Turma:</label>
+                                <p id="turma">RECUPERACAO SEMESTRAL TURMA</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="disciplina">Disciplina:</label>
+                                <p id="disciplina">MATEMÁTICA</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="professor">Professor:</label>
+                                <p id="professor">FUNCIONARIO PROFESSOR</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="bold" for="mediaMinima">Média Final Mínima:</label>
+                                <p id="mediaMinima">80</p>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="table-responsive mt-2">
+                            <table class="table table-bordered">
+                                <thead class="table-warning">
+                                    <tr>
+                                        <th scope="col">Aluno</th>
+                                        <th scope="col">Nota Final</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Teste</td>
+                                        <td>7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="d-flex justify-content-end mt-3 mb-3 mr-2">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="finalizarUnidades" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <h6>Esta ação só poderá ser desfeita por usuário perfil Diretoria.</h6>
+                    <p>Clique no botão <b>"Finalizar Unidades"</b> para confirmar esta operação.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Finalizar Unidades</button>
+                    <button class="btn btn-secondary">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>
