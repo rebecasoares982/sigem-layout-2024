@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="marcadores-sigem">
+        <div id="abre_janela_wp" class="open"><span class="fa fa-chevron-left"><i>abre</i></span></div>
+        <p class="ribbon ribbon.ribbon-bottom-left ribbon-md ribbon-warning">Homologação</p>
+    </div>
+
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-4">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+        <a href="/menu-ajuda.html" class="nav-link" id="ajuda"><i class="fas fa-question-circle"></i>
+            Ajuda</a>
+    </div>
+
+    <div class="content">
+        <header class="header profile-container  d-flex justify-content-between align-items-center p-3">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-school"></i> Alterar escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+
+        <br>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Pessoal</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Funcionários e Professores</li>
+            </ol>
+        </nav>
+
+        <div class="d-flex justify-content-between mt-5">
+            <h4 class="text-primary"><i class="fas fa-user"></i> Funcionários e Professores</h4>
+            <a class="btn btn-cadastro" href="cadastrar-funcionarios.html">
+                <i class="fas fa-user-plus"></i> Cadastrar Funcionários e Professores</a>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="element-wrapper">
+                <div class="element-header">
+                    <h5>Filtro</h5>
+                    <p>Utilize os campos abaixo para filtrar os dados de seu interesse.</p>
+                </div>
+            </div>
+
+            <form class="mt-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="localizacao" class="bold">Escola:</label>
+                        <select class="form-control" id="localizacao" name="localizacao" required>
+                            <option value="">Selecione</option>
+                            <option value="">Teste</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3  mt-4">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fas fa-trash"></i>
+                            Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+        <div class="element-box">
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <button type="button" class="btn btn-primary-light" title="Copiar">
+                        <i class="far fa-copy fa-lg"></i> Copiar dados da tabela
+                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary-light dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-table fa-lg"></i> Visualizar por Colunas
+                        </button>
+                        <!--<div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Nº</a>
+                        <a class="dropdown-item" href="#">Id</a>
+                        <a class="dropdown-item" href="#">Escola</a>
+                        <a class="dropdown-item" href="#">Nome</a>
+                        <a class="dropdown-item" href="#">Matrícula</a>
+                        <a class="dropdown-item" href="#">Situação</a>
+                        <a class="dropdown-item" href="#">Funções</a>
+                    </div> -->
+
+                        <div class="dropdown-menu p-3">
+                            <form id="filter-form">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nº" id="colNo">
+                                    <label class="form-check-label" for="colNo">Nº</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Id" id="colId">
+                                    <label class="form-check-label" for="colId">Id</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Escola" id="colEscola">
+                                    <label class="form-check-label" for="colEscola">Escola</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Nome" id="colNome">
+                                    <label class="form-check-label" for="colNome">Nome</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Matrícula" id="colMatricula">
+                                    <label class="form-check-label" for="colMatricula">Matrícula</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Situação" id="colSituacao">
+                                    <label class="form-check-label" for="colSituacao">Situação</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Funções" id="colFuncoes">
+                                    <label class="form-check-label" for="colFuncoes">Funções</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-3" id="filter-button"><i
+                                        class="fas fa-filter"></i> Filtrar </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Exportar Dados">
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para Excel">
+                        <i class="far fa-file-excel text-dark fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para CSV">
+                        <i class="fas fa-file-csv text-dark  fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" title="Exportar para PDF">
+                        <i class="far fa-file-pdf text-dark  fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="d-flex justify-content-between">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="resultsPerPage">Resultados por página:</label>
+                        <select class="form-control" id="resultsPerPage">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="search">Pesquisar:</label>
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <table class="table table-bordered table-striped">
+                <thead class="bg-white">
+                    <tr>
+                        <th scope="col">Nº</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Escola</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Situação</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>78542</td>
+                        <td>Teste</td>
+                        <td>Teste</td>
+                        <td>Teste</td>
+                        <td>Teste</td>
+                        <td>
+                            <a href="##"><i class="fas fa-file-alt icon-view" title="Arquivo do Funcionário"
+                                    data-toggle="modal" data-target="#arquivoFuncionario"></i></a>
+                            <a href="modelo-relatorios.html"><i class="fas fa-id-card icon-file"
+                                    title="Ficha do Funcionário"></i></a>
+                            <a href="##"><i class="fas fa-graduation-cap icon-access" title="Turmas" data-toggle="modal"
+                                    data-target="#turmas"></i></a>
+                            <a href="##"><i class="fas fa-user-circle icon-relatorio" title="Acesso ao Sistema"
+                                    data-toggle="modal" data-target="#acessoSistema"></i></a>
+                            <a href="editar-funcionarios.html"><i class="fas fa-edit icon-edit" title="Editar"></i></a>
+                            <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                    data-target="#excluir"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row mt-5 align-items-center">
+                <div class="col-sm-6">
+                    <p class="mb-0">Mostrando de 1 até 10 de 19 registros (Filtrados de 10 registros)</p>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="arquivoFuncionario" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Arquivo do Funcionário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="teste" class="bold">Documento</label>
+                                <select class="form-control" id="teste" name="teste">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="anexarArquivo" class="bold">Anexar Arquivo:</label>
+                                <input type="file" class="form-control-file btn-primary" id="anexarArquivo"
+                                    name="anexarArquivo">
+                                <small>(Tamanho máximo: 5 MB) Somente arquivos do tipo png, jpg, pdf ou word.</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                            <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                        </div>
+
+                        <hr>
+
+                        <table class="table table-bordered table-striped">
+                            <thead class="bg-white">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Documento</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Teste</td>
+                                    <td>
+                                        <a href="##"><i class="fas fa-download icon-access" title="Download"></i></a>
+                                        <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                data-target="#excluir"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!-- Modal -->
+    <div class="modal fade" id="acessoSistema" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Cadastro de Frequência do Funcionário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="bold" for="nome">Nome:</label>
+                                <p id="nome">teste</p>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label class="bold" for="vinculoPrincipal">Vínculo Principal do Cadastro:</label>
+                                <select class="form-control" id="gradeCurricular" name="gradeCurricular">
+                                    <option value="">Selecione</option>
+                                    <option value="">Teste</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4 mt-4">
+                                <button type="button" class="btn btn-primary">Alterar Vínculo Principal</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="bold">Situação 1:</label>
+                                    <Br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="situacao"
+                                            id="situacaoAtivado" value="Ativado">
+                                        <label class="form-check-label" for="situacaoAtivado">Ativado</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="situacao"
+                                            id="situacaoDesativado" value="Desativado">
+                                        <label class="form-check-label" for="situacaoDesativado">Desativado</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="bold" for="senha">Senha:</label>
+                                <input type="password" class="form-control" id="senha" name="senha">
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="bold" for="confirmarSenha">Confirmação da Senha:</label>
+                                <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha">
+                            </div>
+                            <div class="col-sm-4 mt-4">
+                                <button type="button" class="btn btn-secondary">Alterar Senha</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <h5>Permissão</h5>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="funcionario" class="bold">Escola<span class="text-danger"
+                                    title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="funcionario" name="funcionario" required>
+                                <option value="">Selecione</option>
+                                <option value="">Teste</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="date" class="bold">Selecione o Perfil<span class="text-danger"
+                                    title="Preenchimento Obrigatório">*</span></label>
+                            <select class="form-control" id="funcionario" name="funcionario" required>
+                                <option value="">Selecione</option>
+                                <option value="">Teste</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-4 mt-3">
+                            <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                                <i class="fas fa-plus"></i> Adicionar Perfil
+                            </button>
+                        </div>
+
+                        <div class="col-sm-12 mt-3">
+                            <h6 class="mb-2">Listagem de Escolas</h6>
+                            <div class="table-responsive bg-white">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Cidade/Estado</th>
+                                            <th>Nome</th>
+                                            <th>Escola</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Feira de Santana-BA</td>
+                                            <td>Teste</td>
+                                            <td>Teste</td>
+                                            <td>
+                                                <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                        data-target="#excluir"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="turmas" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Turmas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="nomeProfessor" class="bold">Nome do Professor:</label>
+                            <p>Teste</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="turma" class="bold">Turma:</label>
+                            <p>Teste</p>
+                        </div>
+
+                        <div class="col-sm-12 mt-3">
+                            <h6 class="mb-2">Lista das turmas do(a) professor(a) Teste</h6>
+                            <div class="table-responsive bg-white">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>ID da Turma</th>
+                                            <th>Nome da Turma</th>
+                                            <th>Dias de Aula</th>
+                                            <th>Horário</th>
+                                            <th>Disciplina</th>
+                                            <th>Professor</th>
+                                            <th>Dependência</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>Teste</td>
+                                            <td>5</td>
+                                            <td>15:00</td>
+                                            <td>História</td>
+                                            <td>Teste</td>
+                                            <td>Não</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Deseja excluir as informações?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-primary">Sim</button>
+                    <button class="btn btn-secondary">Não</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
+    <script src="menu-lateral.js"></script>
+</body>
+
+</html>

@@ -215,7 +215,7 @@
                         <td>
                             <a href="##"><i class="fas fa-user-circle icon-view" title="Acesso ao Sistema"
                                     data-toggle="modal" data-target="#acessoSistema"></i></a>
-                            <a href="editar-funcionarios-sem-escola.html" target="_blank"><i
+                            <a href="editar-funcionarios.html" target="_blank"><i
                                     class="fas fa-edit icon-edit" title="Editar"></i></a>
                             <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
                                     data-target="#excluir"></i></a>
@@ -248,131 +248,132 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="acessoSistema" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5>Cadastro de Frequência do Funcionário</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label class="bold" for="nome">Nome:</label>
-                                <p id="nome">teste</p>
-                            </div>
+      <!-- Modal -->
+      <div class="modal fade" id="acessoSistema" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5>Cadastro de Frequência do Funcionário</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="row">
+                          <div class="col-sm-3">
+                              <label class="bold" for="nome">Nome:</label>
+                              <p id="nome">teste</p>
+                          </div>
 
-                            <div class="col-sm-4">
-                                <label class="bold" for="vinculoPrincipal">Vínculo Principal do Cadastro:</label>
-                                <select class="form-control" id="gradeCurricular" name="gradeCurricular">
-                                    <option value="">Selecione</option>
-                                    <option value="">Teste</option>
-                                </select>
-                            </div>
+                          <div class="col-sm-4">
+                              <label class="bold" for="vinculoPrincipal">Vínculo Principal do Cadastro:</label>
+                              <select class="form-control" id="gradeCurricular" name="gradeCurricular">
+                                  <option value="">Selecione</option>
+                                  <option value="">Teste</option>
+                              </select>
+                          </div>
 
-                            <div class="col-sm-4 mt-4">
-                                <button type="button" class="btn btn-primary">Alterar Vínculo Principal</button>
-                            </div>
-                        </div>
+                          <div class="col-sm-4 mt-4">
+                              <button type="button" class="btn btn-primary">Alterar Vínculo Principal</button>
+                          </div>
+                      </div>
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <label class="bold">Situação 1:</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="situacao"
-                                            id="situacaoAtivado" value="Ativado">
-                                        <label class="form-check-label" for="situacaoAtivado">Ativado</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="situacao"
-                                            id="situacaoDesativado" value="Desativado">
-                                        <label class="form-check-label" for="situacaoDesativado">Desativado</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <div class="form-group">
+                                  <label class="bold">Situação 1:</label>
+                                  <Br>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="situacao"
+                                          id="situacaoAtivado" value="Ativado">
+                                      <label class="form-check-label" for="situacaoAtivado">Ativado</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="situacao"
+                                          id="situacaoDesativado" value="Desativado">
+                                      <label class="form-check-label" for="situacaoDesativado">Desativado</label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label class="bold" for="senha">Senha:</label>
-                                <input type="password" class="form-control" id="senha" name="senha">
-                            </div>
-                            <div class="col-sm-4">
-                                <label class="bold" for="confirmarSenha">Confirmação da Senha:</label>
-                                <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha">
-                            </div>
-                            <div class="col-sm-4 mt-4">
-                                <button type="button" class="btn btn-secondary">Alterar Senha</button>
-                            </div>
-                        </div>
-                    </form>
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <label class="bold" for="senha">Senha:</label>
+                              <input type="password" class="form-control" id="senha" name="senha">
+                          </div>
+                          <div class="col-sm-4">
+                              <label class="bold" for="confirmarSenha">Confirmação da Senha:</label>
+                              <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha">
+                          </div>
+                          <div class="col-sm-4 mt-4">
+                              <button type="button" class="btn btn-secondary">Alterar Senha</button>
+                          </div>
+                      </div>
+                  </form>
 
-                    <hr>
+                  <hr>
 
-                    <h5>Permissão</h5>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label for="funcionario" class="bold">Escola<span class="text-danger"
-                                    title="Preenchimento Obrigatório">*</span></label>
-                            <select class="form-control" id="funcionario" name="funcionario" required>
-                                <option value="">Selecione</option>
-                                <option value="">Teste</option>
-                            </select>
-                        </div>
+                  <h5>Permissão</h5>
+                  <div class="row">
+                      <div class="col-sm-4">
+                          <label for="funcionario" class="bold">Escola<span class="text-danger"
+                                  title="Preenchimento Obrigatório">*</span></label>
+                          <select class="form-control" id="funcionario" name="funcionario" required>
+                              <option value="">Selecione</option>
+                              <option value="">Teste</option>
+                          </select>
+                      </div>
 
-                        <div class="col-sm-4">
-                            <label for="date" class="bold">Selecione o Perfil<span class="text-danger"
-                                    title="Preenchimento Obrigatório">*</span></label>
-                            <select class="form-control" id="funcionario" name="funcionario" required>
-                                <option value="">Selecione</option>
-                                <option value="">Teste</option>
-                            </select>
-                        </div>
+                      <div class="col-sm-4">
+                          <label for="date" class="bold">Selecione o Perfil<span class="text-danger"
+                                  title="Preenchimento Obrigatório">*</span></label>
+                          <select class="form-control" id="funcionario" name="funcionario" required>
+                              <option value="">Selecione</option>
+                              <option value="">Teste</option>
+                          </select>
+                      </div>
 
-                        <div class="col-sm-4 mt-3">
-                            <button class="btn btn-blue-light btn-icon mt-4" type="button">
-                                <i class="fas fa-plus"></i> Adicionar Perfil
-                            </button>
-                        </div>
+                      <div class="col-sm-4 mt-3">
+                          <button class="btn btn-blue-light btn-icon mt-4" type="button">
+                              <i class="fas fa-plus"></i> Adicionar Perfil
+                          </button>
+                      </div>
 
-                        <div class="col-sm-12 mt-3">
-                            <h6 class="mb-2">Listagem de Escolas</h6>
-                            <div class="table-responsive bg-white">
-                                <table class="table table-bordered">
-                                    <thead class="table-primary">
-                                        <tr>
-                                            <th>Cidade/Estado</th>
-                                            <th>Nome</th>
-                                            <th>Escola</th>
-                                            <th>Ação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Feira de Santana-BA</td>
-                                            <td>Teste</td>
-                                            <td>Teste</td>
-                                            <td>
-                                                <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
-                                                        data-target="#excluir"></i></a>
-                                            </td>
-                                        </tr>
+                      <div class="col-sm-12 mt-3">
+                          <h6 class="mb-2">Listagem de Escolas</h6>
+                          <div class="table-responsive bg-white">
+                              <table class="table table-bordered">
+                                  <thead class="table-primary">
+                                      <tr>
+                                          <th>Cidade/Estado</th>
+                                          <th>Nome</th>
+                                          <th>Escola</th>
+                                          <th>Ação</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>Feira de Santana-BA</td>
+                                          <td>Teste</td>
+                                          <td>Teste</td>
+                                          <td>
+                                              <a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                      data-target="#excluir"></i></a>
+                                          </td>
+                                      </tr>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
     <!-- Modal -->
     <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="excluirLabel" aria-hidden="true">

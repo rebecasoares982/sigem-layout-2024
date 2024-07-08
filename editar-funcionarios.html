@@ -92,15 +92,14 @@
                 <li class="breadcrumb-item"><a href="/index.html">Início</a></li>
                 <li class="breadcrumb-item"><a href="/menu-pessoal.html">Pessoal</a></li>
                 <li class="breadcrumb-item"><a href="/menu-pessoal.html">Funcionários e Professores</a></li>
-                <li class="breadcrumb-item"><a href="/menu-pessoal.html">Funcionários sem Escola</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Editar Funcionários sem Escola</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Editar Funcionários</a></li>
             </ol>
         </nav>
 
         <br>
 
         <div class="mt-4">
-            <h4 class="text-primary"><i class="fas fa-pen"></i> Editar Funcionários sem Escola</h4>
+            <h4 class="text-primary"><i class="fas fa-pen"></i> Editar Funcionários</h4>
         </div>
 
         <br>
@@ -112,8 +111,8 @@
                 <form>
                     <div class="row">
                         <div class="col-sm-4">
-                            <label for="aluno" class="bold">Identificação única(INEP):</label>
-                            <input type="text" class="form-control" id="aluno" name="aluno" value=" " disabled>
+                            <label for="aluno" class="bold">Código INEP:</label>
+                            <input type="text" class="form-control" id="aluno" name="aluno" value=" ">
                         </div>
 
                         <div class="col-sm-4">
@@ -798,6 +797,18 @@
                         data-parent="#accordionEscolas">
                         <div class="card-body">
                             <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="creche"
+                                            value="creche">
+                                        <label class="form-check-label bold" for="creche">Não desempenha atividade em
+                                            nenhuma
+                                            escola municipal</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
                                 <div class="col-sm-4">
                                     <label class="bold" for="instituicao">Instituição<span class="text-danger"
                                             title="Preenchimento Obrigatório">*</span></label>
@@ -958,14 +969,259 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <br>
+            <div class="accordion p-3" id="accordionDadosVariaveis">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingDadosVariaveis">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseDadosVariaveis" aria-expanded="true"
+                                aria-controls="collapseDadosVariaveis">
+                                Dados Variáveis <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseDadosVariaveis" class="collapse show" aria-labelledby="headingDadosVariaveis"
+                        data-parent="#accordionDadosVariaveis">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="bold" for="instituicao">Nível de Escolaridade<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="instituicao" name="instituicao">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
 
-                <div class="d-flex justify-content-end mt-3">
-                    <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
-                    <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                                <div class="col-sm-3">
+                                    <label class="bold" for="instituicao">Tipo de ensino médio cursado<span
+                                            class="text-danger" title="Preenchimento Obrigatório">*</span></label>
+                                    <select class="form-control" id="instituicao" name="instituicao">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <h5>Formação Superior</h5>
+                                <button class="btn btn-primary-light btn-icon" type="button" data-toggle="modal"
+                                    data-target="#adicionarEscolas">
+                                    <i class="fas fa-plus"></i> Adicionar Formações Superiores
+                                </button>
+                            </div>
+
+                            <br>
+
+                            <h5 class="mb-2">Lista das Formações Superiores</h5>
+                            <div class="table responsive">
+                                <table class="table table-bordered  ">
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Instituição</th>
+                                            <th>Ano Início</th>
+                                            <th>Ano Conclusão</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5">Nenhum registro encontrado.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <hr>
+
+                            <h5>Outros cursos específicos (Formação continuada com mínimo de 80 horas)</h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <label class="bold">Selecione as opções:</label>
+                                    <br>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="creche"
+                                            value="creche">
+                                        <label class="form-check-label" for="creche">Creche (0 a 3 anos)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="preEscola"
+                                            value="preEscola">
+                                        <label class="form-check-label" for="preEscola">Pré-escola (4 a 5
+                                            anos)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="anosIniciaisEF" value="anosIniciaisEF">
+                                        <label class="form-check-label" for="anosIniciaisEF">Anos iniciais do ensino
+                                            fundamental</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="anosFinaisEF"
+                                            value="anosFinaisEF">
+                                        <label class="form-check-label" for="anosFinaisEF">Anos finais do ensino
+                                            fundamental</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="ensinoMedio"
+                                            value="ensinoMedio">
+                                        <label class="form-check-label" for="ensinoMedio">Ensino médio</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="eja"
+                                            value="eja">
+                                        <label class="form-check-label" for="eja">Educação de jovens e
+                                            adultos</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="educacaoEspecial" value="educacaoEspecial">
+                                        <label class="form-check-label" for="educacaoEspecial">Educação
+                                            especial</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="educacaoIndigena" value="educacaoIndigena">
+                                        <label class="form-check-label" for="educacaoIndigena">Educação
+                                            Indígena</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="educacaoCampo"
+                                            value="educacaoCampo">
+                                        <label class="form-check-label" for="educacaoCampo">Educação do
+                                            campo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="educacaoAmbiental" value="educacaoAmbiental">
+                                        <label class="form-check-label" for="educacaoAmbiental">Educação
+                                            ambiental</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="educacaoDH"
+                                            value="educacaoDH">
+                                        <label class="form-check-label" for="educacaoDH">Educação em direitos
+                                            humanos</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="educacaoBilngueSurdos" value="educacaoBilngueSurdos">
+                                        <label class="form-check-label" for="educacaoBilngueSurdos">Educação
+                                            bilíngue de
+                                            surdos</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="educacaoTIC"
+                                            value="educacaoTIC">
+                                        <label class="form-check-label" for="educacaoTIC">Educação e Tecnologia de
+                                            Informação e Comunicação (TIC)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="generoDiversidade" value="generoDiversidade">
+                                        <label class="form-check-label" for="generoDiversidade">Gênero e diversidade
+                                            sexual</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="direitosCrianca" value="direitosCrianca">
+                                        <label class="form-check-label" for="direitosCrianca">Direitos de criança e
+                                            adolescente</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes"
+                                            id="relacoesEtnicoRaciais" value="relacoesEtnicoRaciais">
+                                        <label class="form-check-label" for="relacoesEtnicoRaciais">Educação para as
+                                            relações étnico-raciais e História e cultura afro-brasileira e
+                                            africana</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="gestaoEscolar"
+                                            value="gestaoEscolar">
+                                        <label class="form-check-label" for="gestaoEscolar">Gestão Escolar</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="outros"
+                                            value="outros">
+                                        <label class="form-check-label" for="outros">Outros</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="opcoes" id="nenhum"
+                                            value="nenhum">
+                                        <label class="form-check-label" for="nenhum">Nenhum</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="accordion p-3" id="accordionHabilitacaoDisciplinas">
+                <div class="card">
+                    <div class="card-header btn-blue-light" id="headingHabilitacaoDisciplinas">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link blue" type="button" data-toggle="collapse"
+                                data-target="#collapseHabilitacaoDisciplinas" aria-expanded="true"
+                                aria-controls="collapseHabilitacaoDisciplinas">
+                                Habilitação de Disciplinas <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseHabilitacaoDisciplinas" class="collapse show"
+                        aria-labelledby="headingHabilitacaoDisciplinas" data-parent="#accordionHabilitacaoDisciplinas">
+                        <div class="card-body">
+                            <div class="row mt-4">
+                                <div class="col-sm-4">
+                                    <label class="bold" for="instituicao">Disciplina:</label>
+                                    <select class="form-control" id="instituicao" name="instituicao">
+                                        <option>Selecione</option>
+                                        <option>Teste</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4 mt-4">
+                                    <button class="btn btn-primary-light btn-icon" type="button">
+                                        <i class="fas fa-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <h6 class="mb-2 mt-3">Lista de Disciplinas</h6>
+                            <div class="table responsive">
+                                <table class="table table-bordered  ">
+                                    <thead class="table-warning">
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Teste</td>
+                                            <td><a href="##"><i class="fas fa-trash" title="Excluir" data-toggle="modal"
+                                                        data-target="#excluir"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="d-flex justify-content-end p-3">
+                <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+            </div>
+
         </div>
 
         <!-- Modal -->
