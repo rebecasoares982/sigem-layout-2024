@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div class="marcadores-sigem">
+        <div id="abre_janela_wp" class="open"><span class="fa fa-chevron-left"><i>abre</i></span></div>
+        <p class="ribbon ribbon.ribbon-bottom-left ribbon-md ribbon-warning">Homologação</p>
+    </div>
+
+    <div class="sidebar d-flex flex-column p-3 page-academico">
+        <img src="./assets/images/logo-SIGEM.png" class="logo-SIGEM mx-auto mb-3">
+        <h3 class="badge badge-warning text-wrap text-white">PREFEITURA MUNICIPAL DE XAPURI</h3>
+
+        <a href="/index.html" class="nav-link" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="/menu-academico.html" class="nav-link" id="academico"><i class="fas fa-graduation-cap"></i>
+            Acadêmico</a>
+        <a href="/menu-pessoal.html" class="nav-link" id="pessoal"><i class="fas fa-user"></i> Pessoal</a>
+        <a href="/menu-escola.html" class="nav-link" id="escola"><i class="fas fa-school"></i> Escola</a>
+        <a href="/menu-gerencial.html" class="nav-link" id="gerencial"><i class="fas fa-cogs"></i> Gerencial</a>
+        <a href="/menu-alimentacao.html" class="nav-link" id="alimentacao"><i class="fas fa-utensils"></i>
+            Alimentação</a>
+        <a href="/menu-agenda.html" class="nav-link" id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</a>
+        <a href="/menu-noticias.html" class="nav-link" id="noticias"><i class="fas fa-newspaper"></i> Notícias</a>
+        <a href="/menu-relatorios.html" class="nav-link" id="relatorios"><i class="fas fa-chart-line"></i>
+            Relatórios</a>
+        <a href="/menu-ajuda.html" class="nav-link" id="ajuda"><i class="fas fa-question-circle"></i>
+            Ajuda</a>
+    </div>
+
+    <div class="content">
+        <header class="header d-flex justify-content-between align-items-center p-3 profile-container ">
+            <div class="search-bar">
+                <input type="text" class="form-control w-75" placeholder="Buscar...">
+            </div>
+
+            <div class="icons d-flex align-items-center">
+                <div class="icon-container mr-3" id="bellDropdown">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge badge-danger badge-notificacoes">3</span>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Notificação 1</a>
+                        <a class="dropdown-item" href="#">Notificação 2</a>
+                        <a class="dropdown-item" href="#">Notificação 3</a>
+                    </div>
+                </div>
+                <div class="icon-container mr-3" id="envelopeDropdown">
+                    <i class="fas fa-envelope"></i>
+                    <span class="badge badge-danger badge-notificacoes">3</span>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Mensagem 1</a>
+                        <a class="dropdown-item" href="#">Mensagem 2</a>
+                        <a class="dropdown-item" href="#">Mensagem 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile d-flex align-items-center dropdown" id="profileDropdown">
+                <div class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="/assets/images/profile.png" alt="Foto do Professor" class="img-profile">
+                    <div class="ml-2">
+                        <span>Escola Teste</span>
+                        <br>
+                        <span>Xavier Antunes</span>
+                        <br>
+                        <span>Perfil Professor</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="selecionar-perfil-login.html"><i class="fas fa-school"></i> Alterar
+                        escola</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-key"></i> Alterar senha</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair do sistema</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="margin-top"></div>
+
+        <div class="mt-4">
+            <div class="row">
+                <div class="col-sm-12 mb-3">
+                    <div class="p-4 bg-bem-vindo text-white rounded">
+                        <h2>Seja bem-vindo!</h2>
+                        <p>Gerencie informações, turma, alunos, professores no melhor sistema acadêmico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="row">
+                    <div class="col-sm-12 mb-3">
+                        <div class="p-4 bg-white rounded">
+                            <h3>Dados da Unidade</h3>
+                            <div id="barchart_values" style="width: 100%; height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <div class="col-sm-12 mb-3">
+                    <div class="p-4 element-box">
+                        <div class="d-flex justify-content-between">
+                            <h3>Turmas</h3> 
+                            <a class="btn btn-outline-secondary" data-toggle="modal"
+                                data-target="#frequenciaMultisseriada"><i class="fas fa-user-plus"></i>
+                                Frequência Agrupada Multisseriada</a>
+                        </div>
+ 
+                        <Br>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-success-light text-dark rounded h-100">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="text-bg-success text-wrap text-break">
+                                            ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 ª º</h5>
+                                        <h4 class="text-bg-success">250</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-2 bg-success-light text-dark rounded h-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="selectCard1">
+                                        <label class="form-check-label" for="selectCard1"></label>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1 ms-2">
+                                            <h5 class="text-bg-success text-wrap text-break">TURMA MULTI INFANTIL E
+                                                FUNDAMENTAL - 1º ANO</h5>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-bg-success">14</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-success-light text-dark rounded h-100">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="text-bg-success text-wrap text-break">TURMA REGULAR</h5>
+                                        <h4 class="text-bg-success">250</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-success-light text-dark rounded h-100">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="text-bg-success text-wrap text-break">CRECHE A</h5>
+                                        <h4 class="text-bg-success">250</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-2 bg-success-light text-dark rounded h-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="selectCard1">
+                                        <label class="form-check-label" for="selectCard1"></label>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1 ms-2">
+                                            <h5 class="text-bg-success text-wrap text-break">TURMA GRADE UM</h5>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-bg-success">14</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-2 bg-success-light text-dark rounded h-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="selectCard1">
+                                        <label class="form-check-label" for="selectCard1"></label>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1 ms-2">
+                                            <h5 class="text-bg-success text-wrap text-break">BOLETIM NOVOS CAMPOS</h5>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-bg-success">14</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-3 bg-success-light text-dark rounded h-100">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="text-bg-success text-wrap text-break">TURMA CONCEITOS DOIS</h5>
+                                        <h4 class="text-bg-success">250</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6 mb-3">
+                                <div class="p-2 bg-success-light text-dark rounded h-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="selectCard1">
+                                        <label class="form-check-label" for="selectCard1"></label>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1 ms-2">
+                                            <h5 class="text-bg-success text-wrap text-break">
+                                                MULTI EDUCACAO INFANTIL E FUNDAMENTAL</h5>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-bg-success">14</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-user-graduate" title="Alunos na Turma"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-calendar-check" title="Frequência por dia de Aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-clock" title="Frequência por hora de aula"></i>
+                                        </a>
+                                        <a href="#" class="text-dark">
+                                            <i class="fas fa-table" title="Grade de aula"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="frequenciaMultisseriada" tabindex="-1" role="dialog" aria-labelledby="excluirLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Frequência Multisseriada</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label for="escola" class="bold">Escola:</label>
+                                    <p>Escola Teste</p>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="ano" class="bold">Ano:</label>
+                                    <p>2021</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-3">
+                                    <label for="data" class="bold">Data da aula<span class="text-danger"
+                                            title="Preenchimento Obrigatório">*</span></label>
+                                    <input type="date" class="form-control" id="data" name="data">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="disciplinas" class="bold">Local da Aula</label>
+                                    <select class="form-control" id="disciplinas" name="disciplinas">
+                                        <option value="">SELECIONE UM REGISTRO</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+
+                    <div class="container">
+                        <div class="alert alert-danger mt-3" role="alert">
+                            <h6> <i class="fas fa-exclamation-triangle"></i> A data informada está fora do intervalo de
+                                datas do ano letivo.</h6>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-3 mb-3 mr-2">
+                        <button type="submit" class="btn btn-outline-primary btn-rounded  mr-2">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <footer class="text-center mt-5">
+            <p class="mb-0">&copy; 2024, Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script src="scripts.js"></script>
+        <script src="menu-lateral.js"></script>
+
+</body>
+
+</html>
